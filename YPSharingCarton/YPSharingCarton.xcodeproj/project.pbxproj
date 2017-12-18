@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		D73E81971FE76093003C6DA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81961FE76093003C6DA9 /* AppDelegate.m */; };
 		D73E819A1FE76093003C6DA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81991FE76093003C6DA9 /* ViewController.m */; };
-		D73E819D1FE76093003C6DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D73E819B1FE76093003C6DA9 /* Main.storyboard */; };
 		D73E819F1FE76093003C6DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D73E819E1FE76093003C6DA9 /* Assets.xcassets */; };
-		D73E81A21FE76093003C6DA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D73E81A01FE76093003C6DA9 /* LaunchScreen.storyboard */; };
 		D73E81A51FE76093003C6DA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81A41FE76093003C6DA9 /* main.m */; };
 		D73E81AF1FE76093003C6DA9 /* YPSharingCartonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81AE1FE76093003C6DA9 /* YPSharingCartonTests.m */; };
 		D73E81BA1FE76093003C6DA9 /* YPSharingCartonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81B91FE76093003C6DA9 /* YPSharingCartonUITests.m */; };
+		D73E81CC1FE76208003C6DA9 /* KKSliderMenuTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81C81FE76208003C6DA9 /* KKSliderMenuTool.m */; };
+		D73E81CD1FE76208003C6DA9 /* KKAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81C91FE76208003C6DA9 /* KKAnimateViewController.m */; };
+		D73E81D21FE76275003C6DA9 /* LYPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81D11FE76275003C6DA9 /* LYPMainViewController.m */; };
+		D73E81DA1FE7685F003C6DA9 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81D71FE7685F003C6DA9 /* UIView+Extension.m */; };
+		D73E81DB1FE7685F003C6DA9 /* UIImage+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81D81FE7685F003C6DA9 /* UIImage+Extention.m */; };
+		D73E81DC1FE7685F003C6DA9 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81D91FE7685F003C6DA9 /* UIBarButtonItem+Extension.m */; };
+		D73E81E01FE769E9003C6DA9 /* KKNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81DF1FE769E9003C6DA9 /* KKNavController.m */; };
+		D73E81EB1FE76E39003C6DA9 /* LYPPersonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81EA1FE76E39003C6DA9 /* LYPPersonMainVC.m */; };
+		D73E81EE1FE76F11003C6DA9 /* LYPMessageMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81ED1FE76F11003C6DA9 /* LYPMessageMainVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +47,7 @@
 		D73E81961FE76093003C6DA9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D73E81981FE76093003C6DA9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D73E81991FE76093003C6DA9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D73E819C1FE76093003C6DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D73E819E1FE76093003C6DA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D73E81A11FE76093003C6DA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D73E81A31FE76093003C6DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D73E81A41FE76093003C6DA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D73E81AA1FE76093003C6DA9 /* YPSharingCartonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YPSharingCartonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +56,25 @@
 		D73E81B51FE76093003C6DA9 /* YPSharingCartonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YPSharingCartonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D73E81B91FE76093003C6DA9 /* YPSharingCartonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YPSharingCartonUITests.m; sourceTree = "<group>"; };
 		D73E81BB1FE76093003C6DA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D73E81C81FE76208003C6DA9 /* KKSliderMenuTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSliderMenuTool.m; sourceTree = "<group>"; };
+		D73E81C91FE76208003C6DA9 /* KKAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKAnimateViewController.m; sourceTree = "<group>"; };
+		D73E81CA1FE76208003C6DA9 /* KKSliderMenuTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSliderMenuTool.h; sourceTree = "<group>"; };
+		D73E81CB1FE76208003C6DA9 /* KKAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAnimateViewController.h; sourceTree = "<group>"; };
+		D73E81D01FE76275003C6DA9 /* LYPMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMainViewController.h; sourceTree = "<group>"; };
+		D73E81D11FE76275003C6DA9 /* LYPMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMainViewController.m; sourceTree = "<group>"; };
+		D73E81D41FE7685E003C6DA9 /* UIImage+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extention.h"; sourceTree = "<group>"; };
+		D73E81D51FE7685E003C6DA9 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		D73E81D61FE7685F003C6DA9 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D73E81D71FE7685F003C6DA9 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D73E81D81FE7685F003C6DA9 /* UIImage+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extention.m"; sourceTree = "<group>"; };
+		D73E81D91FE7685F003C6DA9 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		D73E81DD1FE768A6003C6DA9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D73E81DE1FE769E9003C6DA9 /* KKNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNavController.h; sourceTree = "<group>"; };
+		D73E81DF1FE769E9003C6DA9 /* KKNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNavController.m; sourceTree = "<group>"; };
+		D73E81E91FE76E39003C6DA9 /* LYPPersonMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonMainVC.h; sourceTree = "<group>"; };
+		D73E81EA1FE76E39003C6DA9 /* LYPPersonMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonMainVC.m; sourceTree = "<group>"; };
+		D73E81EC1FE76F11003C6DA9 /* LYPMessageMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMessageMainVC.h; sourceTree = "<group>"; };
+		D73E81ED1FE76F11003C6DA9 /* LYPMessageMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMessageMainVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +125,15 @@
 		D73E81941FE76093003C6DA9 /* YPSharingCarton */ = {
 			isa = PBXGroup;
 			children = (
+				D73E81E51FE76DD5003C6DA9 /* Main */,
+				D73E81D31FE767EE003C6DA9 /* UITool */,
+				D73E81CF1FE7621B003C6DA9 /* 地图主页 */,
+				D73E81C71FE761AC003C6DA9 /* 侧边栏 */,
 				D73E81951FE76093003C6DA9 /* AppDelegate.h */,
 				D73E81961FE76093003C6DA9 /* AppDelegate.m */,
 				D73E81981FE76093003C6DA9 /* ViewController.h */,
 				D73E81991FE76093003C6DA9 /* ViewController.m */,
-				D73E819B1FE76093003C6DA9 /* Main.storyboard */,
 				D73E819E1FE76093003C6DA9 /* Assets.xcassets */,
-				D73E81A01FE76093003C6DA9 /* LaunchScreen.storyboard */,
 				D73E81A31FE76093003C6DA9 /* Info.plist */,
 				D73E81A41FE76093003C6DA9 /* main.m */,
 			);
@@ -119,6 +145,7 @@
 			children = (
 				D73E81AE1FE76093003C6DA9 /* YPSharingCartonTests.m */,
 				D73E81B01FE76093003C6DA9 /* Info.plist */,
+				D73E81DD1FE768A6003C6DA9 /* PrefixHeader.pch */,
 			);
 			path = YPSharingCartonTests;
 			sourceTree = "<group>";
@@ -130,6 +157,100 @@
 				D73E81BB1FE76093003C6DA9 /* Info.plist */,
 			);
 			path = YPSharingCartonUITests;
+			sourceTree = "<group>";
+		};
+		D73E81C71FE761AC003C6DA9 /* 侧边栏 */ = {
+			isa = PBXGroup;
+			children = (
+				D73E81DE1FE769E9003C6DA9 /* KKNavController.h */,
+				D73E81DF1FE769E9003C6DA9 /* KKNavController.m */,
+				D73E81CB1FE76208003C6DA9 /* KKAnimateViewController.h */,
+				D73E81C91FE76208003C6DA9 /* KKAnimateViewController.m */,
+				D73E81CA1FE76208003C6DA9 /* KKSliderMenuTool.h */,
+				D73E81C81FE76208003C6DA9 /* KKSliderMenuTool.m */,
+			);
+			path = "侧边栏";
+			sourceTree = "<group>";
+		};
+		D73E81CF1FE7621B003C6DA9 /* 地图主页 */ = {
+			isa = PBXGroup;
+			children = (
+				D73E81E11FE76DB4003C6DA9 /* Controller */,
+				D73E81E31FE76DB5003C6DA9 /* Model */,
+				D73E81E21FE76DB4003C6DA9 /* View */,
+			);
+			path = "地图主页";
+			sourceTree = "<group>";
+		};
+		D73E81D31FE767EE003C6DA9 /* UITool */ = {
+			isa = PBXGroup;
+			children = (
+				D73E81D51FE7685E003C6DA9 /* UIBarButtonItem+Extension.h */,
+				D73E81D91FE7685F003C6DA9 /* UIBarButtonItem+Extension.m */,
+				D73E81D41FE7685E003C6DA9 /* UIImage+Extention.h */,
+				D73E81D81FE7685F003C6DA9 /* UIImage+Extention.m */,
+				D73E81D61FE7685F003C6DA9 /* UIView+Extension.h */,
+				D73E81D71FE7685F003C6DA9 /* UIView+Extension.m */,
+			);
+			path = UITool;
+			sourceTree = "<group>";
+		};
+		D73E81E11FE76DB4003C6DA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D73E81D01FE76275003C6DA9 /* LYPMainViewController.h */,
+				D73E81D11FE76275003C6DA9 /* LYPMainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D73E81E21FE76DB4003C6DA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D73E81E31FE76DB5003C6DA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D73E81E51FE76DD5003C6DA9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D73E81E61FE76DE3003C6DA9 /* Controller */,
+				D73E81E81FE76DE3003C6DA9 /* Model */,
+				D73E81E71FE76DE3003C6DA9 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D73E81E61FE76DE3003C6DA9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D73E81E91FE76E39003C6DA9 /* LYPPersonMainVC.h */,
+				D73E81EA1FE76E39003C6DA9 /* LYPPersonMainVC.m */,
+				D73E81EC1FE76F11003C6DA9 /* LYPMessageMainVC.h */,
+				D73E81ED1FE76F11003C6DA9 /* LYPMessageMainVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D73E81E71FE76DE3003C6DA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D73E81E81FE76DE3003C6DA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +315,7 @@
 		D73E818A1FE76092003C6DA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LYP;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = laiyongpeng;
 				TargetAttributes = {
@@ -238,9 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D73E81A21FE76093003C6DA9 /* LaunchScreen.storyboard in Resources */,
 				D73E819F1FE76093003C6DA9 /* Assets.xcassets in Resources */,
-				D73E819D1FE76093003C6DA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +385,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73E81DB1FE7685F003C6DA9 /* UIImage+Extention.m in Sources */,
+				D73E81E01FE769E9003C6DA9 /* KKNavController.m in Sources */,
 				D73E819A1FE76093003C6DA9 /* ViewController.m in Sources */,
+				D73E81CD1FE76208003C6DA9 /* KKAnimateViewController.m in Sources */,
+				D73E81CC1FE76208003C6DA9 /* KKSliderMenuTool.m in Sources */,
+				D73E81EE1FE76F11003C6DA9 /* LYPMessageMainVC.m in Sources */,
+				D73E81DA1FE7685F003C6DA9 /* UIView+Extension.m in Sources */,
+				D73E81D21FE76275003C6DA9 /* LYPMainViewController.m in Sources */,
+				D73E81EB1FE76E39003C6DA9 /* LYPPersonMainVC.m in Sources */,
+				D73E81DC1FE7685F003C6DA9 /* UIBarButtonItem+Extension.m in Sources */,
 				D73E81A51FE76093003C6DA9 /* main.m in Sources */,
 				D73E81971FE76093003C6DA9 /* AppDelegate.m in Sources */,
 			);
@@ -301,25 +430,6 @@
 			targetProxy = D73E81B61FE76093003C6DA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D73E819B1FE76093003C6DA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D73E819C1FE76093003C6DA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D73E81A01FE76093003C6DA9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D73E81A11FE76093003C6DA9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D73E81BC1FE76093003C6DA9 /* Debug */ = {
@@ -432,12 +542,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DN43523GZM;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/YPSharingCartonTests/PrefixHeader.pch\"",
+				);
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
 		};
@@ -447,12 +563,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DN43523GZM;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/YPSharingCartonTests/PrefixHeader.pch\"",
+				);
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Release;
 		};
