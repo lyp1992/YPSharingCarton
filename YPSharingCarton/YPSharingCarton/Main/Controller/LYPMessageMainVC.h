@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LYPMessageMainVC : UIViewController
+@interface LYPMessageMainVC : LYPFatherViewController
 
 @end

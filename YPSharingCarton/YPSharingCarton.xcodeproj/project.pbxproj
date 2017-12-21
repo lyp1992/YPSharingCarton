@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		722475041E8C6D95A1E3D3CB /* libPods-YPSharingCartonUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FD82D891C110CDEDA3698D /* libPods-YPSharingCartonUITests.a */; };
+		73B1E06E84A30656E517E66D /* libPods-YPSharingCartonTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F0416F96AE872D5D9D1A9C /* libPods-YPSharingCartonTests.a */; };
 		D73E81971FE76093003C6DA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81961FE76093003C6DA9 /* AppDelegate.m */; };
 		D73E819A1FE76093003C6DA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81991FE76093003C6DA9 /* ViewController.m */; };
 		D73E819F1FE76093003C6DA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D73E819E1FE76093003C6DA9 /* Assets.xcassets */; };
@@ -22,6 +24,20 @@
 		D73E81E01FE769E9003C6DA9 /* KKNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81DF1FE769E9003C6DA9 /* KKNavController.m */; };
 		D73E81EB1FE76E39003C6DA9 /* LYPPersonMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81EA1FE76E39003C6DA9 /* LYPPersonMainVC.m */; };
 		D73E81EE1FE76F11003C6DA9 /* LYPMessageMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E81ED1FE76F11003C6DA9 /* LYPMessageMainVC.m */; };
+		D76098171FEB520E0020152C /* LYPPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = D76098161FEB520E0020152C /* LYPPromptView.m */; };
+		D76098221FEB969E0020152C /* LYPScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76098211FEB969E0020152C /* LYPScanViewController.m */; };
+		D76098251FEB983B0020152C /* LYPCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D76098241FEB983B0020152C /* LYPCustomButton.m */; };
+		D76098281FEB9B500020152C /* LYPFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76098271FEB9B500020152C /* LYPFatherViewController.m */; };
+		D760982B1FEBAB270020152C /* LYPServiceV.m in Sources */ = {isa = PBXBuildFile; fileRef = D760982A1FEBAB270020152C /* LYPServiceV.m */; };
+		D760982D1FEBAB3E0020152C /* LYPServiceV.xib in Resources */ = {isa = PBXBuildFile; fileRef = D760982C1FEBAB3E0020152C /* LYPServiceV.xib */; };
+		D76098301FEBB0250020152C /* LYPServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D760982F1FEBB0250020152C /* LYPServiceViewController.m */; };
+		D768E5351FEA13C4003224AB /* LYPPersonHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E5331FEA13C4003224AB /* LYPPersonHeadView.m */; };
+		D768E53A1FEA3D03003224AB /* LYPPersonCycTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E5391FEA3D03003224AB /* LYPPersonCycTableViewCell.m */; };
+		D768E53C1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D768E53B1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib */; };
+		D768E53F1FEA4CA9003224AB /* LYPPersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E53E1FEA4CA9003224AB /* LYPPersonTableViewCell.m */; };
+		D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */; };
+		D7A7D0871FE90AFC008D8C5A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7D0861FE90AFC008D8C5A /* MapKit.framework */; };
+		E335005AF5A204DD62C9ABFB /* libPods-YPSharingCarton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A8B5C5573F809126DC21C1 /* libPods-YPSharingCarton.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D7D17CF9A8EBD84D287741D /* Pods-YPSharingCartonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPSharingCartonUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YPSharingCartonUITests/Pods-YPSharingCartonUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F061F624562ADB6750888E9 /* Pods-YPSharingCarton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPSharingCarton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YPSharingCarton/Pods-YPSharingCarton.debug.xcconfig"; sourceTree = "<group>"; };
+		1047714ECF1DE7D4D0CD8C1E /* Pods-YPSharingCartonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPSharingCartonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YPSharingCartonTests/Pods-YPSharingCartonTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A4EE297D2339F4323A58F9A /* Pods-YPSharingCartonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPSharingCartonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YPSharingCartonTests/Pods-YPSharingCartonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33DDC4036BB93F6317A542ED /* Pods-YPSharingCartonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPSharingCartonUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YPSharingCartonUITests/Pods-YPSharingCartonUITests.release.xcconfig"; sourceTree = "<group>"; };
+		93A8B5C5573F809126DC21C1 /* libPods-YPSharingCarton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YPSharingCarton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB28DF9826390992DDA1880B /* Pods-YPSharingCarton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YPSharingCarton.release.xcconfig"; path = "Pods/Target Support Files/Pods-YPSharingCarton/Pods-YPSharingCarton.release.xcconfig"; sourceTree = "<group>"; };
+		C1F0416F96AE872D5D9D1A9C /* libPods-YPSharingCartonTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YPSharingCartonTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D73E81921FE76093003C6DA9 /* YPSharingCarton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YPSharingCarton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D73E81951FE76093003C6DA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D73E81961FE76093003C6DA9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +99,30 @@
 		D73E81EA1FE76E39003C6DA9 /* LYPPersonMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonMainVC.m; sourceTree = "<group>"; };
 		D73E81EC1FE76F11003C6DA9 /* LYPMessageMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMessageMainVC.h; sourceTree = "<group>"; };
 		D73E81ED1FE76F11003C6DA9 /* LYPMessageMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMessageMainVC.m; sourceTree = "<group>"; };
+		D76098151FEB520E0020152C /* LYPPromptView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPromptView.h; sourceTree = "<group>"; };
+		D76098161FEB520E0020152C /* LYPPromptView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPromptView.m; sourceTree = "<group>"; };
+		D76098201FEB969E0020152C /* LYPScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPScanViewController.h; sourceTree = "<group>"; };
+		D76098211FEB969E0020152C /* LYPScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPScanViewController.m; sourceTree = "<group>"; };
+		D76098231FEB983B0020152C /* LYPCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCustomButton.h; sourceTree = "<group>"; };
+		D76098241FEB983B0020152C /* LYPCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCustomButton.m; sourceTree = "<group>"; };
+		D76098261FEB9B500020152C /* LYPFatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPFatherViewController.h; sourceTree = "<group>"; };
+		D76098271FEB9B500020152C /* LYPFatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPFatherViewController.m; sourceTree = "<group>"; };
+		D76098291FEBAB270020152C /* LYPServiceV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPServiceV.h; sourceTree = "<group>"; };
+		D760982A1FEBAB270020152C /* LYPServiceV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPServiceV.m; sourceTree = "<group>"; };
+		D760982C1FEBAB3E0020152C /* LYPServiceV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPServiceV.xib; sourceTree = "<group>"; };
+		D760982E1FEBB0250020152C /* LYPServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPServiceViewController.h; sourceTree = "<group>"; };
+		D760982F1FEBB0250020152C /* LYPServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPServiceViewController.m; sourceTree = "<group>"; };
+		D768E5321FEA13C4003224AB /* LYPPersonHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonHeadView.h; sourceTree = "<group>"; };
+		D768E5331FEA13C4003224AB /* LYPPersonHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonHeadView.m; sourceTree = "<group>"; };
+		D768E5381FEA3D03003224AB /* LYPPersonCycTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonCycTableViewCell.h; sourceTree = "<group>"; };
+		D768E5391FEA3D03003224AB /* LYPPersonCycTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonCycTableViewCell.m; sourceTree = "<group>"; };
+		D768E53B1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPPersonCycTableViewCell.xib; sourceTree = "<group>"; };
+		D768E53D1FEA4CA9003224AB /* LYPPersonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonTableViewCell.h; sourceTree = "<group>"; };
+		D768E53E1FEA4CA9003224AB /* LYPPersonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonTableViewCell.m; sourceTree = "<group>"; };
+		D7A7D0811FE905B8008D8C5A /* LYPMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMapViewController.h; sourceTree = "<group>"; };
+		D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMapViewController.m; sourceTree = "<group>"; };
+		D7A7D0861FE90AFC008D8C5A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D9FD82D891C110CDEDA3698D /* libPods-YPSharingCartonUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YPSharingCartonUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +130,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A7D0871FE90AFC008D8C5A /* MapKit.framework in Frameworks */,
+				E335005AF5A204DD62C9ABFB /* libPods-YPSharingCarton.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B1E06E84A30656E517E66D /* libPods-YPSharingCartonTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +147,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				722475041E8C6D95A1E3D3CB /* libPods-YPSharingCartonUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEB15136B62B774B67174166 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F061F624562ADB6750888E9 /* Pods-YPSharingCarton.debug.xcconfig */,
+				BB28DF9826390992DDA1880B /* Pods-YPSharingCarton.release.xcconfig */,
+				1A4EE297D2339F4323A58F9A /* Pods-YPSharingCartonTests.debug.xcconfig */,
+				1047714ECF1DE7D4D0CD8C1E /* Pods-YPSharingCartonTests.release.xcconfig */,
+				0D7D17CF9A8EBD84D287741D /* Pods-YPSharingCartonUITests.debug.xcconfig */,
+				33DDC4036BB93F6317A542ED /* Pods-YPSharingCartonUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D73E81891FE76092003C6DA9 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +174,8 @@
 				D73E81AD1FE76093003C6DA9 /* YPSharingCartonTests */,
 				D73E81B81FE76093003C6DA9 /* YPSharingCartonUITests */,
 				D73E81931FE76093003C6DA9 /* Products */,
+				AEB15136B62B774B67174166 /* Pods */,
+				E4F1A12B563DF3541C8AFEC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +203,7 @@
 				D73E819E1FE76093003C6DA9 /* Assets.xcassets */,
 				D73E81A31FE76093003C6DA9 /* Info.plist */,
 				D73E81A41FE76093003C6DA9 /* main.m */,
+				D73E81DD1FE768A6003C6DA9 /* PrefixHeader.pch */,
 			);
 			path = YPSharingCarton;
 			sourceTree = "<group>";
@@ -145,7 +213,6 @@
 			children = (
 				D73E81AE1FE76093003C6DA9 /* YPSharingCartonTests.m */,
 				D73E81B01FE76093003C6DA9 /* Info.plist */,
-				D73E81DD1FE768A6003C6DA9 /* PrefixHeader.pch */,
 			);
 			path = YPSharingCartonTests;
 			sourceTree = "<group>";
@@ -191,6 +258,10 @@
 				D73E81D81FE7685F003C6DA9 /* UIImage+Extention.m */,
 				D73E81D61FE7685F003C6DA9 /* UIView+Extension.h */,
 				D73E81D71FE7685F003C6DA9 /* UIView+Extension.m */,
+				D76098151FEB520E0020152C /* LYPPromptView.h */,
+				D76098161FEB520E0020152C /* LYPPromptView.m */,
+				D76098231FEB983B0020152C /* LYPCustomButton.h */,
+				D76098241FEB983B0020152C /* LYPCustomButton.m */,
 			);
 			path = UITool;
 			sourceTree = "<group>";
@@ -200,6 +271,12 @@
 			children = (
 				D73E81D01FE76275003C6DA9 /* LYPMainViewController.h */,
 				D73E81D11FE76275003C6DA9 /* LYPMainViewController.m */,
+				D7A7D0811FE905B8008D8C5A /* LYPMapViewController.h */,
+				D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */,
+				D76098261FEB9B500020152C /* LYPFatherViewController.h */,
+				D76098271FEB9B500020152C /* LYPFatherViewController.m */,
+				D760982E1FEBB0250020152C /* LYPServiceViewController.h */,
+				D760982F1FEBB0250020152C /* LYPServiceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +284,9 @@
 		D73E81E21FE76DB4003C6DA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D76098291FEBAB270020152C /* LYPServiceV.h */,
+				D760982A1FEBAB270020152C /* LYPServiceV.m */,
+				D760982C1FEBAB3E0020152C /* LYPServiceV.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +315,8 @@
 				D73E81EA1FE76E39003C6DA9 /* LYPPersonMainVC.m */,
 				D73E81EC1FE76F11003C6DA9 /* LYPMessageMainVC.h */,
 				D73E81ED1FE76F11003C6DA9 /* LYPMessageMainVC.m */,
+				D76098201FEB969E0020152C /* LYPScanViewController.h */,
+				D76098211FEB969E0020152C /* LYPScanViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +324,13 @@
 		D73E81E71FE76DE3003C6DA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D768E5321FEA13C4003224AB /* LYPPersonHeadView.h */,
+				D768E5331FEA13C4003224AB /* LYPPersonHeadView.m */,
+				D768E5381FEA3D03003224AB /* LYPPersonCycTableViewCell.h */,
+				D768E5391FEA3D03003224AB /* LYPPersonCycTableViewCell.m */,
+				D768E53B1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib */,
+				D768E53D1FEA4CA9003224AB /* LYPPersonTableViewCell.h */,
+				D768E53E1FEA4CA9003224AB /* LYPPersonTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +342,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E4F1A12B563DF3541C8AFEC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7A7D0861FE90AFC008D8C5A /* MapKit.framework */,
+				93A8B5C5573F809126DC21C1 /* libPods-YPSharingCarton.a */,
+				C1F0416F96AE872D5D9D1A9C /* libPods-YPSharingCartonTests.a */,
+				D9FD82D891C110CDEDA3698D /* libPods-YPSharingCartonUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,9 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D73E81BE1FE76093003C6DA9 /* Build configuration list for PBXNativeTarget "YPSharingCarton" */;
 			buildPhases = (
+				FB0B46E76AC0AE2E5149BD49 /* [CP] Check Pods Manifest.lock */,
 				D73E818E1FE76093003C6DA9 /* Sources */,
 				D73E818F1FE76093003C6DA9 /* Frameworks */,
 				D73E81901FE76093003C6DA9 /* Resources */,
+				1CC292D644D9652159553E0D /* [CP] Embed Pods Frameworks */,
+				383175F2E8E2D24586527EF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,9 +380,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D73E81C11FE76093003C6DA9 /* Build configuration list for PBXNativeTarget "YPSharingCartonTests" */;
 			buildPhases = (
+				F53BE6164A42699CA230C1D8 /* [CP] Check Pods Manifest.lock */,
 				D73E81A61FE76093003C6DA9 /* Sources */,
 				D73E81A71FE76093003C6DA9 /* Frameworks */,
 				D73E81A81FE76093003C6DA9 /* Resources */,
+				991585A6834F92D4E131F16D /* [CP] Embed Pods Frameworks */,
+				A9B29C61F95586DBB1896337 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,9 +401,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D73E81C41FE76093003C6DA9 /* Build configuration list for PBXNativeTarget "YPSharingCartonUITests" */;
 			buildPhases = (
+				ECB3AA0A4298B4EF2D0D3320 /* [CP] Check Pods Manifest.lock */,
 				D73E81B11FE76093003C6DA9 /* Sources */,
 				D73E81B21FE76093003C6DA9 /* Frameworks */,
 				D73E81B31FE76093003C6DA9 /* Resources */,
+				3CFEC733C508F3AF7E0D8434 /* [CP] Embed Pods Frameworks */,
+				1AE65C1D6DD5D0C050B5B442 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +431,14 @@
 					D73E81911FE76093003C6DA9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D73E81A91FE76093003C6DA9 = {
 						CreatedOnToolsVersion = 9.2;
@@ -360,7 +477,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D768E53C1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib in Resources */,
 				D73E819F1FE76093003C6DA9 /* Assets.xcassets in Resources */,
+				D760982D1FEBAB3E0020152C /* LYPServiceV.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,20 +499,181 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AE65C1D6DD5D0C050B5B442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCartonUITests/Pods-YPSharingCartonUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CC292D644D9652159553E0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCarton/Pods-YPSharingCarton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		383175F2E8E2D24586527EF5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCarton/Pods-YPSharingCarton-resources.sh",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCarton/Pods-YPSharingCarton-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CFEC733C508F3AF7E0D8434 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCartonUITests/Pods-YPSharingCartonUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		991585A6834F92D4E131F16D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCartonTests/Pods-YPSharingCartonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9B29C61F95586DBB1896337 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCartonTests/Pods-YPSharingCartonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB3AA0A4298B4EF2D0D3320 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YPSharingCartonUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F53BE6164A42699CA230C1D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YPSharingCartonTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB0B46E76AC0AE2E5149BD49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YPSharingCarton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D73E818E1FE76093003C6DA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76098251FEB983B0020152C /* LYPCustomButton.m in Sources */,
+				D76098171FEB520E0020152C /* LYPPromptView.m in Sources */,
 				D73E81DB1FE7685F003C6DA9 /* UIImage+Extention.m in Sources */,
 				D73E81E01FE769E9003C6DA9 /* KKNavController.m in Sources */,
+				D76098301FEBB0250020152C /* LYPServiceViewController.m in Sources */,
+				D768E53F1FEA4CA9003224AB /* LYPPersonTableViewCell.m in Sources */,
 				D73E819A1FE76093003C6DA9 /* ViewController.m in Sources */,
+				D76098281FEB9B500020152C /* LYPFatherViewController.m in Sources */,
+				D76098221FEB969E0020152C /* LYPScanViewController.m in Sources */,
 				D73E81CD1FE76208003C6DA9 /* KKAnimateViewController.m in Sources */,
 				D73E81CC1FE76208003C6DA9 /* KKSliderMenuTool.m in Sources */,
 				D73E81EE1FE76F11003C6DA9 /* LYPMessageMainVC.m in Sources */,
+				D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */,
+				D768E5351FEA13C4003224AB /* LYPPersonHeadView.m in Sources */,
 				D73E81DA1FE7685F003C6DA9 /* UIView+Extension.m in Sources */,
 				D73E81D21FE76275003C6DA9 /* LYPMainViewController.m in Sources */,
 				D73E81EB1FE76E39003C6DA9 /* LYPPersonMainVC.m in Sources */,
+				D768E53A1FEA3D03003224AB /* LYPPersonCycTableViewCell.m in Sources */,
+				D760982B1FEBAB270020152C /* LYPServiceV.m in Sources */,
 				D73E81DC1FE7685F003C6DA9 /* UIBarButtonItem+Extension.m in Sources */,
 				D73E81A51FE76093003C6DA9 /* main.m in Sources */,
 				D73E81971FE76093003C6DA9 /* AppDelegate.m in Sources */,
@@ -538,19 +818,22 @@
 		};
 		D73E81BF1FE76093003C6DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F061F624562ADB6750888E9 /* Pods-YPSharingCarton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DN43523GZM;
+				DEVELOPMENT_TEAM = 96EWSQNWMS;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YPSharingCarton/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
-					"\"$(SRCROOT)/YPSharingCartonTests/PrefixHeader.pch\"",
+					"\"$(SRCROOT)/YPSharingCarton/PrefixHeader.pch\"",
 				);
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.iclassmate.YPSharingCarton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
@@ -559,19 +842,22 @@
 		};
 		D73E81C01FE76093003C6DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB28DF9826390992DDA1880B /* Pods-YPSharingCarton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DN43523GZM;
+				DEVELOPMENT_TEAM = 96EWSQNWMS;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YPSharingCarton/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)",
-					"\"$(SRCROOT)/YPSharingCartonTests/PrefixHeader.pch\"",
+					"\"$(SRCROOT)/YPSharingCarton/PrefixHeader.pch\"",
 				);
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "animal.--";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.iclassmate.YPSharingCarton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
@@ -580,6 +866,7 @@
 		};
 		D73E81C21FE76093003C6DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4EE297D2339F4323A58F9A /* Pods-YPSharingCartonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -595,6 +882,7 @@
 		};
 		D73E81C31FE76093003C6DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1047714ECF1DE7D4D0CD8C1E /* Pods-YPSharingCartonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -610,6 +898,7 @@
 		};
 		D73E81C51FE76093003C6DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7D17CF9A8EBD84D287741D /* Pods-YPSharingCartonUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DN43523GZM;
@@ -624,6 +913,7 @@
 		};
 		D73E81C61FE76093003C6DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33DDC4036BB93F6317A542ED /* Pods-YPSharingCartonUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DN43523GZM;

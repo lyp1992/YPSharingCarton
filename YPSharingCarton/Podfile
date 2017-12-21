@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'YPSharingCarton' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for YPSharingCarton
+
+pod ‘AMap3DMap’
+pod ‘AMapSearch’
+pod ‘AMapLocation’
+pod ‘AMapNavi’
+pod 'Masonry', '~> 1.0.2'
+
+  target 'YPSharingCartonTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'YPSharingCartonUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

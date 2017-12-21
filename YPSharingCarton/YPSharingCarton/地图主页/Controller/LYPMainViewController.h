@@ -11,6 +11,6 @@
 #import "LYPMessageMainVC.h"
 #import "KKSliderMenuTool.h"
 
-@interface LYPMainViewController : UIViewController
+@interface LYPMainViewController : LYPFatherViewController
 
 @end

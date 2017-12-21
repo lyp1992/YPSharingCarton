@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LYPMainViewController.h"
-
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
 
@@ -25,6 +25,11 @@
     self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
+    
+//    注册高德地图
+    [AMapServices sharedServices].apiKey = @"b1a7457967c073c006a2d71525ed435b";
+    [AMapServices sharedServices].crashReportEnabled = YES;
+    [AMapServices sharedServices].enableHTTPS = YES;
     
     return YES;
 }
