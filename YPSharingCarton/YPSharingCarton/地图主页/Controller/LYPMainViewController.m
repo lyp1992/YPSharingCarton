@@ -13,6 +13,7 @@
 #import "LYPCustomButton.h"
 #import "LYPServiceViewController.h"
 
+
 @interface LYPMainViewController ()
 
 @end
@@ -102,5 +103,10 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:servieVc animated:YES completion:nil];
     
 }
-
+    
+-(void) updateNotification:(NSString *) str {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+    
 @end

@@ -12,5 +12,6 @@
 #import "KKSliderMenuTool.h"
 
 @interface LYPMainViewController : LYPFatherViewController
-
+-(void) updateNotification:(NSString *) str;
+    
 @end

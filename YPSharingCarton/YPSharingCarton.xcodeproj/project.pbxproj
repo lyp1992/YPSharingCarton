@@ -31,10 +31,19 @@
 		D760982B1FEBAB270020152C /* LYPServiceV.m in Sources */ = {isa = PBXBuildFile; fileRef = D760982A1FEBAB270020152C /* LYPServiceV.m */; };
 		D760982D1FEBAB3E0020152C /* LYPServiceV.xib in Resources */ = {isa = PBXBuildFile; fileRef = D760982C1FEBAB3E0020152C /* LYPServiceV.xib */; };
 		D76098301FEBB0250020152C /* LYPServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D760982F1FEBB0250020152C /* LYPServiceViewController.m */; };
+		D765FA622005E5470028D8EB /* UpAndLowerButtonPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D765FA602005E5470028D8EB /* UpAndLowerButtonPlace.m */; };
+		D765FA652005F3BB0028D8EB /* LYPQRCodeResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D765FA642005F3BB0028D8EB /* LYPQRCodeResultVC.m */; };
 		D768E5351FEA13C4003224AB /* LYPPersonHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E5331FEA13C4003224AB /* LYPPersonHeadView.m */; };
 		D768E53A1FEA3D03003224AB /* LYPPersonCycTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E5391FEA3D03003224AB /* LYPPersonCycTableViewCell.m */; };
 		D768E53C1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D768E53B1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib */; };
 		D768E53F1FEA4CA9003224AB /* LYPPersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E53E1FEA4CA9003224AB /* LYPPersonTableViewCell.m */; };
+		D78DEADB1FFF686C0093AC6C /* libxgidfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAD71FFF686C0093AC6C /* libxgidfa.a */; };
+		D78DEADC1FFF686C0093AC6C /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAD81FFF686C0093AC6C /* libXG-SDK.a */; };
+		D78DEADD1FFF686C0093AC6C /* ReleaseNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D78DEAD91FFF686C0093AC6C /* ReleaseNotes.txt */; };
+		D78DEAE01FFF68DE0093AC6C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEADF1FFF68DE0093AC6C /* UserNotifications.framework */; };
+		D78DEAE21FFF68E70093AC6C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE11FFF68E70093AC6C /* CoreTelephony.framework */; };
+		D78DEAE41FFF68F00093AC6C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE31FFF68F00093AC6C /* SystemConfiguration.framework */; };
+		D78DEAE61FFF71070093AC6C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE51FFF71070093AC6C /* libsqlite3.0.tbd */; };
 		D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */; };
 		D7A7D0871FE90AFC008D8C5A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7D0861FE90AFC008D8C5A /* MapKit.framework */; };
 		E335005AF5A204DD62C9ABFB /* libPods-YPSharingCarton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A8B5C5573F809126DC21C1 /* libPods-YPSharingCarton.a */; };
@@ -112,6 +121,10 @@
 		D760982C1FEBAB3E0020152C /* LYPServiceV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPServiceV.xib; sourceTree = "<group>"; };
 		D760982E1FEBB0250020152C /* LYPServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPServiceViewController.h; sourceTree = "<group>"; };
 		D760982F1FEBB0250020152C /* LYPServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPServiceViewController.m; sourceTree = "<group>"; };
+		D765FA602005E5470028D8EB /* UpAndLowerButtonPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpAndLowerButtonPlace.m; sourceTree = "<group>"; };
+		D765FA612005E5470028D8EB /* UpAndLowerButtonPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpAndLowerButtonPlace.h; sourceTree = "<group>"; };
+		D765FA632005F3BB0028D8EB /* LYPQRCodeResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPQRCodeResultVC.h; sourceTree = "<group>"; };
+		D765FA642005F3BB0028D8EB /* LYPQRCodeResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPQRCodeResultVC.m; sourceTree = "<group>"; };
 		D768E5321FEA13C4003224AB /* LYPPersonHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonHeadView.h; sourceTree = "<group>"; };
 		D768E5331FEA13C4003224AB /* LYPPersonHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonHeadView.m; sourceTree = "<group>"; };
 		D768E5381FEA3D03003224AB /* LYPPersonCycTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonCycTableViewCell.h; sourceTree = "<group>"; };
@@ -119,6 +132,15 @@
 		D768E53B1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPPersonCycTableViewCell.xib; sourceTree = "<group>"; };
 		D768E53D1FEA4CA9003224AB /* LYPPersonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonTableViewCell.h; sourceTree = "<group>"; };
 		D768E53E1FEA4CA9003224AB /* LYPPersonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonTableViewCell.m; sourceTree = "<group>"; };
+		D78DEAD71FFF686C0093AC6C /* libxgidfa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxgidfa.a; sourceTree = "<group>"; };
+		D78DEAD81FFF686C0093AC6C /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
+		D78DEAD91FFF686C0093AC6C /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
+		D78DEADA1FFF686C0093AC6C /* XGPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGPush.h; sourceTree = "<group>"; };
+		D78DEADE1FFF68940093AC6C /* YPSharingCarton.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YPSharingCarton.entitlements; sourceTree = "<group>"; };
+		D78DEADF1FFF68DE0093AC6C /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D78DEAE11FFF68E70093AC6C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D78DEAE31FFF68F00093AC6C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D78DEAE51FFF71070093AC6C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D7A7D0811FE905B8008D8C5A /* LYPMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMapViewController.h; sourceTree = "<group>"; };
 		D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMapViewController.m; sourceTree = "<group>"; };
 		D7A7D0861FE90AFC008D8C5A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -130,8 +152,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78DEAE61FFF71070093AC6C /* libsqlite3.0.tbd in Frameworks */,
+				D78DEAE41FFF68F00093AC6C /* SystemConfiguration.framework in Frameworks */,
+				D78DEAE21FFF68E70093AC6C /* CoreTelephony.framework in Frameworks */,
+				D78DEAE01FFF68DE0093AC6C /* UserNotifications.framework in Frameworks */,
+				D78DEADB1FFF686C0093AC6C /* libxgidfa.a in Frameworks */,
 				D7A7D0871FE90AFC008D8C5A /* MapKit.framework in Frameworks */,
 				E335005AF5A204DD62C9ABFB /* libPods-YPSharingCarton.a in Frameworks */,
+				D78DEADC1FFF686C0093AC6C /* libXG-SDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +220,8 @@
 		D73E81941FE76093003C6DA9 /* YPSharingCarton */ = {
 			isa = PBXGroup;
 			children = (
+				D78DEADE1FFF68940093AC6C /* YPSharingCarton.entitlements */,
+				D78DEAD51FFF686C0093AC6C /* sdk */,
 				D73E81E51FE76DD5003C6DA9 /* Main */,
 				D73E81D31FE767EE003C6DA9 /* UITool */,
 				D73E81CF1FE7621B003C6DA9 /* 地图主页 */,
@@ -252,6 +282,8 @@
 		D73E81D31FE767EE003C6DA9 /* UITool */ = {
 			isa = PBXGroup;
 			children = (
+				D765FA612005E5470028D8EB /* UpAndLowerButtonPlace.h */,
+				D765FA602005E5470028D8EB /* UpAndLowerButtonPlace.m */,
 				D73E81D51FE7685E003C6DA9 /* UIBarButtonItem+Extension.h */,
 				D73E81D91FE7685F003C6DA9 /* UIBarButtonItem+Extension.m */,
 				D73E81D41FE7685E003C6DA9 /* UIImage+Extention.h */,
@@ -317,6 +349,8 @@
 				D73E81ED1FE76F11003C6DA9 /* LYPMessageMainVC.m */,
 				D76098201FEB969E0020152C /* LYPScanViewController.h */,
 				D76098211FEB969E0020152C /* LYPScanViewController.m */,
+				D765FA632005F3BB0028D8EB /* LYPQRCodeResultVC.h */,
+				D765FA642005F3BB0028D8EB /* LYPQRCodeResultVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,9 +376,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D78DEAD51FFF686C0093AC6C /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				D78DEAD61FFF686C0093AC6C /* idfa */,
+				D78DEAD81FFF686C0093AC6C /* libXG-SDK.a */,
+				D78DEAD91FFF686C0093AC6C /* ReleaseNotes.txt */,
+				D78DEADA1FFF686C0093AC6C /* XGPush.h */,
+			);
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		D78DEAD61FFF686C0093AC6C /* idfa */ = {
+			isa = PBXGroup;
+			children = (
+				D78DEAD71FFF686C0093AC6C /* libxgidfa.a */,
+			);
+			path = idfa;
+			sourceTree = "<group>";
+		};
 		E4F1A12B563DF3541C8AFEC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D78DEAE51FFF71070093AC6C /* libsqlite3.0.tbd */,
+				D78DEAE31FFF68F00093AC6C /* SystemConfiguration.framework */,
+				D78DEAE11FFF68E70093AC6C /* CoreTelephony.framework */,
+				D78DEADF1FFF68DE0093AC6C /* UserNotifications.framework */,
 				D7A7D0861FE90AFC008D8C5A /* MapKit.framework */,
 				93A8B5C5573F809126DC21C1 /* libPods-YPSharingCarton.a */,
 				C1F0416F96AE872D5D9D1A9C /* libPods-YPSharingCartonTests.a */,
@@ -438,6 +495,9 @@
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					D73E81A91FE76093003C6DA9 = {
@@ -477,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78DEADD1FFF686C0093AC6C /* ReleaseNotes.txt in Resources */,
 				D768E53C1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib in Resources */,
 				D73E819F1FE76093003C6DA9 /* Assets.xcassets in Resources */,
 				D760982D1FEBAB3E0020152C /* LYPServiceV.xib in Resources */,
@@ -664,10 +725,12 @@
 				D73E819A1FE76093003C6DA9 /* ViewController.m in Sources */,
 				D76098281FEB9B500020152C /* LYPFatherViewController.m in Sources */,
 				D76098221FEB969E0020152C /* LYPScanViewController.m in Sources */,
+				D765FA652005F3BB0028D8EB /* LYPQRCodeResultVC.m in Sources */,
 				D73E81CD1FE76208003C6DA9 /* KKAnimateViewController.m in Sources */,
 				D73E81CC1FE76208003C6DA9 /* KKSliderMenuTool.m in Sources */,
 				D73E81EE1FE76F11003C6DA9 /* LYPMessageMainVC.m in Sources */,
 				D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */,
+				D765FA622005E5470028D8EB /* UpAndLowerButtonPlace.m in Sources */,
 				D768E5351FEA13C4003224AB /* LYPPersonHeadView.m in Sources */,
 				D73E81DA1FE7685F003C6DA9 /* UIView+Extension.m in Sources */,
 				D73E81D21FE76275003C6DA9 /* LYPMainViewController.m in Sources */,
@@ -822,6 +885,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = YPSharingCarton/YPSharingCarton.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96EWSQNWMS;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPSharingCarton/PrefixHeader.pch";
@@ -833,8 +898,15 @@
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YPSharingCarton/sdk/idfa",
+					"$(PROJECT_DIR)/YPSharingCarton/sdk",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.iclassmate.YPSharingCarton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
@@ -846,6 +918,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = YPSharingCarton/YPSharingCarton.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96EWSQNWMS;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPSharingCarton/PrefixHeader.pch";
@@ -857,8 +931,15 @@
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YPSharingCarton/sdk/idfa",
+					"$(PROJECT_DIR)/YPSharingCarton/sdk",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.iclassmate.YPSharingCarton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};

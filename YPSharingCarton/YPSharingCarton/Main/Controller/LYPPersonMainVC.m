@@ -27,7 +27,7 @@
                          @{@"title":@"我的卡劵",@"image":@"menu_promo"},
                          @{@"title":@"邀请好友",@"image":@"menu_invite"},
                          @{@"title":@"我的贴纸",@"image":@"menu_sticker"}];
-//        menu_wallet   menu_trips menu_invite menu_promo menu_sticker
+
         _rowDataArr = [NSMutableArray arrayWithArray:arr];
         
     }
