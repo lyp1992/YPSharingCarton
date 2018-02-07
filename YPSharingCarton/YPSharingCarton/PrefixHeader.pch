@@ -9,6 +9,17 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#define BaseIP @"114.115.167.38:8085"
+
+#define loginUrl [NSString stringWithFormat:@"http://%@/v1.0/user/login",BaseIP]
+#define loginRegisterUrl [NSString stringWithFormat:@"http://%@/v1.0/user/register",BaseIP]
+//getcode?mobile=1352265****&utype=2
+#define getCodeUrl [NSString stringWithFormat:@"http://%@/v1.0/user",BaseIP]
+#define resetPassWordUrl [NSString stringWithFormat:@"http://%@/v1.0/user/resetpwd",BaseIP]
+#define takePaperUrl [NSString stringWithFormat:@"http://%@/v1.0/user/takepaper",BaseIP]
+
+#define APPKey @"f56e58020315728d2"
+
 #define RGBACOLOR(R,G,B,A) [UIColor colorWithRed:(R) / 255.0f green:(G) /255.0f blue:(B) / 255.0f alpha:(A)] //自定义颜色
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
@@ -17,9 +28,12 @@
 #define ScreenFitWidth [UIScreen mainScreen].bounds.size.width / 375
 #define ScreenFitHeight [UIScreen mainScreen].bounds.size.height / 667
 
+
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+Extension.h"
 #import "LYPFatherViewController.h"
 #import "UpAndLowerButtonPlace.h"
+#import <AFNetworking.h>
+#import <MJExtension.h>
 
 #endif /* PrefixHeader_pch */

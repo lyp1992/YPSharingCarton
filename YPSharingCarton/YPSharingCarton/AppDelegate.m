@@ -10,6 +10,8 @@
 #import "LYPMainViewController.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import "XGPush.h"
+#import "LYPUserSingle.h"
+
 @interface AppDelegate ()<XGPushDelegate>
 
 @end
@@ -24,6 +26,7 @@
          LYPMainViewController *ctr1 = (LYPMainViewController *)[self.window rootViewController];
         [ctr1 updateNotification:[NSString stringWithFormat:@"%@%@", @"启动信鸽服务", (isSuccess?@"成功":@"失败")]];
     }
+    
 }
     
 - (void)xgPushDidFinishStop:(BOOL)isSuccess error:(NSError *)error {
@@ -45,6 +48,10 @@
     self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
+
+    
+//    注册远程通知
+    [self registRemoteNotification];
     
 //    注册高德地图
     [AMapServices sharedServices].apiKey = @"b1a7457967c073c006a2d71525ed435b";
@@ -65,8 +72,12 @@
 }
 //     此方法现在不是必须的，SDK内部已经在内部处理
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
     [[XGPushTokenManager defaultTokenManager] registerDeviceToken:deviceToken]; // 此方法可以不需要调用，SDK已经在内部处理
     NSLog(@"[XGDemo] device token is %@", [[XGPushTokenManager defaultTokenManager] deviceTokenString]);
+    //获取token，保存到本地
+    [LYPUserSingle shareUserSingle].deviceToken = [[XGPushTokenManager defaultTokenManager] deviceTokenString];
+    NSLog(@"%@",[LYPUserSingle shareUserSingle].deviceToken);
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"[XGDemo] register APNS fail.\n[XGDemo] reason : %@", error);
@@ -97,7 +108,36 @@
     [[XGPush defaultManager] reportXGNotificationInfo:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
+
+- (void)registRemoteNotification{
     
+#ifdef __IPHONE_8_0
+    
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert categories:nil];
+        
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        
+    } else {
+        
+        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
+        
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+        
+    }
+    
+#else
+    
+    UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
+    
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+    
+#endif
+    
+}
+
+
     // iOS 10 新增 API
     // iOS 10 会走新 API, iOS 10 以前会走到老 API
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0

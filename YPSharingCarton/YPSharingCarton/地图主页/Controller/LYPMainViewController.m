@@ -12,7 +12,8 @@
 #import "LYPScanViewController.h"
 #import "LYPCustomButton.h"
 #import "LYPServiceViewController.h"
-
+#import "LYPUserSingle.h"
+#import "LYPLonginNetworkTool.h"
 
 @interface LYPMainViewController ()
 
@@ -29,11 +30,27 @@
     [self createUserLocation];//定位
     [self createService];//客服
     
+    LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
+    NSDictionary *dic = @{@"mobile":@"13522652010",@"password":@"3D4F2BF07DC1BE38B20CD6E46949A1071F9D0E3D",@"deviceToken":@"525688FEdade",@"ios":@(0)};
+    
+    [longinTool userLoginWithUserDic:dic Success:^(id responseData, NSInteger responseCode) {
+        NSLog(@"login=%@",responseData);
+    } failue:^(id responseData, NSInteger responseCode) {
+        NSLog(@"login=%@",responseData);
+    }];
+    NSDictionary *regisDic = @{@"mobile":@"13522652010",@"password":@"3D4F2BF07DC1BE38B20CD6E46949A1071F9D0E3D",@"deviceToken":@"525688FEdade",@"ios":@(0)};
+    [longinTool userLoginRegisterWithDic:regisDic success:^(id responseData, NSInteger responseCode) {
+        NSLog(@"Register=%@",responseData);
+    } failre:^(id responseData, NSInteger responseCode) {
+        NSLog(@"Register=%@",responseData);
+    }];
+    
+    
 }
 -(void)setNavBar{
 
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithNomalImage:@"navigationbar_list_normal" selectImage:@"navigationbar_list_hl" target:self action:@selector(showPersonVC)];
-   self.title = @"主页";
+    self.title = [LYPUserSingle shareUserSingle].deviceToken;
   self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithNomalImage:@"navigationbar_msg" selectImage:@"navigationbar_msg" target:self action:@selector(showMessageVC)];
     self.navigationController.navigationBar.backgroundColor =  RGBACOLOR(43, 45, 51, 1);
 }

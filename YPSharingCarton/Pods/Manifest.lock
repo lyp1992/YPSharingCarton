@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - AMap3DMap (5.3.0):
     - AMapFoundation (~> 1.3)
   - AMapFoundation (1.4.2)
@@ -10,22 +25,27 @@ PODS:
   - AMapSearch (5.3.0):
     - AMapFoundation (~> 1.2)
   - Masonry (1.0.2)
+  - MJExtension (3.0.13)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
   - AMap3DMap
   - AMapLocation
   - AMapNavi
   - AMapSearch
   - Masonry (~> 1.0.2)
+  - MJExtension (~> 3.0.13)
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMap3DMap: 0614b5b7ed7a8b69f1d9ba7bc40ce30362497dc5
   AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
   AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
   AMapNavi: bb4d65295ed0ee0ad4b5f5792e9e2ea0e5117ffa
   AMapSearch: beb01c6b2e7be18fb4898e97162fedf144420c6f
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
 
-PODFILE CHECKSUM: e5f34bbfa8932c70700bf5052bdad66fd873310e
+PODFILE CHECKSUM: 837593e18624a94b6ce6c514f80855a160a01c18
 
 COCOAPODS: 1.3.1
