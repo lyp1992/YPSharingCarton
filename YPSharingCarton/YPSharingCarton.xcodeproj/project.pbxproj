@@ -46,6 +46,14 @@
 		D768E53A1FEA3D03003224AB /* LYPPersonCycTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E5391FEA3D03003224AB /* LYPPersonCycTableViewCell.m */; };
 		D768E53C1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D768E53B1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib */; };
 		D768E53F1FEA4CA9003224AB /* LYPPersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D768E53E1FEA4CA9003224AB /* LYPPersonTableViewCell.m */; };
+		D775BFE2202C2722009B5D55 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFD5202C2722009B5D55 /* icon.png */; };
+		D775BFE3202C2722009B5D55 /* map_history.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFD6202C2722009B5D55 /* map_history.png */; };
+		D775BFE4202C2722009B5D55 /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D775BFD8202C2722009B5D55 /* MapManager.m */; };
+		D775BFE5202C2722009B5D55 /* MoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D775BFDB202C2722009B5D55 /* MoreMenuView.m */; };
+		D775BFE6202C2722009B5D55 /* SpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D775BFDE202C2722009B5D55 /* SpeechSynthesizer.m */; };
+		D775BFE7202C2722009B5D55 /* 定位.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFDF202C2722009B5D55 /* 定位.png */; };
+		D775BFE8202C2722009B5D55 /* 目的地.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFE0202C2722009B5D55 /* 目的地.png */; };
+		D775BFE9202C2722009B5D55 /* 首牛.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFE1202C2722009B5D55 /* 首牛.png */; };
 		D78DEADB1FFF686C0093AC6C /* libxgidfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAD71FFF686C0093AC6C /* libxgidfa.a */; };
 		D78DEADC1FFF686C0093AC6C /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAD81FFF686C0093AC6C /* libXG-SDK.a */; };
 		D78DEADD1FFF686C0093AC6C /* ReleaseNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D78DEAD91FFF686C0093AC6C /* ReleaseNotes.txt */; };
@@ -158,6 +166,17 @@
 		D768E53B1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LYPPersonCycTableViewCell.xib; sourceTree = "<group>"; };
 		D768E53D1FEA4CA9003224AB /* LYPPersonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPersonTableViewCell.h; sourceTree = "<group>"; };
 		D768E53E1FEA4CA9003224AB /* LYPPersonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPersonTableViewCell.m; sourceTree = "<group>"; };
+		D775BFD5202C2722009B5D55 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		D775BFD6202C2722009B5D55 /* map_history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_history.png; sourceTree = "<group>"; };
+		D775BFD7202C2722009B5D55 /* MapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
+		D775BFD8202C2722009B5D55 /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
+		D775BFDA202C2722009B5D55 /* MoreMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreMenuView.h; sourceTree = "<group>"; };
+		D775BFDB202C2722009B5D55 /* MoreMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreMenuView.m; sourceTree = "<group>"; };
+		D775BFDD202C2722009B5D55 /* SpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechSynthesizer.h; sourceTree = "<group>"; };
+		D775BFDE202C2722009B5D55 /* SpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechSynthesizer.m; sourceTree = "<group>"; };
+		D775BFDF202C2722009B5D55 /* 定位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位.png"; sourceTree = "<group>"; };
+		D775BFE0202C2722009B5D55 /* 目的地.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "目的地.png"; sourceTree = "<group>"; };
+		D775BFE1202C2722009B5D55 /* 首牛.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首牛.png"; sourceTree = "<group>"; };
 		D78DEAD71FFF686C0093AC6C /* libxgidfa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxgidfa.a; sourceTree = "<group>"; };
 		D78DEAD81FFF686C0093AC6C /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
 		D78DEAD91FFF686C0093AC6C /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
@@ -330,6 +349,7 @@
 		D73E81E11FE76DB4003C6DA9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D775BFD4202C2722009B5D55 /* Manager */,
 				D73E81D01FE76275003C6DA9 /* LYPMainViewController.h */,
 				D73E81D11FE76275003C6DA9 /* LYPMainViewController.m */,
 				D7A7D0811FE905B8008D8C5A /* LYPMapViewController.h */,
@@ -441,6 +461,40 @@
 				D75B8958202AD5D300118F22 /* LYPListNeteworkTool.m */,
 			);
 			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		D775BFD4202C2722009B5D55 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D775BFD5202C2722009B5D55 /* icon.png */,
+				D775BFD6202C2722009B5D55 /* map_history.png */,
+				D775BFD7202C2722009B5D55 /* MapManager.h */,
+				D775BFD8202C2722009B5D55 /* MapManager.m */,
+				D775BFD9202C2722009B5D55 /* MoreMenuView */,
+				D775BFDC202C2722009B5D55 /* SpeechSynthesizer */,
+				D775BFDF202C2722009B5D55 /* 定位.png */,
+				D775BFE0202C2722009B5D55 /* 目的地.png */,
+				D775BFE1202C2722009B5D55 /* 首牛.png */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D775BFD9202C2722009B5D55 /* MoreMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				D775BFDA202C2722009B5D55 /* MoreMenuView.h */,
+				D775BFDB202C2722009B5D55 /* MoreMenuView.m */,
+			);
+			path = MoreMenuView;
+			sourceTree = "<group>";
+		};
+		D775BFDC202C2722009B5D55 /* SpeechSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				D775BFDD202C2722009B5D55 /* SpeechSynthesizer.h */,
+				D775BFDE202C2722009B5D55 /* SpeechSynthesizer.m */,
+			);
+			path = SpeechSynthesizer;
 			sourceTree = "<group>";
 		};
 		D78DEAD51FFF686C0093AC6C /* sdk */ = {
@@ -605,9 +659,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D78DEADD1FFF686C0093AC6C /* ReleaseNotes.txt in Resources */,
+				D775BFE2202C2722009B5D55 /* icon.png in Resources */,
 				D768E53C1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib in Resources */,
 				D73E819F1FE76093003C6DA9 /* Assets.xcassets in Resources */,
+				D775BFE8202C2722009B5D55 /* 目的地.png in Resources */,
+				D775BFE9202C2722009B5D55 /* 首牛.png in Resources */,
 				D760982D1FEBAB3E0020152C /* LYPServiceV.xib in Resources */,
+				D775BFE7202C2722009B5D55 /* 定位.png in Resources */,
+				D775BFE3202C2722009B5D55 /* map_history.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +867,9 @@
 				D73E81DA1FE7685F003C6DA9 /* UIView+Extension.m in Sources */,
 				D73E81D21FE76275003C6DA9 /* LYPMainViewController.m in Sources */,
 				D73E81EB1FE76E39003C6DA9 /* LYPPersonMainVC.m in Sources */,
+				D775BFE4202C2722009B5D55 /* MapManager.m in Sources */,
+				D775BFE6202C2722009B5D55 /* SpeechSynthesizer.m in Sources */,
+				D775BFE5202C2722009B5D55 /* MoreMenuView.m in Sources */,
 				D768E53A1FEA3D03003224AB /* LYPPersonCycTableViewCell.m in Sources */,
 				D760982B1FEBAB270020152C /* LYPServiceV.m in Sources */,
 				D73E81DC1FE7685F003C6DA9 /* UIBarButtonItem+Extension.m in Sources */,

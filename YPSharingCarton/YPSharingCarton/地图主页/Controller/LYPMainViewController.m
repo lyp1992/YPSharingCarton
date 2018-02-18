@@ -58,7 +58,7 @@
 -(void)setUPUI{
     
     LYPMapViewController *mapVC = [[LYPMapViewController alloc]init];
-    mapVC.view.frame =CGRectMake(0, 64,SCREENWIDTH, SCREENHEIGHT-64);
+//    mapVC.view.frame =CGRectMake(0, 64,SCREENWIDTH, SCREENHEIGHT-64);
     [self.view addSubview:mapVC.view];
     
 }
