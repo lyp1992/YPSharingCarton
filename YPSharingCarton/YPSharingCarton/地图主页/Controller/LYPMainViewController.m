@@ -14,6 +14,11 @@
 #import "LYPServiceViewController.h"
 #import "LYPUserSingle.h"
 #import "LYPLonginNetworkTool.h"
+#import "LYPSavePList.h"
+#import "StringEXtension.h"
+
+#import "LYPloginModel.h"
+#import "LYPLoginVC.h"
 
 @interface LYPMainViewController ()
 
@@ -25,27 +30,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setNavBar];//导航栏
+//    
     [self setUPUI];//地图
     [self sweepTheYard];//扫码
     [self createUserLocation];//定位
     [self createService];//客服
-    
-    LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
-    NSDictionary *dic = @{@"mobile":@"13522652010",@"password":@"3D4F2BF07DC1BE38B20CD6E46949A1071F9D0E3D",@"deviceToken":@"525688FEdade",@"ios":@(0)};
-    
-    [longinTool userLoginWithUserDic:dic Success:^(id responseData, NSInteger responseCode) {
-        NSLog(@"login=%@",responseData);
-    } failue:^(id responseData, NSInteger responseCode) {
-        NSLog(@"login=%@",responseData);
-    }];
-    NSDictionary *regisDic = @{@"mobile":@"13522652010",@"password":@"3D4F2BF07DC1BE38B20CD6E46949A1071F9D0E3D",@"deviceToken":@"525688FEdade",@"ios":@(0)};
-    [longinTool userLoginRegisterWithDic:regisDic success:^(id responseData, NSInteger responseCode) {
-        NSLog(@"Register=%@",responseData);
-    } failre:^(id responseData, NSInteger responseCode) {
-        NSLog(@"Register=%@",responseData);
-    }];
-    
-    
 }
 -(void)setNavBar{
 
@@ -58,7 +47,6 @@
 -(void)setUPUI{
     
     LYPMapViewController *mapVC = [[LYPMapViewController alloc]init];
-//    mapVC.view.frame =CGRectMake(0, 64,SCREENWIDTH, SCREENHEIGHT-64);
     [self.view addSubview:mapVC.view];
     
 }
@@ -105,8 +93,19 @@
 
 -(void)scanAction{
     
-    LYPScanViewController *scanVC = [[LYPScanViewController alloc]init];
-    [self.navigationController pushViewController:scanVC animated:YES];
+//    判断用户是否登录了
+    if ([StringEXtension isBlankString:[LYPSavePList readTokenPlist]]) {//本地没有存token，需要登录或者注册
+        
+        UIStoryboard *board = [UIStoryboard storyboardWithName:@"LYPLoginVC" bundle:nil];
+        LYPLoginVC *loginVC = [board instantiateViewControllerWithIdentifier:@"LYPLoginVC"];
+        [self presentViewController:loginVC animated:YES completion:nil];
+        
+    }else{//本地有token，直接进入扫码界面
+        
+        LYPScanViewController *scanVC = [[LYPScanViewController alloc]init];
+        [self.navigationController pushViewController:scanVC animated:YES];
+    }
+    
 }
 -(void)openLocation{
     

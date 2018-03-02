@@ -54,6 +54,15 @@
 		D775BFE7202C2722009B5D55 /* 定位.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFDF202C2722009B5D55 /* 定位.png */; };
 		D775BFE8202C2722009B5D55 /* 目的地.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFE0202C2722009B5D55 /* 目的地.png */; };
 		D775BFE9202C2722009B5D55 /* 首牛.png in Resources */ = {isa = PBXBuildFile; fileRef = D775BFE1202C2722009B5D55 /* 首牛.png */; };
+		D7772C0E2047D4DC00F80717 /* NSArray+LYPLog.m in Sources */ = {isa = PBXBuildFile; fileRef = D7772C0D2047D4DC00F80717 /* NSArray+LYPLog.m */; };
+		D7772C122047D71C00F80717 /* LYPSavePList.m in Sources */ = {isa = PBXBuildFile; fileRef = D7772C112047D71C00F80717 /* LYPSavePList.m */; };
+		D7772C1D2047D77100F80717 /* XMGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D7772C152047D77100F80717 /* XMGModel.m */; };
+		D7772C1E2047D77100F80717 /* XMGSqliteModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D7772C182047D77100F80717 /* XMGSqliteModelTool.m */; };
+		D7772C1F2047D77100F80717 /* XMGSqliteTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D7772C1A2047D77100F80717 /* XMGSqliteTool.m */; };
+		D7772C202047D77100F80717 /* XMGTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D7772C1C2047D77100F80717 /* XMGTable.m */; };
+		D7772C262047FDA100F80717 /* LYPLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7772C252047FDA100F80717 /* LYPLoginVC.m */; };
+		D7772C282047FDC000F80717 /* LYPLoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7772C272047FDC000F80717 /* LYPLoginVC.storyboard */; };
+		D787BDD62048EC8900FA4751 /* LYPRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D787BDD52048EC8900FA4751 /* LYPRegisterVC.m */; };
 		D78DEADB1FFF686C0093AC6C /* libxgidfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAD71FFF686C0093AC6C /* libxgidfa.a */; };
 		D78DEADC1FFF686C0093AC6C /* libXG-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAD81FFF686C0093AC6C /* libXG-SDK.a */; };
 		D78DEADD1FFF686C0093AC6C /* ReleaseNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D78DEAD91FFF686C0093AC6C /* ReleaseNotes.txt */; };
@@ -61,6 +70,7 @@
 		D78DEAE21FFF68E70093AC6C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE11FFF68E70093AC6C /* CoreTelephony.framework */; };
 		D78DEAE41FFF68F00093AC6C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE31FFF68F00093AC6C /* SystemConfiguration.framework */; };
 		D78DEAE61FFF71070093AC6C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE51FFF71070093AC6C /* libsqlite3.0.tbd */; };
+		D79668D2204536DB00067697 /* StringEXtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D79668D0204536DB00067697 /* StringEXtension.m */; };
 		D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */; };
 		D7A7D0871FE90AFC008D8C5A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7D0861FE90AFC008D8C5A /* MapKit.framework */; };
 		E335005AF5A204DD62C9ABFB /* libPods-YPSharingCarton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A8B5C5573F809126DC21C1 /* libPods-YPSharingCarton.a */; };
@@ -177,6 +187,24 @@
 		D775BFDF202C2722009B5D55 /* 定位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定位.png"; sourceTree = "<group>"; };
 		D775BFE0202C2722009B5D55 /* 目的地.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "目的地.png"; sourceTree = "<group>"; };
 		D775BFE1202C2722009B5D55 /* 首牛.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "首牛.png"; sourceTree = "<group>"; };
+		D7772C0C2047D4DC00F80717 /* NSArray+LYPLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+LYPLog.h"; sourceTree = "<group>"; };
+		D7772C0D2047D4DC00F80717 /* NSArray+LYPLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LYPLog.m"; sourceTree = "<group>"; };
+		D7772C102047D71C00F80717 /* LYPSavePList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPSavePList.h; sourceTree = "<group>"; };
+		D7772C112047D71C00F80717 /* LYPSavePList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPSavePList.m; sourceTree = "<group>"; };
+		D7772C142047D77100F80717 /* XMGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGModel.h; sourceTree = "<group>"; };
+		D7772C152047D77100F80717 /* XMGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGModel.m; sourceTree = "<group>"; };
+		D7772C162047D77100F80717 /* XMGSqliteModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteModelProtocol.h; sourceTree = "<group>"; };
+		D7772C172047D77100F80717 /* XMGSqliteModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteModelTool.h; sourceTree = "<group>"; };
+		D7772C182047D77100F80717 /* XMGSqliteModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqliteModelTool.m; sourceTree = "<group>"; };
+		D7772C192047D77100F80717 /* XMGSqliteTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteTool.h; sourceTree = "<group>"; };
+		D7772C1A2047D77100F80717 /* XMGSqliteTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqliteTool.m; sourceTree = "<group>"; };
+		D7772C1B2047D77100F80717 /* XMGTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTable.h; sourceTree = "<group>"; };
+		D7772C1C2047D77100F80717 /* XMGTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTable.m; sourceTree = "<group>"; };
+		D7772C242047FDA100F80717 /* LYPLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPLoginVC.h; sourceTree = "<group>"; };
+		D7772C252047FDA100F80717 /* LYPLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPLoginVC.m; sourceTree = "<group>"; };
+		D7772C272047FDC000F80717 /* LYPLoginVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LYPLoginVC.storyboard; sourceTree = "<group>"; };
+		D787BDD42048EC8900FA4751 /* LYPRegisterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPRegisterVC.h; sourceTree = "<group>"; };
+		D787BDD52048EC8900FA4751 /* LYPRegisterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPRegisterVC.m; sourceTree = "<group>"; };
 		D78DEAD71FFF686C0093AC6C /* libxgidfa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxgidfa.a; sourceTree = "<group>"; };
 		D78DEAD81FFF686C0093AC6C /* libXG-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libXG-SDK.a"; sourceTree = "<group>"; };
 		D78DEAD91FFF686C0093AC6C /* ReleaseNotes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReleaseNotes.txt; sourceTree = "<group>"; };
@@ -186,6 +214,8 @@
 		D78DEAE11FFF68E70093AC6C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D78DEAE31FFF68F00093AC6C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D78DEAE51FFF71070093AC6C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D79668D0204536DB00067697 /* StringEXtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEXtension.m; sourceTree = "<group>"; };
+		D79668D1204536DB00067697 /* StringEXtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEXtension.h; sourceTree = "<group>"; };
 		D7A7D0811FE905B8008D8C5A /* LYPMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMapViewController.h; sourceTree = "<group>"; };
 		D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMapViewController.m; sourceTree = "<group>"; };
 		D7A7D0861FE90AFC008D8C5A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -265,6 +295,7 @@
 		D73E81941FE76093003C6DA9 /* YPSharingCarton */ = {
 			isa = PBXGroup;
 			children = (
+				D7772C0F2047D65400F80717 /* Tool */,
 				D78DEADE1FFF68940093AC6C /* YPSharingCarton.entitlements */,
 				D78DEAD51FFF686C0093AC6C /* sdk */,
 				D73E81E51FE76DD5003C6DA9 /* Main */,
@@ -288,6 +319,7 @@
 		D73E81AD1FE76093003C6DA9 /* YPSharingCartonTests */ = {
 			isa = PBXGroup;
 			children = (
+				D7772C0B2047D4BC00F80717 /* NSLog */,
 				D75B894B202AA21300118F22 /* Foundation+Log.m */,
 				D73E81AE1FE76093003C6DA9 /* YPSharingCartonTests.m */,
 				D73E81B01FE76093003C6DA9 /* Info.plist */,
@@ -330,6 +362,8 @@
 		D73E81D31FE767EE003C6DA9 /* UITool */ = {
 			isa = PBXGroup;
 			children = (
+				D79668D1204536DB00067697 /* StringEXtension.h */,
+				D79668D0204536DB00067697 /* StringEXtension.m */,
 				D765FA612005E5470028D8EB /* UpAndLowerButtonPlace.h */,
 				D765FA602005E5470028D8EB /* UpAndLowerButtonPlace.m */,
 				D73E81D51FE7685E003C6DA9 /* UIBarButtonItem+Extension.h */,
@@ -393,6 +427,7 @@
 		D73E81E61FE76DE3003C6DA9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D7772C232047FD5B00F80717 /* Login */,
 				D73E81E91FE76E39003C6DA9 /* LYPPersonMainVC.h */,
 				D73E81EA1FE76E39003C6DA9 /* LYPPersonMainVC.m */,
 				D73E81EC1FE76F11003C6DA9 /* LYPMessageMainVC.h */,
@@ -495,6 +530,53 @@
 				D775BFDE202C2722009B5D55 /* SpeechSynthesizer.m */,
 			);
 			path = SpeechSynthesizer;
+			sourceTree = "<group>";
+		};
+		D7772C0B2047D4BC00F80717 /* NSLog */ = {
+			isa = PBXGroup;
+			children = (
+				D7772C0C2047D4DC00F80717 /* NSArray+LYPLog.h */,
+				D7772C0D2047D4DC00F80717 /* NSArray+LYPLog.m */,
+			);
+			path = NSLog;
+			sourceTree = "<group>";
+		};
+		D7772C0F2047D65400F80717 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D7772C132047D77100F80717 /* Classes */,
+				D7772C102047D71C00F80717 /* LYPSavePList.h */,
+				D7772C112047D71C00F80717 /* LYPSavePList.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		D7772C132047D77100F80717 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D7772C142047D77100F80717 /* XMGModel.h */,
+				D7772C152047D77100F80717 /* XMGModel.m */,
+				D7772C162047D77100F80717 /* XMGSqliteModelProtocol.h */,
+				D7772C172047D77100F80717 /* XMGSqliteModelTool.h */,
+				D7772C182047D77100F80717 /* XMGSqliteModelTool.m */,
+				D7772C192047D77100F80717 /* XMGSqliteTool.h */,
+				D7772C1A2047D77100F80717 /* XMGSqliteTool.m */,
+				D7772C1B2047D77100F80717 /* XMGTable.h */,
+				D7772C1C2047D77100F80717 /* XMGTable.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D7772C232047FD5B00F80717 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D7772C242047FDA100F80717 /* LYPLoginVC.h */,
+				D7772C252047FDA100F80717 /* LYPLoginVC.m */,
+				D7772C272047FDC000F80717 /* LYPLoginVC.storyboard */,
+				D787BDD42048EC8900FA4751 /* LYPRegisterVC.h */,
+				D787BDD52048EC8900FA4751 /* LYPRegisterVC.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		D78DEAD51FFF686C0093AC6C /* sdk */ = {
@@ -663,6 +745,7 @@
 				D768E53C1FEA3DA5003224AB /* LYPPersonCycTableViewCell.xib in Resources */,
 				D73E819F1FE76093003C6DA9 /* Assets.xcassets in Resources */,
 				D775BFE8202C2722009B5D55 /* 目的地.png in Resources */,
+				D7772C282047FDC000F80717 /* LYPLoginVC.storyboard in Resources */,
 				D775BFE9202C2722009B5D55 /* 首牛.png in Resources */,
 				D760982D1FEBAB3E0020152C /* LYPServiceV.xib in Resources */,
 				D775BFE7202C2722009B5D55 /* 定位.png in Resources */,
@@ -726,6 +809,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-YPSharingCarton/Pods-YPSharingCarton-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -848,7 +932,11 @@
 				D73E81DB1FE7685F003C6DA9 /* UIImage+Extention.m in Sources */,
 				D73E81E01FE769E9003C6DA9 /* KKNavController.m in Sources */,
 				D76098301FEBB0250020152C /* LYPServiceViewController.m in Sources */,
+				D7772C1F2047D77100F80717 /* XMGSqliteTool.m in Sources */,
 				D768E53F1FEA4CA9003224AB /* LYPPersonTableViewCell.m in Sources */,
+				D787BDD62048EC8900FA4751 /* LYPRegisterVC.m in Sources */,
+				D7772C262047FDA100F80717 /* LYPLoginVC.m in Sources */,
+				D7772C1E2047D77100F80717 /* XMGSqliteModelTool.m in Sources */,
 				D73E819A1FE76093003C6DA9 /* ViewController.m in Sources */,
 				D768A59720294E9800C8995D /* LYPLonginNetworkTool.m in Sources */,
 				D75B896C202AE70B00118F22 /* LYPDataListModel.m in Sources */,
@@ -860,16 +948,20 @@
 				D765FA652005F3BB0028D8EB /* LYPQRCodeResultVC.m in Sources */,
 				D73E81CD1FE76208003C6DA9 /* KKAnimateViewController.m in Sources */,
 				D73E81CC1FE76208003C6DA9 /* KKSliderMenuTool.m in Sources */,
+				D7772C122047D71C00F80717 /* LYPSavePList.m in Sources */,
 				D73E81EE1FE76F11003C6DA9 /* LYPMessageMainVC.m in Sources */,
 				D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */,
 				D765FA622005E5470028D8EB /* UpAndLowerButtonPlace.m in Sources */,
+				D7772C1D2047D77100F80717 /* XMGModel.m in Sources */,
 				D768E5351FEA13C4003224AB /* LYPPersonHeadView.m in Sources */,
+				D7772C202047D77100F80717 /* XMGTable.m in Sources */,
 				D73E81DA1FE7685F003C6DA9 /* UIView+Extension.m in Sources */,
 				D73E81D21FE76275003C6DA9 /* LYPMainViewController.m in Sources */,
 				D73E81EB1FE76E39003C6DA9 /* LYPPersonMainVC.m in Sources */,
 				D775BFE4202C2722009B5D55 /* MapManager.m in Sources */,
 				D775BFE6202C2722009B5D55 /* SpeechSynthesizer.m in Sources */,
 				D775BFE5202C2722009B5D55 /* MoreMenuView.m in Sources */,
+				D79668D2204536DB00067697 /* StringEXtension.m in Sources */,
 				D768E53A1FEA3D03003224AB /* LYPPersonCycTableViewCell.m in Sources */,
 				D760982B1FEBAB270020152C /* LYPServiceV.m in Sources */,
 				D73E81DC1FE7685F003C6DA9 /* UIBarButtonItem+Extension.m in Sources */,
@@ -885,6 +977,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73E81AF1FE76093003C6DA9 /* YPSharingCartonTests.m in Sources */,
+				D7772C0E2047D4DC00F80717 /* NSArray+LYPLog.m in Sources */,
 				D75B894C202AA21300118F22 /* Foundation+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1034,7 +1127,7 @@
 					"\"$(SRCROOT)/YPSharingCarton/PrefixHeader.pch\"",
 				);
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1067,7 +1160,7 @@
 					"\"$(SRCROOT)/YPSharingCarton/PrefixHeader.pch\"",
 				);
 				INFOPLIST_FILE = YPSharingCarton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

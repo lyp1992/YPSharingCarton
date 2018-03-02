@@ -49,18 +49,19 @@ static CLLocationCoordinate2D distinateCoor;//目的地坐标
 //    //设置定位距离
 //    _mapView.distanceFilter = 5.0f;
     
-//    [AMapServices sharedServices].enableHTTPS = YES;
-//    self.mapView.showsUserLocation = YES;
-//    self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
-//    self.mapView.showsIndoorMap = YES;    //YES：显示室内地图；NO：不显示；
-//    [self.mapView setZoomLevel:17 animated:YES];//设置缩放水平
-//    self.mapView.delegate = self;
-//    
-//    MAUserLocationRepresentation *r = [[MAUserLocationRepresentation alloc] init];
-//    r.showsAccuracyRing = NO;///精度圈是否显示，默认YES
-//    r.image = [UIImage imageNamed:@"userPosition"]; ///定位图标, 与蓝色原点互斥
-//    r.showsHeadingIndicator = NO;///是否显示方向指示(MAUserTrackingModeFollowWithHeading模式开启)。默认为YES
-//    [self.mapView updateUserLocationRepresentation:r];
+    [AMapServices sharedServices].enableHTTPS = YES;
+    self.mapView.showsUserLocation = YES;
+    self.mapView.userTrackingMode = MAUserTrackingModeFollow;
+    self.mapView.showsIndoorMap = YES;    //YES：显示室内地图；NO：不显示；
+    [self.mapView setZoomLevel:17 animated:YES];//设置缩放水平
+    self.mapView.delegate = self;
+    
+    MAUserLocationRepresentation *r = [[MAUserLocationRepresentation alloc] init];
+    r.showsAccuracyRing = NO;///精度圈是否显示，默认YES
+    r.image = [UIImage imageNamed:@"定位"]; ///定位图标, 与蓝色原点互斥
+//    self.locationPointImgName = @"定位";
+    r.showsHeadingIndicator = NO;///是否显示方向指示(MAUserTrackingModeFollowWithHeading模式开启)。默认为YES
+    [self.mapView updateUserLocationRepresentation:r];
 }
 #pragma mark --带block的地图初始化方法
 -(void)initMapViewWithBlock:(MapBlock)block{
@@ -130,9 +131,10 @@ static CLLocationCoordinate2D distinateCoor;//目的地坐标
         
         //设置大头针显示的图片
         if (!self.locationPointImgName) {
-            annotationView.image = [UIImage imageNamed:@"定位"];
+            annotationView.image = [UIImage imageNamed:@"目的地"];
         }else{
             annotationView.image = [UIImage imageNamed:self.locationPointImgName];
+//            annotationView.image = [UIImage imageNamed:@"定位"];
         }
         //点击大头针显示的左边的视图
         UIImageView *imageV = [[UIImageView alloc]init];
@@ -221,6 +223,7 @@ updatingLocation:(BOOL)updatingLocation
     if(updatingLocation)
     {
         self.currentLocation = [userLocation.location copy];
+//        [[NSNotificationCenter defaultCenter]postNotificationName:@"getDeviceList" object:nil userInfo:@{@"lon":@(self.currentLocation.coordinate.longitude),@"lat":@(self.currentLocation.coordinate.latitude)}];
     }
     
     

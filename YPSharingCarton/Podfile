@@ -15,6 +15,7 @@ pod 'Masonry', '~> 1.0.2'
 pod 'AFNetworking', '~> 3.1.0'
 pod 'MJExtension', '~> 3.0.13'
 pod 'JZLocationConverter', '~> 1.0.0'
+pod 'SVProgressHUD', '~> 2.2'
 
   target 'YPSharingCartonTests' do
     inherit! :search_paths

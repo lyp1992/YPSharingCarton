@@ -13,11 +13,14 @@
 -(void)getEquipmentListWithDic:(NSDictionary *)parames success:(successBlock)success failure:(failureBlock)failure{
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
+//     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+
 //    本地登录成功之后的token，appkey
-    [serializer setValue:@"" forHTTPHeaderField:@"token"];
-    [serializer setValue:APPKey forHTTPHeaderField:@"appkey"];
-    NSString *url = [NSString stringWithFormat:@"%@/devicelist?/lon=%@&lat=%@",getCodeUrl,parames[@"lon"],parames[@"lat"]];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:APPKey forHTTPHeaderField:@"appkey"];
+    [manager.requestSerializer setValue:parames[@"token"] forHTTPHeaderField:@"token"];
+    
+    NSString *url = [NSString stringWithFormat:@"%@/devicelist?lon=%@&lat=%@",getCodeUrl,parames[@"lon"],parames[@"lat"]];
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             success(responseObject,0);

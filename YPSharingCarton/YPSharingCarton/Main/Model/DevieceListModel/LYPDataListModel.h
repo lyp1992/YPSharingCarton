@@ -24,7 +24,7 @@
 
 @property (nonatomic, copy) NSString *seatId;
 
-@property (nonatomic, copy) NSString *lon;
-@property (nonatomic, copy) NSString *lat;
+@property (nonatomic, assign) float lon;
+@property (nonatomic, assign) float lat;
 
 @end

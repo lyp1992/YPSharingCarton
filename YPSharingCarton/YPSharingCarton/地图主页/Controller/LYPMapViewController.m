@@ -10,19 +10,40 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "MapManager.h"
-@interface LYPMapViewController ()<AMapLocationManagerDelegate,MAMapViewDelegate>
-@property (nonatomic, strong) MAMapView *mapView;
-@property (nonatomic, strong) AMapLocationManager *locationManager;
+
+#import "LYPListNeteworkTool.h"
+#import "LYPSavePList.h"
+#import "LYPDeviceListModel.h"
+#import "LYPDataListModel.h"
+
+@interface LYPMapViewController ()<CLLocationManagerDelegate>
+
+@property (nonatomic, strong) NSMutableArray *deviceListArr;
+@property (nonatomic, strong) MapManager *manager;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *location;
+
 @end
 
 @implementation LYPMapViewController
 
+-(NSMutableArray *)deviceListArr{
+    if (!_deviceListArr) {
+        _deviceListArr = [NSMutableArray array];
+    }
+    return _deviceListArr;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self setUPMap];//设置地图
-//    [self setUPLocation];
+    
     [self loadMapSelf];
+    
+//    添加标记点
+     [self startLocation];
+
 }
 
 -(void)loadMapSelf{
@@ -30,89 +51,92 @@
     MapManager *manager =[MapManager sharedManager];
     manager.controller = self;
     [manager initMapView];
+    self.manager = manager;
 }
-//-(void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
+//开始定位
+- (void)startLocation {
+    if ([CLLocationManager locationServicesEnabled]) {
+        //        CLog(@"--------开始定位");
+        self.locationManager = [[CLLocationManager alloc]init];
+        self.locationManager.delegate = self;
+        //控制定位精度,越高耗电量越
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        // 总是授权
+        [self.locationManager requestAlwaysAuthorization];
+        self.locationManager.distanceFilter = 10.0f;
+        [self.locationManager requestAlwaysAuthorization];
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+-(void)getDeviceList:(CLLocation*)location{
+
+    NSString *token = [LYPSavePList readTokenPlist];
+    LYPListNeteworkTool *tool = [[LYPListNeteworkTool alloc]init];
+    if ([StringEXtension isBlankString:token]) {
+        return;
+    }
+//    参数，token，自己的位置
+    NSDictionary *parame = [NSDictionary dictionaryWithObjectsAndKeys:@(location.coordinate.longitude),@"lon",@(location.coordinate.latitude),@"lat",token,@"token", nil];
+    [tool getEquipmentListWithDic:parame success:^(id responseData, NSInteger responseCode) {
+        NSLog(@"=%@",responseData);
+        LYPDeviceListModel *listModel = [LYPDeviceListModel mj_objectWithKeyValues:responseData];
+//        创建位置
+        for (LYPDataListModel *dataList in listModel.data) {
+            CLLocationCoordinate2D coor;
+            coor.latitude = dataList.lat;
+            coor.longitude = dataList.lon;
+            [[MapManager sharedManager] addAnomationWithCoor:coor];
+        }
+        
+    } failure:^(id responseData, NSInteger responseCode) {
+        NSLog(@"err==%@",responseData);
+    }];
+    
+}
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    if ([error code] == kCLErrorDenied) {
+        NSLog(@"访问被拒绝");
+    }
+    if ([error code] == kCLErrorLocationUnknown) {
+        NSLog(@"无法获取位置信息");
+    }
+}
+//定位代理经纬度回调
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
+    CLLocation *newLocation = locations[0];
+    [self getDeviceList:newLocation];
+    
+//    // 获取当前所在的城市名
+//    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+//    //根据经纬度反向地理编译出地址信息
+//    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *array, NSError *error){
+//        if (array.count > 0){
+//            CLPlacemark *placemark = [array objectAtIndex:0];
 //
-//}
-//-(void)viewDidLayoutSubviews{
-//    [super viewDidLayoutSubviews];
+//            //获取城市
+//            NSString *city = placemark.locality;
+//            if (!city) {
+//                //四大直辖市的城市信息无法通过locality获得，只能通过获取省份的方法来获得（如果city为空，则可知为直辖市）
+//                city = placemark.administrativeArea;
+//            }
+//            NSLog(@"city = %@", city);
 //
-//}
-//-(void)setUPMap{
-//    [AMapServices sharedServices].enableHTTPS = YES;
-//    self.mapView = [[MAMapView alloc]initWithFrame:self.view.bounds];
-//    [self.view addSubview:self.mapView];
-//
-//    self.mapView.showsUserLocation = YES;
-//    self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
-//    self.mapView.showsIndoorMap = YES;    //YES：显示室内地图；NO：不显示；
-//    [self.mapView setZoomLevel:17 animated:YES];//设置缩放水平
-//    self.mapView.delegate = self;
-//
-//    MAUserLocationRepresentation *r = [[MAUserLocationRepresentation alloc] init];
-//    r.showsAccuracyRing = NO;///精度圈是否显示，默认YES
-//    r.image = [UIImage imageNamed:@"userPosition"]; ///定位图标, 与蓝色原点互斥
-//    r.showsHeadingIndicator = NO;///是否显示方向指示(MAUserTrackingModeFollowWithHeading模式开启)。默认为YES
-//    [self.mapView updateUserLocationRepresentation:r];
-//
-//    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-//    pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.869645, 116.460052);
-//    pointAnnotation.title = @"京瑞大厦";
-//    pointAnnotation.subtitle = @"阜通东大街6号";
-//
-////    39.8684600000,116.4597400000 联合国际大厦 北京市朝阳区十八里店地区十里河村北方向
-//    MAPointAnnotation *pointAnnotation1 = [[MAPointAnnotation alloc] init];
-//    pointAnnotation1.coordinate = CLLocationCoordinate2DMake(39.8684600000, 116.4597400000);
-//    pointAnnotation1.title = @"联合国际大厦";
-//    pointAnnotation1.subtitle = @"阜通东大街6号";
-////    39.8703900000,116.4599600000 五环大酒店  北京市朝阳区潘家园街道华威里社区东南方向
-//    MAPointAnnotation *pointAnnotation2 = [[MAPointAnnotation alloc] init];
-//    pointAnnotation2.coordinate = CLLocationCoordinate2DMake(39.8703900000, 116.4599600000);
-//    pointAnnotation2.title = @"五环大酒店";
-//    pointAnnotation2.subtitle = @"阜通东大街6号";
-//
-//    [self.mapView addAnnotation:pointAnnotation];
-//    [self.mapView addAnnotation:pointAnnotation1];
-//    [self.mapView addAnnotation:pointAnnotation2];
-//
-//
-//}
-//
-//-(void)setUPLocation{
-//
-//    self.locationManager = [[AMapLocationManager alloc]init];
-//    self.locationManager.delegate = self;
-//    self.locationManager.distanceFilter = 20;
-//    self.locationManager.locatingWithReGeocode = YES;
-//
-//    [self.locationManager startUpdatingLocation];
-//}
-//#pragma mark AMapLocationManagerDelegate
-//-(void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location reGeocode:(AMapLocationReGeocode *)reGeocode{
-//
-//    NSLog(@"%@",reGeocode);
-//
-//}
-//
-//#pragma mark MAMapViewDelegate
-//-(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation{
-//
-//    if ([annotation isKindOfClass:[MAPointAnnotation class]])
-//    {
-//        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
-//        MAAnnotationView *annotationView = (MAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
-//        if (annotationView == nil)
-//        {
-//            annotationView = [[MAAnnotationView alloc] initWithAnnotation:annotation
-//                                                          reuseIdentifier:reuseIndetifier];
 //        }
-//        annotationView.image = [UIImage imageNamed:@"fixed_point_normal"];
-//        //设置中心点偏移，使得标注底部中间点成为经纬度对应点
-//        annotationView.centerOffset = CGPointMake(0, -18);
-//        return annotationView;
-//    }
-//    return nil;
-//}
+//        else if (error == nil && [array count] == 0)
+//        {
+//            NSLog(@"No results were returned.");
+//        }
+//        else if (error != nil)
+//        {
+//            NSLog(@"An error occurred = %@", error);
+//        }
+//    }];
+    //系统会一直更新数据，直到选择停止更新，因为我们只需要获得一次经纬度即可，所以获取之后就停止更新
+    [manager stopUpdatingLocation];
+    
+}
+
 
 @end

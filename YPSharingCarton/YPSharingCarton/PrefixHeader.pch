@@ -35,5 +35,7 @@
 #import "UpAndLowerButtonPlace.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
+#import "StringEXtension.h"
+#import <SVProgressHUD.h>
 
 #endif /* PrefixHeader_pch */
