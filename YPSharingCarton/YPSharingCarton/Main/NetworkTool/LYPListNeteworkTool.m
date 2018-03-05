@@ -32,10 +32,10 @@
 
 -(void)takePaperWithDic:(NSDictionary *)parames success:(successBlock)block failure:(failureBlock)failure{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     //    本地登录成功之后的token，appkey
-    [serializer setValue:@"" forHTTPHeaderField:@"token"];
-    [serializer setValue:APPKey forHTTPHeaderField:@"appkey"];
+    [manager.requestSerializer setValue:[LYPSavePList readTokenPlist] forHTTPHeaderField:@"token"];
+    [manager.requestSerializer setValue:APPKey forHTTPHeaderField:@"appkey"];
     [manager POST:takePaperUrl parameters:parames progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         block(responseObject,0);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

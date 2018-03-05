@@ -10,4 +10,6 @@
 
 @interface LYPRegisterVC : UIViewController
 
+@property (nonatomic, assign) BOOL isregister;
+
 @end

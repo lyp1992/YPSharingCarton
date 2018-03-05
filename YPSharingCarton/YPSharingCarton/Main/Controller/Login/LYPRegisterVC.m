@@ -7,31 +7,215 @@
 //
 
 #import "LYPRegisterVC.h"
+#import "LYPLonginNetworkTool.h"
+#import "LYPloginModel.h"
+#import "LYPSavePList.h"
 
-@interface LYPRegisterVC ()
+#define timeOut 60
+
+@interface LYPRegisterVC ()<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextF;
+@property (weak, nonatomic) IBOutlet UITextField *passWTextF;
+@property (weak, nonatomic) IBOutlet UITextField *vercodeTextF;
+@property (weak, nonatomic) IBOutlet UIButton *getCodeButton;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet UIButton *dismssButton;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneLabelWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textPhoneLabelWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneViewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *passWViewWidth;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginButtonWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginButtonConstainHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *vericodeContainWitdh;
+
 
 @end
 
 @implementation LYPRegisterVC
+{
+    
+    dispatch_source_t _timer;
+    
+}
+- (IBAction)getCodeClick:(id)sender {
+    if ([StringEXtension isBlankString:self.phoneTextF.text]) {
+        [SVStatusHUD showWithStatus:@"请填写手机号码"];
+        return;
+    }else{
+    
+        if ([StringEXtension isBlankString:self.vercodeTextF.text]) {
+            [SVStatusHUD showWithStatus:@"请填写验证码"];
+            return;
+        }
+        LYPLonginNetworkTool *tool = [[LYPLonginNetworkTool alloc]init];
+        
+        int ctype = self.isregister ? 1:2;
+       
+            NSDictionary *parames = [NSDictionary dictionaryWithObjectsAndKeys:@"mobile",self.phoneTextF.text,@"ctype",@(ctype), nil];
+            [tool getVerificationCodeWithDic:parames success:^(id responseData, NSInteger responseCode) {
+                LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+                if (![StringEXtension isBlankString:model.error.msg]) {
+                    [SVStatusHUD showWithStatus:@"获取验证码失败"];
+                     dispatch_resume(_timer);
+                }
+            } failure:^(id responseData, NSInteger responseCode) {
+                [SVStatusHUD showWithStatus:@"获取验证码失败"];
+                 dispatch_resume(_timer);
+            }];
 
+    __block int timeout = timeOut; //倒计时时间
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(_timer, ^{
+        if(timeout<0){ //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置界面的按钮显示 根据自己需求设置
+        
+                self.timeLabel.hidden = YES;
+            });
+        }else{
+            int seconds = timeout % 61;
+            //                NSString *strTime = [NSString stringWithFormat:@"%.2d", seconds];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //设置界面的按钮显示 根据自己需求设置
+                
+                self.timeLabel.hidden = NO;
+                self.timeLabel.text = [NSString stringWithFormat:@"%.2ds重新获取",seconds];
+                
+                self.timeLabel.textColor = [UIColor whiteColor];
+                //                _timerLabel.backgroundColor = [UIColor colorWithRed:58/255.0 green:190/255.0 blue:192/255.0 alpha:1];
+                self.timeLabel.textAlignment = NSTextAlignmentCenter;
+                //                _timerLabel.layer.cornerRadius = 5.f;
+                self.timeLabel.font = [UIFont systemFontOfSize:14];
+                self.timeLabel.layer.masksToBounds = YES;
+                //                [UIView commitAnimations];
+                self.timeLabel.userInteractionEnabled = NO;
+            });
+            timeout--;
+        }
+    });
+    dispatch_resume(_timer);
+        
+    }
+    
+}
+
+- (IBAction)registerButton:(id)sender {
+    if ([StringEXtension isBlankString:self.phoneTextF.text] || [StringEXtension isBlankString:self.passWTextF.text] || [StringEXtension isBlankString:self.vercodeTextF.text] ) {
+        [SVStatusHUD showWithStatus:@"请输入正确的信息"];
+    }else{
+        LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
+        if (self.registerButton) {
+            NSDictionary *regisDic = @{@"mobile":self.phoneTextF.text,@"password":self.passWTextF.text,@"deviceToken":[LYPUserSingle shareUserSingle].deviceToken,@"ios":@(0)};
+            [longinTool userLoginRegisterWithDic:regisDic success:^(id responseData, NSInteger responseCode) {
+                
+                LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+                if ([StringEXtension isBlankString:model.error.msg]) {
+                    //                将返回的token写入本地
+                    [LYPSavePList saveTokenPlistWith:model.data.token];
+                    [SVStatusHUD showWithStatus:@"注册成功"];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }else{
+                    [SVStatusHUD showWithStatus:model.error.msg];
+                }
+                
+            } failre:^(id responseData, NSInteger responseCode) {
+                NSLog(@"errRegister=%@",responseData);
+                [SVStatusHUD showWithStatus:@"注册失败"];
+            }];
+        }else{
+            
+            NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"mobile",self.phoneTextF.text,@"code",self.vercodeTextF.text,@"password",self.passWTextF.text, nil];
+            [longinTool resetPasswordWithDic:dic success:^(id responseData, NSInteger responseCode) {
+                LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+                if ([StringEXtension isBlankString:model.error.msg]) {
+                    [SVStatusHUD showWithStatus:model.error.msg];
+                }else{
+                    [SVStatusHUD showWithStatus:@"重置成功"];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }
+            } failure:^(id responseData, NSInteger responseCode) {
+                [SVStatusHUD showWithStatus:@"重置失败"];
+            }];
+        }
+      
+        
+    }
+    
+}
+- (IBAction)dismissClick:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if (!self.isregister) {
+        [self.registerButton setTitle:@"重置密码" forState:UIControlStateNormal];
+    }
+    self.scrollview.contentSize = CGSizeMake(SCREENWIDTH, SCREENHEIGHT-20);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupForDismissKeyboard];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)updateViewConstraints{
+    [super updateViewConstraints];
+    
+    CGFloat witdh = 345 *SCREENWIDTH/375;
+    self.phoneLabelWidth.constant = witdh;
+    self.textPhoneLabelWidth.constant = witdh;
+    self.phoneViewWidth.constant = witdh;
+    self.passWViewWidth.constant = witdh;
+    self.loginButtonWidth.constant = witdh;
+    
+    self.loginButtonConstainHeight.constant = 85 *SCREENHEIGHT/667 -10;
+    self.vericodeContainWitdh.constant = witdh;
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)keyboardWillShow:(NSNotification*)notification
+{
+    
+    NSDictionary *info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    // 在这里调整UI位置
+    CGPoint pt = [_registerButton convertPoint:CGPointMake(0, 0) toView:[UIApplication sharedApplication].keyWindow];
+    float txDistanceToBottom = SCREENHEIGHT - pt.y - _registerButton.frame.size.height;   // 距离底部多远
+    if( txDistanceToBottom >= kbSize.height )  // 键盘不会覆盖
+        return;
+    
+    self.scrollview.contentSize = CGSizeMake(_scrollview.contentSize.width, _scrollview.contentSize.height + kbSize.height); //原始滑动距离增加键盘高度
+    
+    // 差多少
+    float offsetY = txDistanceToBottom - kbSize.height - 40;  // 补一些给各种输入法
+    [_scrollview setContentOffset:CGPointMake(0, _scrollview.contentOffset.y - offsetY) animated:YES];
 }
-*/
+
+-(void)keyboardWillHide:(NSNotification*)notification
+{
+    NSDictionary *info = [notification userInfo];
+    //    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    
+    CGFloat animationDurationValue = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:animationDurationValue animations:^{
+        
+        self.scrollview.contentSize = CGSizeMake(SCREENWIDTH, 0);
+    }];
+}
 
 @end

@@ -31,6 +31,8 @@
 		D75B8963202AE3C900118F22 /* LYPErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B8962202AE3C900118F22 /* LYPErrorModel.m */; };
 		D75B8967202AE4D400118F22 /* LYPDeviceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B8966202AE4D400118F22 /* LYPDeviceListModel.m */; };
 		D75B896C202AE70B00118F22 /* LYPDataListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D75B896B202AE70B00118F22 /* LYPDataListModel.m */; };
+		D75E7798204D146B0032F2AB /* SVStatusHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E7797204D146B0032F2AB /* SVStatusHUD.m */; };
+		D75E779C204D19030032F2AB /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E779A204D19030032F2AB /* UIViewController+DismissKeyboard.m */; };
 		D76098171FEB520E0020152C /* LYPPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = D76098161FEB520E0020152C /* LYPPromptView.m */; };
 		D76098221FEB969E0020152C /* LYPScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76098211FEB969E0020152C /* LYPScanViewController.m */; };
 		D76098251FEB983B0020152C /* LYPCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D76098241FEB983B0020152C /* LYPCustomButton.m */; };
@@ -148,6 +150,10 @@
 		D75B8966202AE4D400118F22 /* LYPDeviceListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPDeviceListModel.m; sourceTree = "<group>"; };
 		D75B896A202AE70B00118F22 /* LYPDataListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPDataListModel.h; sourceTree = "<group>"; };
 		D75B896B202AE70B00118F22 /* LYPDataListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPDataListModel.m; sourceTree = "<group>"; };
+		D75E7796204D146A0032F2AB /* SVStatusHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVStatusHUD.h; sourceTree = "<group>"; };
+		D75E7797204D146B0032F2AB /* SVStatusHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVStatusHUD.m; sourceTree = "<group>"; };
+		D75E779A204D19030032F2AB /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
+		D75E779B204D19030032F2AB /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
 		D76098151FEB520E0020152C /* LYPPromptView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPPromptView.h; sourceTree = "<group>"; };
 		D76098161FEB520E0020152C /* LYPPromptView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPPromptView.m; sourceTree = "<group>"; };
 		D76098201FEB969E0020152C /* LYPScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPScanViewController.h; sourceTree = "<group>"; };
@@ -544,6 +550,10 @@
 		D7772C0F2047D65400F80717 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D75E7796204D146A0032F2AB /* SVStatusHUD.h */,
+				D75E7797204D146B0032F2AB /* SVStatusHUD.m */,
+				D75E779B204D19030032F2AB /* UIViewController+DismissKeyboard.h */,
+				D75E779A204D19030032F2AB /* UIViewController+DismissKeyboard.m */,
 				D7772C132047D77100F80717 /* Classes */,
 				D7772C102047D71C00F80717 /* LYPSavePList.h */,
 				D7772C112047D71C00F80717 /* LYPSavePList.m */,
@@ -926,6 +936,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75E779C204D19030032F2AB /* UIViewController+DismissKeyboard.m in Sources */,
 				D75B8963202AE3C900118F22 /* LYPErrorModel.m in Sources */,
 				D76098251FEB983B0020152C /* LYPCustomButton.m in Sources */,
 				D76098171FEB520E0020152C /* LYPPromptView.m in Sources */,
@@ -952,6 +963,7 @@
 				D73E81EE1FE76F11003C6DA9 /* LYPMessageMainVC.m in Sources */,
 				D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */,
 				D765FA622005E5470028D8EB /* UpAndLowerButtonPlace.m in Sources */,
+				D75E7798204D146B0032F2AB /* SVStatusHUD.m in Sources */,
 				D7772C1D2047D77100F80717 /* XMGModel.m in Sources */,
 				D768E5351FEA13C4003224AB /* LYPPersonHeadView.m in Sources */,
 				D7772C202047D77100F80717 /* XMGTable.m in Sources */,
