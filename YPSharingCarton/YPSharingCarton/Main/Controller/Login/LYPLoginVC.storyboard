@@ -592,12 +592,6 @@
                                             <action selector="registerButton:" destination="zdn-m6-Msh" eventType="touchUpInside" id="2zF-Ju-W6G"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjs-wv-gLJ">
-                                        <rect key="frame" x="255" y="262" width="105" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8c-3P-x7j">
                                         <rect key="frame" x="15" y="262" width="345" height="50"/>
                                         <subviews>
@@ -665,6 +659,12 @@
                                             <constraint firstAttribute="bottom" secondItem="nm5-7g-TeY" secondAttribute="bottom" id="wzj-Od-OKQ"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjs-wv-gLJ">
+                                        <rect key="frame" x="255" y="262" width="105" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cnS-Bn-A4w" firstAttribute="leading" secondItem="rOt-iz-GPi" secondAttribute="trailing" id="6ml-Qr-ipK"/>

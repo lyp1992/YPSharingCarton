@@ -46,16 +46,12 @@
         [SVStatusHUD showWithStatus:@"请填写手机号码"];
         return;
     }else{
-    
-        if ([StringEXtension isBlankString:self.vercodeTextF.text]) {
-            [SVStatusHUD showWithStatus:@"请填写验证码"];
-            return;
-        }
+        
         LYPLonginNetworkTool *tool = [[LYPLonginNetworkTool alloc]init];
         
         int ctype = self.isregister ? 1:2;
        
-            NSDictionary *parames = [NSDictionary dictionaryWithObjectsAndKeys:@"mobile",self.phoneTextF.text,@"ctype",@(ctype), nil];
+            NSDictionary *parames = [NSDictionary dictionaryWithObjectsAndKeys:self.phoneTextF.text,@"mobile",@(ctype),@"ctype", nil];
             [tool getVerificationCodeWithDic:parames success:^(id responseData, NSInteger responseCode) {
                 LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
                 if (![StringEXtension isBlankString:model.error.msg]) {
@@ -78,6 +74,7 @@
                 //设置界面的按钮显示 根据自己需求设置
         
                 self.timeLabel.hidden = YES;
+                self.getCodeButton.userInteractionEnabled = YES;
             });
         }else{
             int seconds = timeout % 61;
@@ -86,15 +83,14 @@
                 //设置界面的按钮显示 根据自己需求设置
                 
                 self.timeLabel.hidden = NO;
+                self.timeLabel.backgroundColor = [UIColor lightGrayColor];
+                self.getCodeButton.userInteractionEnabled = NO;
                 self.timeLabel.text = [NSString stringWithFormat:@"%.2ds重新获取",seconds];
                 
                 self.timeLabel.textColor = [UIColor whiteColor];
-                //                _timerLabel.backgroundColor = [UIColor colorWithRed:58/255.0 green:190/255.0 blue:192/255.0 alpha:1];
                 self.timeLabel.textAlignment = NSTextAlignmentCenter;
-                //                _timerLabel.layer.cornerRadius = 5.f;
                 self.timeLabel.font = [UIFont systemFontOfSize:14];
                 self.timeLabel.layer.masksToBounds = YES;
-                //                [UIView commitAnimations];
                 self.timeLabel.userInteractionEnabled = NO;
             });
             timeout--;
