@@ -73,6 +73,9 @@
 		D78DEAE41FFF68F00093AC6C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE31FFF68F00093AC6C /* SystemConfiguration.framework */; };
 		D78DEAE61FFF71070093AC6C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DEAE51FFF71070093AC6C /* libsqlite3.0.tbd */; };
 		D79668D2204536DB00067697 /* StringEXtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D79668D0204536DB00067697 /* StringEXtension.m */; };
+		D79DE0CC2050E73500367CEE /* LYPMoreMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0CB2050E73500367CEE /* LYPMoreMenuViewController.m */; };
+		D79DE0CF205118C500367CEE /* LYPCustomCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0CE205118C500367CEE /* LYPCustomCalloutView.m */; };
+		D79DE0D220511A4400367CEE /* LYPAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0D120511A4400367CEE /* LYPAnnotationView.m */; };
 		D7A7D0831FE905B8008D8C5A /* LYPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */; };
 		D7A7D0871FE90AFC008D8C5A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A7D0861FE90AFC008D8C5A /* MapKit.framework */; };
 		E335005AF5A204DD62C9ABFB /* libPods-YPSharingCarton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A8B5C5573F809126DC21C1 /* libPods-YPSharingCarton.a */; };
@@ -222,6 +225,12 @@
 		D78DEAE51FFF71070093AC6C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D79668D0204536DB00067697 /* StringEXtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEXtension.m; sourceTree = "<group>"; };
 		D79668D1204536DB00067697 /* StringEXtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEXtension.h; sourceTree = "<group>"; };
+		D79DE0CA2050E73500367CEE /* LYPMoreMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMoreMenuViewController.h; sourceTree = "<group>"; };
+		D79DE0CB2050E73500367CEE /* LYPMoreMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMoreMenuViewController.m; sourceTree = "<group>"; };
+		D79DE0CD205118C500367CEE /* LYPCustomCalloutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCustomCalloutView.h; sourceTree = "<group>"; };
+		D79DE0CE205118C500367CEE /* LYPCustomCalloutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCustomCalloutView.m; sourceTree = "<group>"; };
+		D79DE0D020511A4400367CEE /* LYPAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPAnnotationView.h; sourceTree = "<group>"; };
+		D79DE0D120511A4400367CEE /* LYPAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPAnnotationView.m; sourceTree = "<group>"; };
 		D7A7D0811FE905B8008D8C5A /* LYPMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPMapViewController.h; sourceTree = "<group>"; };
 		D7A7D0821FE905B8008D8C5A /* LYPMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPMapViewController.m; sourceTree = "<group>"; };
 		D7A7D0861FE90AFC008D8C5A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -525,6 +534,12 @@
 			children = (
 				D775BFDA202C2722009B5D55 /* MoreMenuView.h */,
 				D775BFDB202C2722009B5D55 /* MoreMenuView.m */,
+				D79DE0CA2050E73500367CEE /* LYPMoreMenuViewController.h */,
+				D79DE0CB2050E73500367CEE /* LYPMoreMenuViewController.m */,
+				D79DE0CD205118C500367CEE /* LYPCustomCalloutView.h */,
+				D79DE0CE205118C500367CEE /* LYPCustomCalloutView.m */,
+				D79DE0D020511A4400367CEE /* LYPAnnotationView.h */,
+				D79DE0D120511A4400367CEE /* LYPAnnotationView.m */,
 			);
 			path = MoreMenuView;
 			sourceTree = "<group>";
@@ -945,10 +960,12 @@
 				D76098301FEBB0250020152C /* LYPServiceViewController.m in Sources */,
 				D7772C1F2047D77100F80717 /* XMGSqliteTool.m in Sources */,
 				D768E53F1FEA4CA9003224AB /* LYPPersonTableViewCell.m in Sources */,
+				D79DE0D220511A4400367CEE /* LYPAnnotationView.m in Sources */,
 				D787BDD62048EC8900FA4751 /* LYPRegisterVC.m in Sources */,
 				D7772C262047FDA100F80717 /* LYPLoginVC.m in Sources */,
 				D7772C1E2047D77100F80717 /* XMGSqliteModelTool.m in Sources */,
 				D73E819A1FE76093003C6DA9 /* ViewController.m in Sources */,
+				D79DE0CF205118C500367CEE /* LYPCustomCalloutView.m in Sources */,
 				D768A59720294E9800C8995D /* LYPLonginNetworkTool.m in Sources */,
 				D75B896C202AE70B00118F22 /* LYPDataListModel.m in Sources */,
 				D76098281FEB9B500020152C /* LYPFatherViewController.m in Sources */,
@@ -968,6 +985,7 @@
 				D768E5351FEA13C4003224AB /* LYPPersonHeadView.m in Sources */,
 				D7772C202047D77100F80717 /* XMGTable.m in Sources */,
 				D73E81DA1FE7685F003C6DA9 /* UIView+Extension.m in Sources */,
+				D79DE0CC2050E73500367CEE /* LYPMoreMenuViewController.m in Sources */,
 				D73E81D21FE76275003C6DA9 /* LYPMainViewController.m in Sources */,
 				D73E81EB1FE76E39003C6DA9 /* LYPPersonMainVC.m in Sources */,
 				D775BFE4202C2722009B5D55 /* MapManager.m in Sources */,

@@ -43,6 +43,7 @@
     
 //    添加标记点
      [self startLocation];
+    
 
 }
 
@@ -82,13 +83,14 @@
         NSLog(@"=%@",responseData);
         LYPDeviceListModel *listModel = [LYPDeviceListModel mj_objectWithKeyValues:responseData];
 //        创建位置
-        for (LYPDataListModel *dataList in listModel.data) {
-            CLLocationCoordinate2D coor;
-            coor.latitude = dataList.lat;
-            coor.longitude = dataList.lon;
-            [[MapManager sharedManager] addAnomationWithCoor:coor];
-        }
-        
+        [[MapManager sharedManager]addAnomationWithArray:listModel.data];
+//        for (LYPDataListModel *dataList in listModel.data) {
+//            CLLocationCoordinate2D coor;
+//            coor.latitude = dataList.lat;
+//            coor.longitude = dataList.lon;
+//            [[MapManager sharedManager] addAnomationWithCoor:coor];
+//        }
+//
     } failure:^(id responseData, NSInteger responseCode) {
         NSLog(@"err==%@",responseData);
     }];

@@ -16,9 +16,9 @@
 //高德导航类
 #import <AMapNaviKit/AMapNaviKit.h>
 //gps纠偏类
-//#import <JZLocationConverter.h>
+#import <JZLocationConverter.h>
 
-typedef void(^MapBlock)(void);
+typedef void(^MapBlock)();
 @interface MapManager : NSObject
 @property (nonatomic,strong)UIViewController *controller;
 //地图对象

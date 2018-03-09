@@ -107,10 +107,13 @@
         [SVStatusHUD showWithStatus:@"请输入正确的信息"];
     }else{
         LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
+        NSString *passW = [StringEXtension sha1:self.passWTextF.text];
         if (self.registerButton) {
-            NSDictionary *regisDic = @{@"mobile":self.phoneTextF.text,@"password":self.passWTextF.text,@"deviceToken":[LYPUserSingle shareUserSingle].deviceToken,@"ios":@(0)};
+//            NSDictionary *regisDic = @{@"mobile":self.phoneTextF.text,@"password":passW,@"deviceToken":[LYPUserSingle shareUserSingle].deviceToken,@"ios":@(1)};
+            NSDictionary *regisDic = @{@"mobile":self.phoneTextF.text,@"password":passW,@"deviceToken":XGAppKey,@"ios":@(1)};
+            [SVProgressHUD showWithStatus:@"正在注册"];
             [longinTool userLoginRegisterWithDic:regisDic success:^(id responseData, NSInteger responseCode) {
-                
+                [SVProgressHUD dismiss];
                 LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
                 if ([StringEXtension isBlankString:model.error.msg]) {
                     //                将返回的token写入本地
@@ -121,14 +124,18 @@
                     [SVStatusHUD showWithStatus:model.error.msg];
                 }
                 
+                
             } failre:^(id responseData, NSInteger responseCode) {
+                [SVProgressHUD dismiss];
                 NSLog(@"errRegister=%@",responseData);
                 [SVStatusHUD showWithStatus:@"注册失败"];
             }];
         }else{
-            
-            NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"mobile",self.phoneTextF.text,@"code",self.vercodeTextF.text,@"password",self.passWTextF.text, nil];
+             NSString *passW = [StringEXtension sha1:self.passWTextF.text];
+            NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"mobile",self.phoneTextF.text,@"code",self.vercodeTextF.text,@"password",passW, nil];
+            [SVProgressHUD showWithStatus:@"正在重置"];
             [longinTool resetPasswordWithDic:dic success:^(id responseData, NSInteger responseCode) {
+                [SVProgressHUD dismiss];
                 LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
                 if ([StringEXtension isBlankString:model.error.msg]) {
                     [SVStatusHUD showWithStatus:model.error.msg];
@@ -137,6 +144,7 @@
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }
             } failure:^(id responseData, NSInteger responseCode) {
+                [SVProgressHUD dismiss];
                 [SVStatusHUD showWithStatus:@"重置失败"];
             }];
         }

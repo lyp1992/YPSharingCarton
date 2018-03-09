@@ -9,11 +9,11 @@
 #import "MapManager.h"
 #import "SpeechSynthesizer.h"
 #import "MoreMenuView.h"
-
-
+#import "LYPDataListModel.h"
+#import "LYPAnnotationView.h"
 #define SCREEN_W [UIScreen mainScreen].bounds.size.width
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height
-@interface MapManager()<MAMapViewDelegate,AMapSearchDelegate,AMapNaviWalkManagerDelegate,AMapNaviWalkViewDelegate,AMapNaviDriveViewDelegate,AMapNaviDriveManagerDelegate,MoreMenuViewDelegate>
+@interface MapManager()<MAMapViewDelegate,AMapSearchDelegate,AMapNaviWalkManagerDelegate,AMapNaviWalkViewDelegate,AMapNaviDriveViewDelegate,AMapNaviDriveManagerDelegate,MoreMenuViewDelegate,LYPAnnotationViewDeleagte>
 @property (nonatomic,strong)NSMutableArray *searchResultArr;
 @property (nonatomic, strong) MoreMenuView *moreMenu;//导航页面菜单选项
 @end
@@ -39,29 +39,17 @@ static CLLocationCoordinate2D distinateCoor;//目的地坐标
     ///把地图添加至view
     [self.controller.view addSubview:_mapView];
     ///如果您需要进入地图就显示定位小蓝点，则需要下面两行代码
-//    _mapView.showsUserLocation = YES;
-//    _mapView.userTrackingMode = MAUserTrackingModeFollow;
-//    //设置地图缩放比例，即显示区域
-//    [_mapView setZoomLevel:15.1 animated:YES];
-//    _mapView.delegate = self;
-//    //设置定位精度
-//    _mapView.desiredAccuracy = kCLLocationAccuracyBest;
-//    //设置定位距离
-//    _mapView.distanceFilter = 5.0f;
-    
-    [AMapServices sharedServices].enableHTTPS = YES;
-    self.mapView.showsUserLocation = YES;
-    self.mapView.userTrackingMode = MAUserTrackingModeFollow;
-    self.mapView.showsIndoorMap = YES;    //YES：显示室内地图；NO：不显示；
-    [self.mapView setZoomLevel:17 animated:YES];//设置缩放水平
-    self.mapView.delegate = self;
-    
-    MAUserLocationRepresentation *r = [[MAUserLocationRepresentation alloc] init];
-    r.showsAccuracyRing = NO;///精度圈是否显示，默认YES
-    r.image = [UIImage imageNamed:@"定位"]; ///定位图标, 与蓝色原点互斥
-//    self.locationPointImgName = @"定位";
-    r.showsHeadingIndicator = NO;///是否显示方向指示(MAUserTrackingModeFollowWithHeading模式开启)。默认为YES
-    [self.mapView updateUserLocationRepresentation:r];
+    _mapView.showsUserLocation = YES;
+    _mapView.userTrackingMode = MAUserTrackingModeFollow;
+    //设置地图缩放比例，即显示区域
+    [_mapView setZoomLevel:15.1 animated:YES];
+    _mapView.delegate = self;
+    //设置定位精度
+    _mapView.desiredAccuracy = kCLLocationAccuracyBest;
+    //设置定位距离
+    _mapView.distanceFilter = 5.0f;
+    //把中心点设成自己的坐标
+    _mapView.centerCoordinate = self.currentLocation.coordinate;
 }
 #pragma mark --带block的地图初始化方法
 -(void)initMapViewWithBlock:(MapBlock)block{
@@ -117,7 +105,9 @@ static CLLocationCoordinate2D distinateCoor;//目的地坐标
 #pragma mark --设置大头针上方气泡的内容的代理方法
 -(MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation{
     //大头针标注
-    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {//判断是否是自己的定位气泡，如果是自己的定位气泡，不做任何设置，显示为蓝点，如果不是自己的定位气泡，比如大头针就会进入
+    if ([annotation isKindOfClass:[MAUserLocation class]]) {
+        return nil;
+    }else{
         static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
         MAAnnotationView*annotationView = (MAAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
         if (annotationView == nil) {
@@ -127,14 +117,18 @@ static CLLocationCoordinate2D distinateCoor;//目的地坐标
         annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
         //annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
         annotationView.draggable = YES;           //设置标注可以拖动，默认为NO
-        //        annotationView.pinColor = MAPinAnnotationColorPurple;
+//                annotationView.pinColor = MAPinAnnotationColorPurple;
         
+//        LYPAnnotationView *annotationView = (LYPAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
+//        if (annotationView == nil)
+//        {
+//            annotationView = [[LYPAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
+//        }
         //设置大头针显示的图片
         if (!self.locationPointImgName) {
-            annotationView.image = [UIImage imageNamed:@"目的地"];
+            annotationView.image = [UIImage imageNamed:@"定位"];
         }else{
             annotationView.image = [UIImage imageNamed:self.locationPointImgName];
-//            annotationView.image = [UIImage imageNamed:@"定位"];
         }
         //点击大头针显示的左边的视图
         UIImageView *imageV = [[UIImageView alloc]init];
@@ -152,7 +146,6 @@ static CLLocationCoordinate2D distinateCoor;//目的地坐标
         annotationView.rightCalloutAccessoryView = rightButton;
         return annotationView;
     }
-    return nil;
 }
 #pragma mark --导航点击事件
 -(void)navBtnClick{
@@ -182,17 +175,18 @@ static CLLocationCoordinate2D distinateCoor;//目的地坐标
     {
         self.moreMenu = [[MoreMenuView alloc] init];
         self.moreMenu.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+
         
         [self.moreMenu setDelegate:self];
     }
 }
 
 #pragma mark --地图纠偏
-//-(CLLocationCoordinate2D)currectGpsWithLocation:(CLLocationCoordinate2D)coor{
-//    CLLocationCoordinate2D gcjPt = [JZLocationConverter wgs84ToGcj02:coor];
-//    NSLog(@"%lf,%lf",gcjPt.latitude,gcjPt.longitude);
-//    return gcjPt;
-//}
+-(CLLocationCoordinate2D)currectGpsWithLocation:(CLLocationCoordinate2D)coor{
+    CLLocationCoordinate2D gcjPt = [JZLocationConverter wgs84ToGcj02:coor];
+    NSLog(@"%lf,%lf",gcjPt.latitude,gcjPt.longitude);
+    return gcjPt;
+}
 #pragma mark 搜索请求发起后的回调,用于标记自己当前的位置
 /**失败回调*/
 -(void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error{
@@ -223,7 +217,6 @@ updatingLocation:(BOOL)updatingLocation
     if(updatingLocation)
     {
         self.currentLocation = [userLocation.location copy];
-//        [[NSNotificationCenter defaultCenter]postNotificationName:@"getDeviceList" object:nil userInfo:@{@"lon":@(self.currentLocation.coordinate.longitude),@"lat":@(self.currentLocation.coordinate.latitude)}];
     }
     
     
@@ -275,6 +268,10 @@ updatingLocation:(BOOL)updatingLocation
 #pragma mark --行车导航回调
 -(void)driveManagerOnCalculateRouteSuccess:(AMapNaviDriveManager *)driveManager{
     [self initMoreMenu];
+    
+//    发送一条通知隐藏导航栏
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"hideNav" object:nil];
+    
     //将driveView添加为导航数据的Representative，使其可以接收到导航诱导数据
     [self.driveManager addDataRepresentative:self.driveView];
     [driveManager startGPSNavi];
@@ -285,6 +282,7 @@ updatingLocation:(BOOL)updatingLocation
     [driveView removeFromSuperview];
     //停止语音
     [[SpeechSynthesizer sharedSpeechSynthesizer] stopSpeak];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"showNav" object:nil];
 }
 - (BOOL)driveManagerIsNaviSoundPlaying:(AMapNaviDriveManager *)driveManager
 {
@@ -324,6 +322,7 @@ updatingLocation:(BOOL)updatingLocation
 {
     NSLog(@"didChangeShowMode:%ld", (long)showMode);
 }
+
 #pragma mark --周边搜索方法
 -(void)searchAroundWithKeyWords:(NSString *)keywords{
     if (_currentLocation==nil||_search==nil) {
@@ -375,12 +374,16 @@ updatingLocation:(BOOL)updatingLocation
 #pragma mark --标记转折点的位置(轨迹回放)
 -(void)addAnomationWithArray:(NSArray *)array{
     for (int i = 0; i < array.count; i++) {
+        
+        LYPDataListModel *listModel = array[i];
+        
         CLLocationCoordinate2D coor;
-        coor.latitude = [array[i] substringToIndex:9].floatValue;
-        coor.longitude = [array[i] substringFromIndex:10].floatValue;
+        coor.latitude = listModel.lat;
+        coor.longitude = listModel.lon;
         MAPointAnnotation *coorPoint = [[MAPointAnnotation alloc]init];
         coorPoint.coordinate = coor;
-        coorPoint.title = [NSString stringWithFormat:@"位置%d",i+1];
+        coorPoint.title = listModel.build;
+        coorPoint.subtitle = listModel.floor;
         [self.mapView addAnnotation:coorPoint];
     }
 }

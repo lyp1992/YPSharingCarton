@@ -18,7 +18,13 @@
 #define resetPassWordUrl [NSString stringWithFormat:@"http://%@/v1.0/user/resetpwd",BaseIP]
 #define takePaperUrl [NSString stringWithFormat:@"http://%@/v1.0/user/takepaper",BaseIP]
 
+//应用本身授权
 #define APPKey @"f56e58020315728d2"
+//信鸽授权
+#define XGAppKey @"IG745QGSL23K"
+#define XGAPPId @"2200274685"
+//地图授权
+#define AMapAPPkey @"b1a7457967c073c006a2d71525ed435b"
 
 #define RGBACOLOR(R,G,B,A) [UIColor colorWithRed:(R) / 255.0f green:(G) /255.0f blue:(B) / 255.0f alpha:(A)] //自定义颜色
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width

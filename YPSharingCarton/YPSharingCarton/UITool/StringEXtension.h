@@ -25,4 +25,6 @@
 
 +(NSMutableDictionary *)getUrlParameters:(NSString *)urlStr;
 
++(NSString*) sha1:(NSString *)str;
+
 @end

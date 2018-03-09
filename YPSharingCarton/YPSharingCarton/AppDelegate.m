@@ -54,7 +54,7 @@
     [self registRemoteNotification];
     
 //    注册高德地图
-    [AMapServices sharedServices].apiKey = @"b1a7457967c073c006a2d71525ed435b";
+    [AMapServices sharedServices].apiKey = AMapAPPkey;
     [AMapServices sharedServices].crashReportEnabled = YES;
     [AMapServices sharedServices].enableHTTPS = YES;
 
@@ -65,7 +65,7 @@
     XGNotificationCategory *category = [XGNotificationCategory categoryWithIdentifier:@"xgCategory" actions:@[action1, action2] intentIdentifiers:@[] options:XGNotificationCategoryOptionNone];
     XGNotificationConfigure *configure = [XGNotificationConfigure configureNotificationWithCategories:[NSSet setWithObject:category] types:XGUserNotificationTypeAlert|XGUserNotificationTypeBadge|XGUserNotificationTypeSound];
     [[XGPush defaultManager] setNotificationConfigure:configure];
-    [[XGPush defaultManager]startXGWithAppID:2200274685 appKey:@"IG745QGSL23K" delegate:self];
+    [[XGPush defaultManager]startXGWithAppID:XGAPPId appKey:XGAppKey delegate:self];
     [[XGPush defaultManager] setXgApplicationBadgeNumber:0];
     [[XGPush defaultManager] reportXGNotificationInfo:launchOptions];
     return YES;

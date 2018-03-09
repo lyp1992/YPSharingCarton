@@ -1,0 +1,1020 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAFC96AB8850315730BD93C1 /* libPods-LYPShareCartoolManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F55CB81A7C1774B17D86CC /* libPods-LYPShareCartoolManagerTests.a */; };
+		BBAD4F67A0DD0699B338B6FE /* libPods-LYPShareCartoolManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C77AD249AB5F16EFCD98C2 /* libPods-LYPShareCartoolManager.a */; };
+		CF269FDC2D47799F3B707771 /* libPods-LYPShareCartoolManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70670D08C884280B581CF899 /* libPods-LYPShareCartoolManagerUITests.a */; };
+		D78A8AC42052221A000C8148 /* LYPDataListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABA2052221A000C8148 /* LYPDataListModel.m */; };
+		D78A8AC52052221A000C8148 /* LYPDeviceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABC2052221A000C8148 /* LYPDeviceListModel.m */; };
+		D78A8AC62052221A000C8148 /* LYPErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABF2052221A000C8148 /* LYPErrorModel.m */; };
+		D78A8AC72052221A000C8148 /* LYPloginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AC12052221A000C8148 /* LYPloginModel.m */; };
+		D78A8AC82052221A000C8148 /* LYPTokenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AC32052221A000C8148 /* LYPTokenModel.m */; };
+		D78A8AD820522234000C8148 /* LYPCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ACB20522234000C8148 /* LYPCustomButton.m */; };
+		D78A8AD920522234000C8148 /* LYPPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ACD20522234000C8148 /* LYPPromptView.m */; };
+		D78A8ADA20522234000C8148 /* StringEXtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ACF20522234000C8148 /* StringEXtension.m */; };
+		D78A8ADB20522234000C8148 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AD120522234000C8148 /* UIBarButtonItem+Extension.m */; };
+		D78A8ADC20522234000C8148 /* UIImage+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AD320522234000C8148 /* UIImage+Extention.m */; };
+		D78A8ADD20522234000C8148 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AD520522234000C8148 /* UIView+Extension.m */; };
+		D78A8ADE20522234000C8148 /* UpAndLowerButtonPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AD720522234000C8148 /* UpAndLowerButtonPlace.m */; };
+		D78A8AF02052225B000C8148 /* XMGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AE22052225B000C8148 /* XMGModel.m */; };
+		D78A8AF12052225B000C8148 /* XMGSqliteModelTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AE52052225B000C8148 /* XMGSqliteModelTool.m */; };
+		D78A8AF22052225B000C8148 /* XMGSqliteTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AE72052225B000C8148 /* XMGSqliteTool.m */; };
+		D78A8AF32052225B000C8148 /* XMGTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AE92052225B000C8148 /* XMGTable.m */; };
+		D78A8AF42052225B000C8148 /* LYPSavePList.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AEB2052225B000C8148 /* LYPSavePList.m */; };
+		D78A8AF52052225B000C8148 /* SVStatusHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AED2052225B000C8148 /* SVStatusHUD.m */; };
+		D78A8AF62052225B000C8148 /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AEF2052225B000C8148 /* UIViewController+DismissKeyboard.m */; };
+		D78A8AFA205222F5000C8148 /* LYPNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AF9205222F5000C8148 /* LYPNetWorkTool.m */; };
+		D78A8AFD2052291E000C8148 /* LYPUserSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8AFC2052291E000C8148 /* LYPUserSingle.m */; };
+		D79DE0E120512AD600367CEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0E020512AD600367CEE /* AppDelegate.m */; };
+		D79DE0E420512AD600367CEE /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0E320512AD600367CEE /* BaseViewController.m */; };
+		D79DE0E720512AD600367CEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79DE0E520512AD600367CEE /* Main.storyboard */; };
+		D79DE0E920512AD600367CEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D79DE0E820512AD600367CEE /* Assets.xcassets */; };
+		D79DE0EC20512AD600367CEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D79DE0EA20512AD600367CEE /* LaunchScreen.storyboard */; };
+		D79DE0EF20512AD600367CEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0EE20512AD600367CEE /* main.m */; };
+		D79DE0F920512AD600367CEE /* LYPShareCartoolManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE0F820512AD600367CEE /* LYPShareCartoolManagerTests.m */; };
+		D79DE10420512AD600367CEE /* LYPShareCartoolManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE10320512AD600367CEE /* LYPShareCartoolManagerUITests.m */; };
+		D79DE1192051322000367CEE /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE1182051322000367CEE /* MessageViewController.m */; };
+		D79DE11C2051324600367CEE /* ToilteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE11B2051324600367CEE /* ToilteViewController.m */; };
+		D79DE11F2051325700367CEE /* PaperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE11E2051325700367CEE /* PaperViewController.m */; };
+		D79DE1222051326800367CEE /* PersonMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79DE1212051326800367CEE /* PersonMessageViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D79DE0F520512AD600367CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D79DE0D420512AD600367CEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D79DE0DB20512AD600367CEE;
+			remoteInfo = LYPShareCartoolManager;
+		};
+		D79DE10020512AD600367CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D79DE0D420512AD600367CEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D79DE0DB20512AD600367CEE;
+			remoteInfo = LYPShareCartoolManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05310530EAD597EC4BDD4A9E /* Pods-LYPShareCartoolManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		18A69A11E134569B1B601457 /* Pods-LYPShareCartoolManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager.debug.xcconfig"; sourceTree = "<group>"; };
+		60C77AD249AB5F16EFCD98C2 /* libPods-LYPShareCartoolManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYPShareCartoolManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70670D08C884280B581CF899 /* libPods-LYPShareCartoolManagerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYPShareCartoolManagerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBF446A0629C433D40F40D3 /* Pods-LYPShareCartoolManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		99D3994DBC2F17BEC5B864F2 /* Pods-LYPShareCartoolManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C18B1337CE033F6FBCCF7DFB /* Pods-LYPShareCartoolManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager.release.xcconfig"; sourceTree = "<group>"; };
+		D78A8AB92052221A000C8148 /* LYPDataListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDataListModel.h; sourceTree = "<group>"; };
+		D78A8ABA2052221A000C8148 /* LYPDataListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPDataListModel.m; sourceTree = "<group>"; };
+		D78A8ABB2052221A000C8148 /* LYPDeviceListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDeviceListModel.h; sourceTree = "<group>"; };
+		D78A8ABC2052221A000C8148 /* LYPDeviceListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPDeviceListModel.m; sourceTree = "<group>"; };
+		D78A8ABE2052221A000C8148 /* LYPErrorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPErrorModel.h; sourceTree = "<group>"; };
+		D78A8ABF2052221A000C8148 /* LYPErrorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPErrorModel.m; sourceTree = "<group>"; };
+		D78A8AC02052221A000C8148 /* LYPloginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPloginModel.h; sourceTree = "<group>"; };
+		D78A8AC12052221A000C8148 /* LYPloginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPloginModel.m; sourceTree = "<group>"; };
+		D78A8AC22052221A000C8148 /* LYPTokenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPTokenModel.h; sourceTree = "<group>"; };
+		D78A8AC32052221A000C8148 /* LYPTokenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPTokenModel.m; sourceTree = "<group>"; };
+		D78A8ACA20522234000C8148 /* LYPCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPCustomButton.h; sourceTree = "<group>"; };
+		D78A8ACB20522234000C8148 /* LYPCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPCustomButton.m; sourceTree = "<group>"; };
+		D78A8ACC20522234000C8148 /* LYPPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPPromptView.h; sourceTree = "<group>"; };
+		D78A8ACD20522234000C8148 /* LYPPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPPromptView.m; sourceTree = "<group>"; };
+		D78A8ACE20522234000C8148 /* StringEXtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEXtension.h; sourceTree = "<group>"; };
+		D78A8ACF20522234000C8148 /* StringEXtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEXtension.m; sourceTree = "<group>"; };
+		D78A8AD020522234000C8148 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		D78A8AD120522234000C8148 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		D78A8AD220522234000C8148 /* UIImage+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extention.h"; sourceTree = "<group>"; };
+		D78A8AD320522234000C8148 /* UIImage+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extention.m"; sourceTree = "<group>"; };
+		D78A8AD420522234000C8148 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D78A8AD520522234000C8148 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D78A8AD620522234000C8148 /* UpAndLowerButtonPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpAndLowerButtonPlace.h; sourceTree = "<group>"; };
+		D78A8AD720522234000C8148 /* UpAndLowerButtonPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpAndLowerButtonPlace.m; sourceTree = "<group>"; };
+		D78A8AE12052225B000C8148 /* XMGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGModel.h; sourceTree = "<group>"; };
+		D78A8AE22052225B000C8148 /* XMGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGModel.m; sourceTree = "<group>"; };
+		D78A8AE32052225B000C8148 /* XMGSqliteModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteModelProtocol.h; sourceTree = "<group>"; };
+		D78A8AE42052225B000C8148 /* XMGSqliteModelTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteModelTool.h; sourceTree = "<group>"; };
+		D78A8AE52052225B000C8148 /* XMGSqliteModelTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqliteModelTool.m; sourceTree = "<group>"; };
+		D78A8AE62052225B000C8148 /* XMGSqliteTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSqliteTool.h; sourceTree = "<group>"; };
+		D78A8AE72052225B000C8148 /* XMGSqliteTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSqliteTool.m; sourceTree = "<group>"; };
+		D78A8AE82052225B000C8148 /* XMGTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTable.h; sourceTree = "<group>"; };
+		D78A8AE92052225B000C8148 /* XMGTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTable.m; sourceTree = "<group>"; };
+		D78A8AEA2052225B000C8148 /* LYPSavePList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPSavePList.h; sourceTree = "<group>"; };
+		D78A8AEB2052225B000C8148 /* LYPSavePList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPSavePList.m; sourceTree = "<group>"; };
+		D78A8AEC2052225B000C8148 /* SVStatusHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVStatusHUD.h; sourceTree = "<group>"; };
+		D78A8AED2052225B000C8148 /* SVStatusHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVStatusHUD.m; sourceTree = "<group>"; };
+		D78A8AEE2052225B000C8148 /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
+		D78A8AEF2052225B000C8148 /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
+		D78A8AF8205222F5000C8148 /* LYPNetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPNetWorkTool.h; sourceTree = "<group>"; };
+		D78A8AF9205222F5000C8148 /* LYPNetWorkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPNetWorkTool.m; sourceTree = "<group>"; };
+		D78A8AFB2052291E000C8148 /* LYPUserSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LYPUserSingle.h; path = ../LYPUserSingle.h; sourceTree = "<group>"; };
+		D78A8AFC2052291E000C8148 /* LYPUserSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LYPUserSingle.m; path = ../LYPUserSingle.m; sourceTree = "<group>"; };
+		D79DE0DC20512AD600367CEE /* LYPShareCartoolManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYPShareCartoolManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79DE0DF20512AD600367CEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D79DE0E020512AD600367CEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D79DE0E220512AD600367CEE /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D79DE0E320512AD600367CEE /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D79DE0E620512AD600367CEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D79DE0E820512AD600367CEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D79DE0EB20512AD600367CEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D79DE0ED20512AD600367CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79DE0EE20512AD600367CEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D79DE0F420512AD600367CEE /* LYPShareCartoolManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYPShareCartoolManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79DE0F820512AD600367CEE /* LYPShareCartoolManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPShareCartoolManagerTests.m; sourceTree = "<group>"; };
+		D79DE0FA20512AD600367CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79DE0FF20512AD600367CEE /* LYPShareCartoolManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYPShareCartoolManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79DE10320512AD600367CEE /* LYPShareCartoolManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPShareCartoolManagerUITests.m; sourceTree = "<group>"; };
+		D79DE10520512AD600367CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79DE1162051314400367CEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D79DE1172051322000367CEE /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		D79DE1182051322000367CEE /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		D79DE11A2051324600367CEE /* ToilteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToilteViewController.h; sourceTree = "<group>"; };
+		D79DE11B2051324600367CEE /* ToilteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToilteViewController.m; sourceTree = "<group>"; };
+		D79DE11D2051325700367CEE /* PaperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaperViewController.h; sourceTree = "<group>"; };
+		D79DE11E2051325700367CEE /* PaperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperViewController.m; sourceTree = "<group>"; };
+		D79DE1202051326800367CEE /* PersonMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonMessageViewController.h; sourceTree = "<group>"; };
+		D79DE1212051326800367CEE /* PersonMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonMessageViewController.m; sourceTree = "<group>"; };
+		F1F55CB81A7C1774B17D86CC /* libPods-LYPShareCartoolManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LYPShareCartoolManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D79DE0D920512AD600367CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBAD4F67A0DD0699B338B6FE /* libPods-LYPShareCartoolManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0F120512AD600367CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAFC96AB8850315730BD93C1 /* libPods-LYPShareCartoolManagerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0FC20512AD600367CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF269FDC2D47799F3B707771 /* libPods-LYPShareCartoolManagerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B6F6D7A56B3BC7427D868035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60C77AD249AB5F16EFCD98C2 /* libPods-LYPShareCartoolManager.a */,
+				F1F55CB81A7C1774B17D86CC /* libPods-LYPShareCartoolManagerTests.a */,
+				70670D08C884280B581CF899 /* libPods-LYPShareCartoolManagerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D78A8AB72052221A000C8148 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8AB82052221A000C8148 /* DevieceListModel */,
+				D78A8ABD2052221A000C8148 /* LoginModel */,
+			);
+			name = Model;
+			path = ../../../YPSharingCarton/YPSharingCarton/Main/Model;
+			sourceTree = "<group>";
+		};
+		D78A8AB82052221A000C8148 /* DevieceListModel */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8AB92052221A000C8148 /* LYPDataListModel.h */,
+				D78A8ABA2052221A000C8148 /* LYPDataListModel.m */,
+				D78A8ABB2052221A000C8148 /* LYPDeviceListModel.h */,
+				D78A8ABC2052221A000C8148 /* LYPDeviceListModel.m */,
+			);
+			path = DevieceListModel;
+			sourceTree = "<group>";
+		};
+		D78A8ABD2052221A000C8148 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8ABE2052221A000C8148 /* LYPErrorModel.h */,
+				D78A8ABF2052221A000C8148 /* LYPErrorModel.m */,
+				D78A8AC02052221A000C8148 /* LYPloginModel.h */,
+				D78A8AC12052221A000C8148 /* LYPloginModel.m */,
+				D78A8AC22052221A000C8148 /* LYPTokenModel.h */,
+				D78A8AC32052221A000C8148 /* LYPTokenModel.m */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		D78A8AC920522234000C8148 /* UITool */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8ACA20522234000C8148 /* LYPCustomButton.h */,
+				D78A8ACB20522234000C8148 /* LYPCustomButton.m */,
+				D78A8ACC20522234000C8148 /* LYPPromptView.h */,
+				D78A8ACD20522234000C8148 /* LYPPromptView.m */,
+				D78A8ACE20522234000C8148 /* StringEXtension.h */,
+				D78A8ACF20522234000C8148 /* StringEXtension.m */,
+				D78A8AD020522234000C8148 /* UIBarButtonItem+Extension.h */,
+				D78A8AD120522234000C8148 /* UIBarButtonItem+Extension.m */,
+				D78A8AD220522234000C8148 /* UIImage+Extention.h */,
+				D78A8AD320522234000C8148 /* UIImage+Extention.m */,
+				D78A8AD420522234000C8148 /* UIView+Extension.h */,
+				D78A8AD520522234000C8148 /* UIView+Extension.m */,
+				D78A8AD620522234000C8148 /* UpAndLowerButtonPlace.h */,
+				D78A8AD720522234000C8148 /* UpAndLowerButtonPlace.m */,
+			);
+			name = UITool;
+			path = ../../../YPSharingCarton/YPSharingCarton/UITool;
+			sourceTree = "<group>";
+		};
+		D78A8ADF2052225B000C8148 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8AFB2052291E000C8148 /* LYPUserSingle.h */,
+				D78A8AFC2052291E000C8148 /* LYPUserSingle.m */,
+				D78A8AE02052225B000C8148 /* Classes */,
+				D78A8AEA2052225B000C8148 /* LYPSavePList.h */,
+				D78A8AEB2052225B000C8148 /* LYPSavePList.m */,
+				D78A8AEC2052225B000C8148 /* SVStatusHUD.h */,
+				D78A8AED2052225B000C8148 /* SVStatusHUD.m */,
+				D78A8AEE2052225B000C8148 /* UIViewController+DismissKeyboard.h */,
+				D78A8AEF2052225B000C8148 /* UIViewController+DismissKeyboard.m */,
+			);
+			name = Tool;
+			path = ../../../YPSharingCarton/YPSharingCarton/Tool;
+			sourceTree = "<group>";
+		};
+		D78A8AE02052225B000C8148 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8AE12052225B000C8148 /* XMGModel.h */,
+				D78A8AE22052225B000C8148 /* XMGModel.m */,
+				D78A8AE32052225B000C8148 /* XMGSqliteModelProtocol.h */,
+				D78A8AE42052225B000C8148 /* XMGSqliteModelTool.h */,
+				D78A8AE52052225B000C8148 /* XMGSqliteModelTool.m */,
+				D78A8AE62052225B000C8148 /* XMGSqliteTool.h */,
+				D78A8AE72052225B000C8148 /* XMGSqliteTool.m */,
+				D78A8AE82052225B000C8148 /* XMGTable.h */,
+				D78A8AE92052225B000C8148 /* XMGTable.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D78A8AF72052229C000C8148 /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8AF8205222F5000C8148 /* LYPNetWorkTool.h */,
+				D78A8AF9205222F5000C8148 /* LYPNetWorkTool.m */,
+			);
+			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		D79DE0D320512AD600367CEE = {
+			isa = PBXGroup;
+			children = (
+				D79DE0DE20512AD600367CEE /* LYPShareCartoolManager */,
+				D79DE0F720512AD600367CEE /* LYPShareCartoolManagerTests */,
+				D79DE10220512AD600367CEE /* LYPShareCartoolManagerUITests */,
+				D79DE0DD20512AD600367CEE /* Products */,
+				E78426B5FA959D4813CB3D4A /* Pods */,
+				B6F6D7A56B3BC7427D868035 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D79DE0DD20512AD600367CEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE0DC20512AD600367CEE /* LYPShareCartoolManager.app */,
+				D79DE0F420512AD600367CEE /* LYPShareCartoolManagerTests.xctest */,
+				D79DE0FF20512AD600367CEE /* LYPShareCartoolManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D79DE0DE20512AD600367CEE /* LYPShareCartoolManager */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE11120512FF800367CEE /* Main */,
+				D79DE0DF20512AD600367CEE /* AppDelegate.h */,
+				D79DE0E020512AD600367CEE /* AppDelegate.m */,
+				D79DE0E220512AD600367CEE /* BaseViewController.h */,
+				D79DE0E320512AD600367CEE /* BaseViewController.m */,
+				D79DE1162051314400367CEE /* PrefixHeader.pch */,
+				D79DE0E520512AD600367CEE /* Main.storyboard */,
+				D79DE0E820512AD600367CEE /* Assets.xcassets */,
+				D79DE0EA20512AD600367CEE /* LaunchScreen.storyboard */,
+				D79DE0ED20512AD600367CEE /* Info.plist */,
+				D79DE0EE20512AD600367CEE /* main.m */,
+			);
+			path = LYPShareCartoolManager;
+			sourceTree = "<group>";
+		};
+		D79DE0F720512AD600367CEE /* LYPShareCartoolManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE0F820512AD600367CEE /* LYPShareCartoolManagerTests.m */,
+				D79DE0FA20512AD600367CEE /* Info.plist */,
+			);
+			path = LYPShareCartoolManagerTests;
+			sourceTree = "<group>";
+		};
+		D79DE10220512AD600367CEE /* LYPShareCartoolManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE10320512AD600367CEE /* LYPShareCartoolManagerUITests.m */,
+				D79DE10520512AD600367CEE /* Info.plist */,
+			);
+			path = LYPShareCartoolManagerUITests;
+			sourceTree = "<group>";
+		};
+		D79DE11120512FF800367CEE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D78A8AF72052229C000C8148 /* NetworkTool */,
+				D78A8ADF2052225B000C8148 /* Tool */,
+				D78A8AC920522234000C8148 /* UITool */,
+				D78A8AB72052221A000C8148 /* Model */,
+				D79DE1152051301900367CEE /* 个人信息 */,
+				D79DE1142051301400367CEE /* 纸品 */,
+				D79DE1132051300F00367CEE /* 卫生间 */,
+				D79DE1122051300500367CEE /* 信息 */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D79DE1122051300500367CEE /* 信息 */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE1172051322000367CEE /* MessageViewController.h */,
+				D79DE1182051322000367CEE /* MessageViewController.m */,
+			);
+			path = "信息";
+			sourceTree = "<group>";
+		};
+		D79DE1132051300F00367CEE /* 卫生间 */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE11A2051324600367CEE /* ToilteViewController.h */,
+				D79DE11B2051324600367CEE /* ToilteViewController.m */,
+			);
+			path = "卫生间";
+			sourceTree = "<group>";
+		};
+		D79DE1142051301400367CEE /* 纸品 */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE11D2051325700367CEE /* PaperViewController.h */,
+				D79DE11E2051325700367CEE /* PaperViewController.m */,
+			);
+			path = "纸品";
+			sourceTree = "<group>";
+		};
+		D79DE1152051301900367CEE /* 个人信息 */ = {
+			isa = PBXGroup;
+			children = (
+				D79DE1202051326800367CEE /* PersonMessageViewController.h */,
+				D79DE1212051326800367CEE /* PersonMessageViewController.m */,
+			);
+			path = "个人信息";
+			sourceTree = "<group>";
+		};
+		E78426B5FA959D4813CB3D4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18A69A11E134569B1B601457 /* Pods-LYPShareCartoolManager.debug.xcconfig */,
+				C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */,
+				05310530EAD597EC4BDD4A9E /* Pods-LYPShareCartoolManagerTests.debug.xcconfig */,
+				8DBF446A0629C433D40F40D3 /* Pods-LYPShareCartoolManagerTests.release.xcconfig */,
+				C18B1337CE033F6FBCCF7DFB /* Pods-LYPShareCartoolManagerUITests.debug.xcconfig */,
+				99D3994DBC2F17BEC5B864F2 /* Pods-LYPShareCartoolManagerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79DE10820512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManager" */;
+			buildPhases = (
+				88642C9AA791E727A8825C3D /* [CP] Check Pods Manifest.lock */,
+				D79DE0D820512AD600367CEE /* Sources */,
+				D79DE0D920512AD600367CEE /* Frameworks */,
+				D79DE0DA20512AD600367CEE /* Resources */,
+				2F721C4D9E0418354654B73A /* [CP] Embed Pods Frameworks */,
+				B83932D236CF85A2CC87C50D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYPShareCartoolManager;
+			productName = LYPShareCartoolManager;
+			productReference = D79DE0DC20512AD600367CEE /* LYPShareCartoolManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D79DE0F320512AD600367CEE /* LYPShareCartoolManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79DE10B20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerTests" */;
+			buildPhases = (
+				882AF2C7A51411B2C443D061 /* [CP] Check Pods Manifest.lock */,
+				D79DE0F020512AD600367CEE /* Sources */,
+				D79DE0F120512AD600367CEE /* Frameworks */,
+				D79DE0F220512AD600367CEE /* Resources */,
+				449898018D29DFD1658F2F6C /* [CP] Embed Pods Frameworks */,
+				5247C10D4BCDED287DD55117 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D79DE0F620512AD600367CEE /* PBXTargetDependency */,
+			);
+			name = LYPShareCartoolManagerTests;
+			productName = LYPShareCartoolManagerTests;
+			productReference = D79DE0F420512AD600367CEE /* LYPShareCartoolManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D79DE0FE20512AD600367CEE /* LYPShareCartoolManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D79DE10E20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerUITests" */;
+			buildPhases = (
+				D6E2CDB482C4C6BF4AF0EFD5 /* [CP] Check Pods Manifest.lock */,
+				D79DE0FB20512AD600367CEE /* Sources */,
+				D79DE0FC20512AD600367CEE /* Frameworks */,
+				D79DE0FD20512AD600367CEE /* Resources */,
+				0EB0F6A61AE41E130E17EEF9 /* [CP] Embed Pods Frameworks */,
+				A228D02AB6424E6781887718 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D79DE10120512AD600367CEE /* PBXTargetDependency */,
+			);
+			name = LYPShareCartoolManagerUITests;
+			productName = LYPShareCartoolManagerUITests;
+			productReference = D79DE0FF20512AD600367CEE /* LYPShareCartoolManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D79DE0D420512AD600367CEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LYP;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = laiyongpeng;
+				TargetAttributes = {
+					D79DE0DB20512AD600367CEE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D79DE0F320512AD600367CEE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D79DE0DB20512AD600367CEE;
+					};
+					D79DE0FE20512AD600367CEE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D79DE0DB20512AD600367CEE;
+					};
+				};
+			};
+			buildConfigurationList = D79DE0D720512AD600367CEE /* Build configuration list for PBXProject "LYPShareCartoolManager" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D79DE0D320512AD600367CEE;
+			productRefGroup = D79DE0DD20512AD600367CEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */,
+				D79DE0F320512AD600367CEE /* LYPShareCartoolManagerTests */,
+				D79DE0FE20512AD600367CEE /* LYPShareCartoolManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D79DE0DA20512AD600367CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79DE0EC20512AD600367CEE /* LaunchScreen.storyboard in Resources */,
+				D79DE0E920512AD600367CEE /* Assets.xcassets in Resources */,
+				D79DE0E720512AD600367CEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0F220512AD600367CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0FD20512AD600367CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EB0F6A61AE41E130E17EEF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F721C4D9E0418354654B73A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		449898018D29DFD1658F2F6C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5247C10D4BCDED287DD55117 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerTests/Pods-LYPShareCartoolManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		882AF2C7A51411B2C443D061 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYPShareCartoolManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88642C9AA791E727A8825C3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYPShareCartoolManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A228D02AB6424E6781887718 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B83932D236CF85A2CC87C50D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E2CDB482C4C6BF4AF0EFD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LYPShareCartoolManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D79DE0D820512AD600367CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78A8ADD20522234000C8148 /* UIView+Extension.m in Sources */,
+				D78A8AD920522234000C8148 /* LYPPromptView.m in Sources */,
+				D78A8ADC20522234000C8148 /* UIImage+Extention.m in Sources */,
+				D78A8AC62052221A000C8148 /* LYPErrorModel.m in Sources */,
+				D78A8AC52052221A000C8148 /* LYPDeviceListModel.m in Sources */,
+				D79DE0E420512AD600367CEE /* BaseViewController.m in Sources */,
+				D78A8AF02052225B000C8148 /* XMGModel.m in Sources */,
+				D78A8AC42052221A000C8148 /* LYPDataListModel.m in Sources */,
+				D78A8AFD2052291E000C8148 /* LYPUserSingle.m in Sources */,
+				D78A8AFA205222F5000C8148 /* LYPNetWorkTool.m in Sources */,
+				D79DE0EF20512AD600367CEE /* main.m in Sources */,
+				D79DE11C2051324600367CEE /* ToilteViewController.m in Sources */,
+				D78A8AF22052225B000C8148 /* XMGSqliteTool.m in Sources */,
+				D78A8AD820522234000C8148 /* LYPCustomButton.m in Sources */,
+				D78A8AF32052225B000C8148 /* XMGTable.m in Sources */,
+				D79DE1222051326800367CEE /* PersonMessageViewController.m in Sources */,
+				D78A8AF62052225B000C8148 /* UIViewController+DismissKeyboard.m in Sources */,
+				D78A8AF52052225B000C8148 /* SVStatusHUD.m in Sources */,
+				D79DE11F2051325700367CEE /* PaperViewController.m in Sources */,
+				D78A8AF12052225B000C8148 /* XMGSqliteModelTool.m in Sources */,
+				D79DE1192051322000367CEE /* MessageViewController.m in Sources */,
+				D78A8AF42052225B000C8148 /* LYPSavePList.m in Sources */,
+				D78A8AC82052221A000C8148 /* LYPTokenModel.m in Sources */,
+				D78A8ADB20522234000C8148 /* UIBarButtonItem+Extension.m in Sources */,
+				D79DE0E120512AD600367CEE /* AppDelegate.m in Sources */,
+				D78A8ADE20522234000C8148 /* UpAndLowerButtonPlace.m in Sources */,
+				D78A8ADA20522234000C8148 /* StringEXtension.m in Sources */,
+				D78A8AC72052221A000C8148 /* LYPloginModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0F020512AD600367CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79DE0F920512AD600367CEE /* LYPShareCartoolManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D79DE0FB20512AD600367CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79DE10420512AD600367CEE /* LYPShareCartoolManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D79DE0F620512AD600367CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */;
+			targetProxy = D79DE0F520512AD600367CEE /* PBXContainerItemProxy */;
+		};
+		D79DE10120512AD600367CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D79DE0DB20512AD600367CEE /* LYPShareCartoolManager */;
+			targetProxy = D79DE10020512AD600367CEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D79DE0E520512AD600367CEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D79DE0E620512AD600367CEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D79DE0EA20512AD600367CEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D79DE0EB20512AD600367CEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D79DE10620512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D79DE10720512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D79DE10920512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18A69A11E134569B1B601457 /* Pods-LYPShareCartoolManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				GCC_PREFIX_HEADER = /Users/navchina/Desktop/YPSharingCarton/LYPShareCartoolManager/LYPShareCartoolManager/PrefixHeader.pch;
+				INFOPLIST_FILE = LYPShareCartoolManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D79DE10A20512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				GCC_PREFIX_HEADER = /Users/navchina/Desktop/YPSharingCarton/LYPShareCartoolManager/LYPShareCartoolManager/PrefixHeader.pch;
+				INFOPLIST_FILE = LYPShareCartoolManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "animal.---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D79DE10C20512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05310530EAD597EC4BDD4A9E /* Pods-LYPShareCartoolManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYPShareCartoolManager.app/LYPShareCartoolManager";
+			};
+			name = Debug;
+		};
+		D79DE10D20512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DBF446A0629C433D40F40D3 /* Pods-LYPShareCartoolManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LYPShareCartoolManager.app/LYPShareCartoolManager";
+			};
+			name = Release;
+		};
+		D79DE10F20512AD600367CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C18B1337CE033F6FBCCF7DFB /* Pods-LYPShareCartoolManagerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYPShareCartoolManager;
+			};
+			name = Debug;
+		};
+		D79DE11020512AD600367CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D3994DBC2F17BEC5B864F2 /* Pods-LYPShareCartoolManagerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DN43523GZM;
+				INFOPLIST_FILE = LYPShareCartoolManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = animal.LYPShareCartoolManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LYPShareCartoolManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D79DE0D720512AD600367CEE /* Build configuration list for PBXProject "LYPShareCartoolManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10620512AD600367CEE /* Debug */,
+				D79DE10720512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79DE10820512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10920512AD600367CEE /* Debug */,
+				D79DE10A20512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79DE10B20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10C20512AD600367CEE /* Debug */,
+				D79DE10D20512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79DE10E20512AD600367CEE /* Build configuration list for PBXNativeTarget "LYPShareCartoolManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D79DE10F20512AD600367CEE /* Debug */,
+				D79DE11020512AD600367CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D79DE0D420512AD600367CEE /* Project object */;
+}

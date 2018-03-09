@@ -21,6 +21,9 @@
 #import "LYPLoginVC.h"
 
 @interface LYPMainViewController ()
+@property (nonatomic, strong) LYPCustomButton *scanButton;
+@property (nonatomic, strong) LYPCustomButton *locationButton;
+@property (nonatomic, strong) LYPCustomButton *serviceButton;
 
 @end
 
@@ -35,6 +38,9 @@
     [self sweepTheYard];//扫码
     [self createUserLocation];//定位
     [self createService];//客服
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(hideNav) name:@"hideNav" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showNav) name:@"showNav" object:nil];
 }
 -(void)setNavBar{
 
@@ -51,12 +57,26 @@
     
 }
 
+-(void)hideNav{
+    [self setNav:YES];
+}
+-(void)showNav{
+    [self setNav:NO];
+}
+-(void)setNav:(BOOL)parameter{
+    self.navigationController.navigationBarHidden = parameter;
+    self.scanButton.hidden = parameter;
+    self.serviceButton.hidden = parameter;
+    self.locationButton.hidden = parameter;
+}
+
 -(void)sweepTheYard{
     
     CGRect frame = CGRectMake((SCREENWIDTH -  150)/2, SCREENHEIGHT - 65 - 10, 150, 65);
     LYPCustomButton *scanButton = [[LYPCustomButton alloc]initWithFrame:frame nomalImage:@"common_scan" highLightImage:@"seviceScan" backgroundImage:@"scan_button_750" backgroundHightImage:@"" title:@"扫码开锁" titleColor:[UIColor whiteColor]];
     [scanButton addTarget:self action:@selector(scanAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scanButton];
+    self.scanButton = scanButton;
     
 }
 
@@ -66,6 +86,7 @@
     LYPCustomButton *locationButton = [[LYPCustomButton alloc]initWithFrame:frame nomalImage:@"" highLightImage:@"" backgroundImage:@"nav_orientation" backgroundHightImage:@"nav_orientation_highlight" title:nil titleColor:nil];
     [locationButton addTarget:self action:@selector(openLocation) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:locationButton];
+    self.locationButton = locationButton;
 }
 
 -(void)createService{
@@ -74,6 +95,7 @@
     LYPCustomButton *serviceButton = [[LYPCustomButton alloc]initWithFrame:frame nomalImage:@"" highLightImage:@"" backgroundImage:@"main_help_normal" backgroundHightImage:@"main_help_hl" title:nil titleColor:nil];
     [serviceButton addTarget:self action:@selector(openService) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:serviceButton];
+    self.serviceButton = serviceButton;
 }
 
 #pragma method
