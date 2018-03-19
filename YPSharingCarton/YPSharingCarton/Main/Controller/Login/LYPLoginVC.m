@@ -7,12 +7,15 @@
 //
 
 #import "LYPLoginVC.h"
-#import "LYPLonginNetworkTool.h"
+#import "LYPNetWorkTool.h"
 #import "LYPRegisterVC.h"
 #import "LYPSavePList.h"
 #import "LYPloginModel.h"
 #import "LYPUserSingle.h"
 #import "LYPRegisterVC.h"
+
+#import "LYPCleanMainVC.h"
+
 
 @interface LYPLoginVC ()<UITextFieldDelegate,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -38,28 +41,35 @@
 }
 - (IBAction)loginButton:(id)sender {
     
-    LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
-    if ([StringEXtension isBlankString:self.phoneTextF.text] || [StringEXtension isBlankString:self.passWTextF.text]) {
-        [SVStatusHUD showWithStatus:@"请输入正确的信息"];
-        return;
-    }
-        NSDictionary *dic = @{@"mobile":self.phoneTextF.text,@"password":self.passWTextF.text,@"deviceToken":[LYPUserSingle shareUserSingle].deviceToken,@"ios":@(0)};
-        [longinTool userLoginWithUserDic:dic Success:^(id responseData, NSInteger responseCode) {
-            NSLog(@"login=%@",responseData);
-            LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
-            if (![StringEXtension isBlankString:model.error.msg]) {
-                [SVStatusHUD showWithStatus:model.error.msg];
-            }else{
-                
-                if (![StringEXtension isBlankString:model.data.token]) {
-                    //                写入本地
-                    [LYPSavePList saveTokenPlistWith:model.data.token];
-                }
-                
-            }
-        } failue:^(id responseData, NSInteger responseCode) {
-            NSLog(@"errlogin=%@",responseData);
-        }];
+    LYPCleanMainVC *cleanVC = [[LYPCleanMainVC alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cleanVC];
+    [UIApplication sharedApplication].keyWindow.rootViewController = nav;
+//
+//    LYPNetWorkTool *longinTool = [[LYPNetWorkTool alloc]init];
+//    if ([StringEXtension isBlankString:self.phoneTextF.text] || [StringEXtension isBlankString:self.passWTextF.text]) {
+//        [SVStatusHUD showWithStatus:@"请输入正确的信息"];
+//        return;
+//    }
+//      NSString *passW = [StringEXtension sha1:self.passWTextF.text];
+//        NSDictionary *dic = @{@"mobile":self.phoneTextF.text,@"password":passW,@"deviceToken":[LYPUserSingle shareUserSingle].deviceToken,@"ios":@(0)};
+//        [longinTool userLoginWithUserDic:dic Success:^(id responseData, NSInteger responseCode) {
+//            NSLog(@"login=%@",responseData);
+//            LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+//            if (![StringEXtension isBlankString:model.error.msg]) {
+//                [SVStatusHUD showWithStatus:model.error.msg];
+//            }else{
+//
+//                if (![StringEXtension isBlankString:model.data.token]) {
+//                    //                写入本地
+//                    [LYPSavePList saveTokenPlistWith:model.data.token];
+//                    [LYPSavePList savePassWAndUser:dic];
+//                }
+//                [self dismissViewControllerAnimated:YES completion:nil];
+//
+//            }
+//        } failue:^(id responseData, NSInteger responseCode) {
+//            NSLog(@"errlogin=%@",responseData);
+//        }];
 
 }
 - (IBAction)loginQQ:(id)sender {
@@ -82,6 +92,13 @@
     registerVC.isregister = YES;
     [self presentViewController:registerVC animated:YES completion:nil];
     
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSDictionary *userDic = [LYPSavePList readUserInfo];
+    if (userDic) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)viewDidLoad {
@@ -136,7 +153,6 @@
 -(void)keyboardWillHide:(NSNotification*)notification
 {
     NSDictionary *info = [notification userInfo];
-    //    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     CGFloat animationDurationValue = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     

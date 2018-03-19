@@ -7,7 +7,7 @@
 //
 
 #import "LYPRegisterVC.h"
-#import "LYPLonginNetworkTool.h"
+#import "LYPNetWorkTool.h"
 #import "LYPloginModel.h"
 #import "LYPSavePList.h"
 
@@ -47,7 +47,7 @@
         return;
     }else{
         
-        LYPLonginNetworkTool *tool = [[LYPLonginNetworkTool alloc]init];
+        LYPNetWorkTool *tool = [[LYPNetWorkTool alloc]init];
         
         int ctype = self.isregister ? 1:2;
        
@@ -103,54 +103,68 @@
 }
 
 - (IBAction)registerButton:(id)sender {
-    if ([StringEXtension isBlankString:self.phoneTextF.text] || [StringEXtension isBlankString:self.passWTextF.text] || [StringEXtension isBlankString:self.vercodeTextF.text] ) {
-        [SVStatusHUD showWithStatus:@"请输入正确的信息"];
-    }else{
-        LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
-        NSString *passW = [StringEXtension sha1:self.passWTextF.text];
-        if (self.registerButton) {
+//    if ([StringEXtension isBlankString:self.phoneTextF.text] || [StringEXtension isBlankString:self.passWTextF.text] || [StringEXtension isBlankString:self.vercodeTextF.text] ) {
+//        [SVStatusHUD showWithStatus:@"请输入正确的信息"];
+//    }else{
+//        LYPNetWorkTool *longinTool = [[LYPNetWorkTool alloc]init];
+//        NSString *passW = [StringEXtension sha1:self.passWTextF.text];
+//        if (self.registerButton) {
 //            NSDictionary *regisDic = @{@"mobile":self.phoneTextF.text,@"password":passW,@"deviceToken":[LYPUserSingle shareUserSingle].deviceToken,@"ios":@(1)};
-            NSDictionary *regisDic = @{@"mobile":self.phoneTextF.text,@"password":passW,@"deviceToken":XGAppKey,@"ios":@(1)};
-            [SVProgressHUD showWithStatus:@"正在注册"];
-            [longinTool userLoginRegisterWithDic:regisDic success:^(id responseData, NSInteger responseCode) {
-                [SVProgressHUD dismiss];
-                LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
-                if ([StringEXtension isBlankString:model.error.msg]) {
-                    //                将返回的token写入本地
-                    [LYPSavePList saveTokenPlistWith:model.data.token];
-                    [SVStatusHUD showWithStatus:@"注册成功"];
-                    [self dismissViewControllerAnimated:YES completion:nil];
-                }else{
-                    [SVStatusHUD showWithStatus:model.error.msg];
-                }
-                
-                
-            } failre:^(id responseData, NSInteger responseCode) {
-                [SVProgressHUD dismiss];
-                NSLog(@"errRegister=%@",responseData);
-                [SVStatusHUD showWithStatus:@"注册失败"];
-            }];
-        }else{
-             NSString *passW = [StringEXtension sha1:self.passWTextF.text];
-            NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"mobile",self.phoneTextF.text,@"code",self.vercodeTextF.text,@"password",passW, nil];
-            [SVProgressHUD showWithStatus:@"正在重置"];
-            [longinTool resetPasswordWithDic:dic success:^(id responseData, NSInteger responseCode) {
-                [SVProgressHUD dismiss];
-                LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
-                if ([StringEXtension isBlankString:model.error.msg]) {
-                    [SVStatusHUD showWithStatus:model.error.msg];
-                }else{
-                    [SVStatusHUD showWithStatus:@"重置成功"];
-                    [self dismissViewControllerAnimated:YES completion:nil];
-                }
-            } failure:^(id responseData, NSInteger responseCode) {
-                [SVProgressHUD dismiss];
-                [SVStatusHUD showWithStatus:@"重置失败"];
-            }];
-        }
-      
-        
-    }
+//            [SVProgressHUD showWithStatus:@"正在注册"];
+//            [longinTool userLoginRegisterWithDic:regisDic success:^(id responseData, NSInteger responseCode) {
+//                [SVProgressHUD dismiss];
+//                LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+//                if ([StringEXtension isBlankString:model.error.msg]) {
+//                    //                将返回的token写入本地
+//                    [LYPSavePList saveTokenPlistWith:model.data.token];
+//                    [SVStatusHUD showWithStatus:@"注册成功"];
+////                    如果注册成功，保存用户名和密码
+//                    [LYPSavePList savePassWAndUser:regisDic];
+//
+//                    [self dismissViewControllerAnimated:YES completion:nil];
+//                }else{
+//                    [SVStatusHUD showWithStatus:model.error.msg];
+//                }
+//
+//
+//            } failre:^(id responseData, NSInteger responseCode) {
+//                [SVProgressHUD dismiss];
+//                NSLog(@"errRegister=%@",responseData);
+//                [SVStatusHUD showWithStatus:@"注册失败"];
+//            }];
+//        }else{
+//             NSString *passW = [StringEXtension sha1:self.passWTextF.text];
+//            NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"mobile",self.phoneTextF.text,@"code",self.vercodeTextF.text,@"password",passW, nil];
+//            [SVProgressHUD showWithStatus:@"正在重置"];
+//            [longinTool resetPasswordWithDic:dic success:^(id responseData, NSInteger responseCode) {
+//                [SVProgressHUD dismiss];
+//                LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+//                if ([StringEXtension isBlankString:model.error.msg]) {
+//                    [SVStatusHUD showWithStatus:model.error.msg];
+//                }else{
+//                    [SVStatusHUD showWithStatus:@"重置成功"];
+////                    先读取本地的文件
+//                    NSDictionary *userDic = [LYPSavePList readUserInfo];
+//                    if (userDic) {
+//                        NSString *passW = userDic[@"password"];
+//                        NSString *mobile = self.phoneTextF.text;
+//                        NSString *deviceToken =userDic[@"deviceToken"];
+//                        int ios = [userDic[@"ios"] intValue];
+//                        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:passW,@"password",mobile,@"mobile",deviceToken,@"deviceToken",@"ios",@(ios), nil];
+////                        保存
+//                        [LYPSavePList savePassWAndUser:dic];
+//                    }
+//
+//                    [self dismissViewControllerAnimated:YES completion:nil];
+//                }
+//            } failure:^(id responseData, NSInteger responseCode) {
+//                [SVProgressHUD dismiss];
+//                [SVStatusHUD showWithStatus:@"重置失败"];
+//            }];
+//        }
+//
+//
+//    }
     
 }
 - (IBAction)dismissClick:(id)sender {

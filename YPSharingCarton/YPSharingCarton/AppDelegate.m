@@ -60,12 +60,7 @@
 
     
     [[XGPush defaultManager] setEnableDebug:YES];
-    XGNotificationAction *action1 = [XGNotificationAction actionWithIdentifier:@"xgaction001" title:@"xgAction1" options:XGNotificationActionOptionNone];
-    XGNotificationAction *action2 = [XGNotificationAction actionWithIdentifier:@"xgaction002" title:@"xgAction2" options:XGNotificationActionOptionDestructive];
-    XGNotificationCategory *category = [XGNotificationCategory categoryWithIdentifier:@"xgCategory" actions:@[action1, action2] intentIdentifiers:@[] options:XGNotificationCategoryOptionNone];
-    XGNotificationConfigure *configure = [XGNotificationConfigure configureNotificationWithCategories:[NSSet setWithObject:category] types:XGUserNotificationTypeAlert|XGUserNotificationTypeBadge|XGUserNotificationTypeSound];
-    [[XGPush defaultManager] setNotificationConfigure:configure];
-    [[XGPush defaultManager]startXGWithAppID:XGAPPId appKey:XGAppKey delegate:self];
+    [[XGPush defaultManager]startXGWithAppID:2200278564 appKey:@"I47FT8NN55PM" delegate:self];
     [[XGPush defaultManager] setXgApplicationBadgeNumber:0];
     [[XGPush defaultManager] reportXGNotificationInfo:launchOptions];
     return YES;

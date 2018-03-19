@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LYPLoginVC.h"
+#import "LYPCleanMainVC.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"LYPLoginVC" bundle:nil];
+    LYPLoginVC *loginVC = [board instantiateViewControllerWithIdentifier:@"LYPLoginVC"];
+     self.window.rootViewController = loginVC;
+    [ self.window makeKeyAndVisible];
     return YES;
 }
 

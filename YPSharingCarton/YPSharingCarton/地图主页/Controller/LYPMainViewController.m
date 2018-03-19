@@ -19,6 +19,7 @@
 
 #import "LYPloginModel.h"
 #import "LYPLoginVC.h"
+#import "LYPLonginNetworkTool.h"
 
 @interface LYPMainViewController ()
 @property (nonatomic, strong) LYPCustomButton *scanButton;
@@ -28,6 +29,34 @@
 @end
 
 @implementation LYPMainViewController
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+//    每次用户进来都要让他默认去登录一次系统
+    
+    NSDictionary *userdic = [LYPSavePList readUserInfo];
+    if (userdic) {
+        NSDictionary *dic = @{@"mobile":userdic[@"mobile"],@"password":userdic[@"password"],@"deviceToken":userdic[@"deviceToken"],@"ios":@(0)};
+        LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
+        [longinTool userLoginWithUserDic:dic Success:^(id responseData, NSInteger responseCode) {
+            NSLog(@"login=%@",responseData);
+            LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+            if (![StringEXtension isBlankString:model.error.msg]) {
+                [SVStatusHUD showWithStatus:model.error.msg];
+            }else{
+                
+                if (![StringEXtension isBlankString:model.data.token]) {
+                    //                写入本地
+                    [LYPSavePList saveTokenPlistWith:model.data.token];
+                }
+            }
+        } failue:^(id responseData, NSInteger responseCode) {
+            NSLog(@"errlogin=%@",responseData);
+            [SVStatusHUD showWithStatus:@"服务器连接失败"];
+        }];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,6 +71,8 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(hideNav) name:@"hideNav" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showNav) name:@"showNav" object:nil];
 }
+
+
 -(void)setNavBar{
 
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithNomalImage:@"navigationbar_list_normal" selectImage:@"navigationbar_list_hl" target:self action:@selector(showPersonVC)];

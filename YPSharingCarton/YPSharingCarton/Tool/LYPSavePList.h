@@ -14,4 +14,7 @@
 
 +(NSString *)readTokenPlist;
 
++(void)savePassWAndUser:(NSDictionary *)dic;
++(NSDictionary *)readUserInfo;
+
 @end
