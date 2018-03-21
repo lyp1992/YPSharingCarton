@@ -13,24 +13,24 @@
 static NSString *topClIdentify = @"topCollectionViewCellIdentify";
 
 @interface TopCollectionView ()<UICollectionViewDelegate, UICollectionViewDataSource>
-
-@property (nonatomic, strong) NSArray *numArr;
-
 @end
 
 @implementation TopCollectionView
-@synthesize numArr;
 
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(nonnull UICollectionViewLayout *)layout{
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
         self.backgroundColor = [UIColor whiteColor];
         self.delegate = self;
         self.dataSource = self;
-        [self registerClass:[TopCollectionViewCell class] forCellWithReuseIdentifier:topClIdentify];\
-        
-        numArr = @[@"设备ID", @"场所", @"大楼", @"楼层", @"类型", @"区域", @"蹲位", @"换纸", @"换电池"];
+        [self registerClass:[TopCollectionViewCell class] forCellWithReuseIdentifier:topClIdentify];
+     
     }
     return self;
+}
+
+-(void)setNumArr:(NSArray *)numArr{
+    _numArr = numArr;
+    [self reloadData];
 }
 
 - (id)valueForUndefinedKey:(NSString *)key{
@@ -44,12 +44,12 @@ static NSString *topClIdentify = @"topCollectionViewCellIdentify";
 #pragma mark --collectionViewDataSource&&collectionViewDelegate
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return numArr.count;
+    return self.numArr.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     TopCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:topClIdentify forIndexPath:indexPath];
-    cell.topTextLab.text = numArr[indexPath.row];
+    cell.topTextLab.text = self.numArr[indexPath.row];
     return cell;
 }
 
@@ -71,6 +71,12 @@ static NSString *topClIdentify = @"topCollectionViewCellIdentify";
     
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([_topDelegate respondsToSelector:@selector(TopCollectionView:didSelectItemAtIndexPath:)]) {
+        [self.topDelegate TopCollectionView:self didSelectItemAtIndexPath:indexPath];
+    }
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self setValue:[NSValue valueWithCGPoint:scrollView.contentOffset] forKey:TopCollectionViewObserver];

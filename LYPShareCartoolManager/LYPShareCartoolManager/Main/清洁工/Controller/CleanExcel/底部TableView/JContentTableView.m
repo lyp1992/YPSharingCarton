@@ -75,9 +75,6 @@ static NSString *clIdentify = @"collectionViewCellIdentify";
     return 60;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 80;
-}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return parameterArr.count;

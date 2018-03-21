@@ -31,6 +31,10 @@
 		D77599BA205FB7E5009DCFD7 /* KKNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D77599B6205FB7E4009DCFD7 /* KKNavController.m */; };
 		D77599BB205FB7E5009DCFD7 /* KKSliderMenuTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D77599B8205FB7E4009DCFD7 /* KKSliderMenuTool.m */; };
 		D77599C6205FBA43009DCFD7 /* UIAlertController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D77599C5205FBA43009DCFD7 /* UIAlertController+Block.m */; };
+		D77C8D6420623BEC00D874A8 /* LYPCleanToolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */; };
+		D77C8D6720623C0900D874A8 /* LYPCleanToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */; };
+		D77C8D6A20623E2300D874A8 /* LYPToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6920623E2300D874A8 /* LYPToolModel.m */; };
+		D77C8D7620625C1800D874A8 /* YPLeftAndRightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D7420625C1800D874A8 /* YPLeftAndRightButton.m */; };
 		D78A8AC42052221A000C8148 /* LYPDataListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABA2052221A000C8148 /* LYPDataListModel.m */; };
 		D78A8AC52052221A000C8148 /* LYPDeviceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABC2052221A000C8148 /* LYPDeviceListModel.m */; };
 		D78A8AC62052221A000C8148 /* LYPErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABF2052221A000C8148 /* LYPErrorModel.m */; };
@@ -129,6 +133,14 @@
 		D77599B8205FB7E4009DCFD7 /* KKSliderMenuTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSliderMenuTool.m; sourceTree = "<group>"; };
 		D77599C4205FBA42009DCFD7 /* UIAlertController+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Block.h"; sourceTree = "<group>"; };
 		D77599C5205FBA43009DCFD7 /* UIAlertController+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Block.m"; sourceTree = "<group>"; };
+		D77C8D6220623BEC00D874A8 /* LYPCleanToolCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanToolCell.h; sourceTree = "<group>"; };
+		D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanToolCell.m; sourceTree = "<group>"; };
+		D77C8D6520623C0900D874A8 /* LYPCleanToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanToolView.h; sourceTree = "<group>"; };
+		D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanToolView.m; sourceTree = "<group>"; };
+		D77C8D6820623E2300D874A8 /* LYPToolModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPToolModel.h; sourceTree = "<group>"; };
+		D77C8D6920623E2300D874A8 /* LYPToolModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPToolModel.m; sourceTree = "<group>"; };
+		D77C8D7420625C1800D874A8 /* YPLeftAndRightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPLeftAndRightButton.m; sourceTree = "<group>"; };
+		D77C8D7520625C1800D874A8 /* YPLeftAndRightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPLeftAndRightButton.h; sourceTree = "<group>"; };
 		D78A8AB92052221A000C8148 /* LYPDataListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDataListModel.h; sourceTree = "<group>"; };
 		D78A8ABA2052221A000C8148 /* LYPDataListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPDataListModel.m; sourceTree = "<group>"; };
 		D78A8ABB2052221A000C8148 /* LYPDeviceListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDeviceListModel.h; sourceTree = "<group>"; };
@@ -262,6 +274,10 @@
 				D7759988205FB517009DCFD7 /* JoeExcel.h */,
 				D775998A205FB519009DCFD7 /* JoeExcelView.h */,
 				D7759989205FB518009DCFD7 /* JoeExcelView.m */,
+				D77C8D6220623BEC00D874A8 /* LYPCleanToolCell.h */,
+				D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */,
+				D77C8D6520623C0900D874A8 /* LYPCleanToolView.h */,
+				D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +285,8 @@
 		D775997D205FB197009DCFD7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D77C8D6820623E2300D874A8 /* LYPToolModel.h */,
+				D77C8D6920623E2300D874A8 /* LYPToolModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -409,6 +427,8 @@
 				D78A8AD520522234000C8148 /* UIView+Extension.m */,
 				D78A8AD620522234000C8148 /* UpAndLowerButtonPlace.h */,
 				D78A8AD720522234000C8148 /* UpAndLowerButtonPlace.m */,
+				D77C8D7520625C1800D874A8 /* YPLeftAndRightButton.h */,
+				D77C8D7420625C1800D874A8 /* YPLeftAndRightButton.m */,
 			);
 			name = UITool;
 			path = ../../../YPSharingCarton/YPSharingCarton/UITool;
@@ -837,12 +857,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77C8D7620625C1800D874A8 /* YPLeftAndRightButton.m in Sources */,
 				D7759991205FB526009DCFD7 /* TopCollectionViewCell.m in Sources */,
 				D775999B205FB554009DCFD7 /* ContentTableFooter.m in Sources */,
 				D77599AE205FB7B5009DCFD7 /* LYPPersonCycTableViewCell.m in Sources */,
+				D77C8D6420623BEC00D874A8 /* LYPCleanToolCell.m in Sources */,
 				D775999D205FB554009DCFD7 /* ContentCollectionViewCell.m in Sources */,
 				D775999A205FB554009DCFD7 /* JContentTableViewCell.m in Sources */,
 				D78A8ADD20522234000C8148 /* UIView+Extension.m in Sources */,
+				D77C8D6A20623E2300D874A8 /* LYPToolModel.m in Sources */,
 				D78A8AD920522234000C8148 /* LYPPromptView.m in Sources */,
 				D77599C6205FBA43009DCFD7 /* UIAlertController+Block.m in Sources */,
 				D78A8ADC20522234000C8148 /* UIImage+Extention.m in Sources */,
@@ -871,6 +894,7 @@
 				D77599A4205FB790009DCFD7 /* LYPMessageMainVC.m in Sources */,
 				D775998B205FB519009DCFD7 /* JoeExcelView.m in Sources */,
 				D7759975205F8B73009DCFD7 /* LYPLoginVC.m in Sources */,
+				D77C8D6720623C0900D874A8 /* LYPCleanToolView.m in Sources */,
 				D78A8AF42052225B000C8148 /* LYPSavePList.m in Sources */,
 				D78A8AC82052221A000C8148 /* LYPTokenModel.m in Sources */,
 				D77599BB205FB7E5009DCFD7 /* KKSliderMenuTool.m in Sources */,
