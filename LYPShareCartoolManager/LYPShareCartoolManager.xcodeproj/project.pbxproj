@@ -10,6 +10,9 @@
 		BAFC96AB8850315730BD93C1 /* libPods-LYPShareCartoolManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F55CB81A7C1774B17D86CC /* libPods-LYPShareCartoolManagerTests.a */; };
 		BBAD4F67A0DD0699B338B6FE /* libPods-LYPShareCartoolManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C77AD249AB5F16EFCD98C2 /* libPods-LYPShareCartoolManager.a */; };
 		CF269FDC2D47799F3B707771 /* libPods-LYPShareCartoolManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70670D08C884280B581CF899 /* libPods-LYPShareCartoolManagerUITests.a */; };
+		D76E468B2064F3DF006E965E /* LYPManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D76E468A2064F3DF006E965E /* LYPManagerVC.m */; };
+		D76E468E2064F4D3006E965E /* LYPmanagerExcelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D76E468D2064F4D3006E965E /* LYPmanagerExcelVC.m */; };
+		D76E46912064F7FE006E965E /* LYPManagerToolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D76E46902064F7FE006E965E /* LYPManagerToolVC.m */; };
 		D7759975205F8B73009DCFD7 /* LYPLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759971205F8B72009DCFD7 /* LYPLoginVC.m */; };
 		D7759976205F8B73009DCFD7 /* LYPLoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7759972205F8B72009DCFD7 /* LYPLoginVC.storyboard */; };
 		D7759977205F8B73009DCFD7 /* LYPRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7759974205F8B72009DCFD7 /* LYPRegisterVC.m */; };
@@ -35,6 +38,8 @@
 		D77C8D6720623C0900D874A8 /* LYPCleanToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */; };
 		D77C8D6A20623E2300D874A8 /* LYPToolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D6920623E2300D874A8 /* LYPToolModel.m */; };
 		D77C8D7620625C1800D874A8 /* YPLeftAndRightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D7420625C1800D874A8 /* YPLeftAndRightButton.m */; };
+		D77C8D792062622100D874A8 /* LYPCleanHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D782062622100D874A8 /* LYPCleanHomePageVC.m */; };
+		D77C8D7C2062628D00D874A8 /* LYPCleanHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C8D7B2062628D00D874A8 /* LYPCleanHomeCell.m */; };
 		D78A8AC42052221A000C8148 /* LYPDataListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABA2052221A000C8148 /* LYPDataListModel.m */; };
 		D78A8AC52052221A000C8148 /* LYPDeviceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABC2052221A000C8148 /* LYPDeviceListModel.m */; };
 		D78A8AC62052221A000C8148 /* LYPErrorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D78A8ABF2052221A000C8148 /* LYPErrorModel.m */; };
@@ -92,6 +97,12 @@
 		99D3994DBC2F17BEC5B864F2 /* Pods-LYPShareCartoolManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C18B1337CE033F6FBCCF7DFB /* Pods-LYPShareCartoolManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManagerUITests/Pods-LYPShareCartoolManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C79874D679B716274A6D25F4 /* Pods-LYPShareCartoolManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYPShareCartoolManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-LYPShareCartoolManager/Pods-LYPShareCartoolManager.release.xcconfig"; sourceTree = "<group>"; };
+		D76E46892064F3DF006E965E /* LYPManagerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPManagerVC.h; sourceTree = "<group>"; };
+		D76E468A2064F3DF006E965E /* LYPManagerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPManagerVC.m; sourceTree = "<group>"; };
+		D76E468C2064F4D3006E965E /* LYPmanagerExcelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPmanagerExcelVC.h; sourceTree = "<group>"; };
+		D76E468D2064F4D3006E965E /* LYPmanagerExcelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPmanagerExcelVC.m; sourceTree = "<group>"; };
+		D76E468F2064F7FE006E965E /* LYPManagerToolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPManagerToolVC.h; sourceTree = "<group>"; };
+		D76E46902064F7FE006E965E /* LYPManagerToolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPManagerToolVC.m; sourceTree = "<group>"; };
 		D7759970205F8B72009DCFD7 /* LYPLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPLoginVC.h; sourceTree = "<group>"; };
 		D7759971205F8B72009DCFD7 /* LYPLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPLoginVC.m; sourceTree = "<group>"; };
 		D7759972205F8B72009DCFD7 /* LYPLoginVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LYPLoginVC.storyboard; sourceTree = "<group>"; };
@@ -141,6 +152,10 @@
 		D77C8D6920623E2300D874A8 /* LYPToolModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPToolModel.m; sourceTree = "<group>"; };
 		D77C8D7420625C1800D874A8 /* YPLeftAndRightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPLeftAndRightButton.m; sourceTree = "<group>"; };
 		D77C8D7520625C1800D874A8 /* YPLeftAndRightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPLeftAndRightButton.h; sourceTree = "<group>"; };
+		D77C8D772062622100D874A8 /* LYPCleanHomePageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanHomePageVC.h; sourceTree = "<group>"; };
+		D77C8D782062622100D874A8 /* LYPCleanHomePageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanHomePageVC.m; sourceTree = "<group>"; };
+		D77C8D7A2062628D00D874A8 /* LYPCleanHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPCleanHomeCell.h; sourceTree = "<group>"; };
+		D77C8D7B2062628D00D874A8 /* LYPCleanHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPCleanHomeCell.m; sourceTree = "<group>"; };
 		D78A8AB92052221A000C8148 /* LYPDataListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDataListModel.h; sourceTree = "<group>"; };
 		D78A8ABA2052221A000C8148 /* LYPDataListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPDataListModel.m; sourceTree = "<group>"; };
 		D78A8ABB2052221A000C8148 /* LYPDeviceListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPDeviceListModel.h; sourceTree = "<group>"; };
@@ -242,6 +257,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D76E46852064F2BB006E965E /* 管理员 */ = {
+			isa = PBXGroup;
+			children = (
+				D76E46882064F2DF006E965E /* View */,
+				D76E46872064F2DA006E965E /* Model */,
+				D76E46862064F2CA006E965E /* Controller */,
+			);
+			path = "管理员";
+			sourceTree = "<group>";
+		};
+		D76E46862064F2CA006E965E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D76E46892064F3DF006E965E /* LYPManagerVC.h */,
+				D76E468A2064F3DF006E965E /* LYPManagerVC.m */,
+				D76E468C2064F4D3006E965E /* LYPmanagerExcelVC.h */,
+				D76E468D2064F4D3006E965E /* LYPmanagerExcelVC.m */,
+				D76E468F2064F7FE006E965E /* LYPManagerToolVC.h */,
+				D76E46902064F7FE006E965E /* LYPManagerToolVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D76E46872064F2DA006E965E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D76E46882064F2DF006E965E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D775996F205F8B72009DCFD7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +330,10 @@
 				D77C8D6320623BEC00D874A8 /* LYPCleanToolCell.m */,
 				D77C8D6520623C0900D874A8 /* LYPCleanToolView.h */,
 				D77C8D6620623C0900D874A8 /* LYPCleanToolView.m */,
+				D77C8D772062622100D874A8 /* LYPCleanHomePageVC.h */,
+				D77C8D782062622100D874A8 /* LYPCleanHomePageVC.m */,
+				D77C8D7A2062628D00D874A8 /* LYPCleanHomeCell.h */,
+				D77C8D7B2062628D00D874A8 /* LYPCleanHomeCell.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -540,6 +596,7 @@
 		D79DE11120512FF800367CEE /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D76E46852064F2BB006E965E /* 管理员 */,
 				D775997B205FB180009DCFD7 /* 清洁工 */,
 				D78A8AF72052229C000C8148 /* NetworkTool */,
 				D78A8ADF2052225B000C8148 /* Tool */,
@@ -873,12 +930,15 @@
 				D7759984205FB34E009DCFD7 /* LYPCleanMainVC.m in Sources */,
 				D78A8AC62052221A000C8148 /* LYPErrorModel.m in Sources */,
 				D78A8AC52052221A000C8148 /* LYPDeviceListModel.m in Sources */,
+				D76E46912064F7FE006E965E /* LYPManagerToolVC.m in Sources */,
 				D77599A5205FB790009DCFD7 /* LYPPersonMainVC.m in Sources */,
 				D79DE0E420512AD600367CEE /* BaseViewController.m in Sources */,
+				D76E468B2064F3DF006E965E /* LYPManagerVC.m in Sources */,
 				D78A8AF02052225B000C8148 /* XMGModel.m in Sources */,
 				D78A8AC42052221A000C8148 /* LYPDataListModel.m in Sources */,
 				D77599B9205FB7E5009DCFD7 /* KKAnimateViewController.m in Sources */,
 				D78A8AFD2052291E000C8148 /* LYPUserSingle.m in Sources */,
+				D77C8D792062622100D874A8 /* LYPCleanHomePageVC.m in Sources */,
 				D7759977205F8B73009DCFD7 /* LYPRegisterVC.m in Sources */,
 				D77599BA205FB7E5009DCFD7 /* KKNavController.m in Sources */,
 				D78A8AFA205222F5000C8148 /* LYPNetWorkTool.m in Sources */,
@@ -898,6 +958,8 @@
 				D78A8AF42052225B000C8148 /* LYPSavePList.m in Sources */,
 				D78A8AC82052221A000C8148 /* LYPTokenModel.m in Sources */,
 				D77599BB205FB7E5009DCFD7 /* KKSliderMenuTool.m in Sources */,
+				D77C8D7C2062628D00D874A8 /* LYPCleanHomeCell.m in Sources */,
+				D76E468E2064F4D3006E965E /* LYPmanagerExcelVC.m in Sources */,
 				D78A8ADB20522234000C8148 /* UIBarButtonItem+Extension.m in Sources */,
 				D79DE0E120512AD600367CEE /* AppDelegate.m in Sources */,
 				D78A8ADE20522234000C8148 /* UpAndLowerButtonPlace.m in Sources */,

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "LYPLoginVC.h"
 #import "LYPCleanMainVC.h"
+#import "LYPManagerVC.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,9 +21,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    UIStoryboard *board = [UIStoryboard storyboardWithName:@"LYPLoginVC" bundle:nil];
-    LYPLoginVC *loginVC = [board instantiateViewControllerWithIdentifier:@"LYPLoginVC"];
-     self.window.rootViewController = loginVC;
+//    UIStoryboard *board = [UIStoryboard storyboardWithName:@"LYPLoginVC" bundle:nil];
+//    LYPLoginVC *loginVC = [board instantiateViewControllerWithIdentifier:@"LYPLoginVC"];
+//     self.window.rootViewController = loginVC;
+    
+    LYPManagerVC *managerVC = [[LYPManagerVC alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:managerVC];
+    self.window.rootViewController = nav;
+    
     [ self.window makeKeyAndVisible];
     return YES;
 }

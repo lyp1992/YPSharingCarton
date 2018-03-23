@@ -87,7 +87,7 @@
         bottmView.layer.borderColor = [UIColor lightGrayColor].CGColor;
         bottmView.layer.borderWidth = 1;
 //        批量打开
-        UIButton *batchBtn = [[UIButton alloc]initWithFrame:CGRectMake((self.width -130)/2, 0, 130, 45)];
+        UIButton *batchBtn = [[UIButton alloc]initWithFrame:CGRectMake((self.width -130)/2, 2.5, 130, 40)];
         [batchBtn setTitle:@"批量打开纸盒" forState:UIControlStateNormal];
         [batchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [batchBtn addTarget:self action:@selector(batchOpenPaperBox:) forControlEvents:UIControlEventTouchUpInside];
