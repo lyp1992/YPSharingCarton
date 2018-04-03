@@ -41,6 +41,9 @@
     self.memberButton.frame = CGRectMake(CGRectGetMaxX(self.headImageV.frame) +maginW, CGRectGetMaxY(self.headImageV.frame)-30, 50, 25);
     self.creditButton.frame = CGRectMake(CGRectGetMaxX(self.memberButton.frame)+5, CGRectGetMaxY(self.headImageV.frame)-30, 80, 25);
     
+    NSString *iphone = [[LYPSavePList readUserInfo] objectForKey:@"mobile"];
+    self.iphoneLabel.text = iphone;
+    
 }
 
 -(UIImageView *)headImageV{

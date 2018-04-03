@@ -20,4 +20,11 @@
     return single;
 }
 
+-(NSMutableArray *)managerControlArr{
+    if (!_managerControlArr) {
+        _managerControlArr = [NSMutableArray array];
+    }
+    return _managerControlArr;
+}
+
 @end

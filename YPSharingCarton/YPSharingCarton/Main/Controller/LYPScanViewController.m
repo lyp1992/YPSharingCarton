@@ -10,6 +10,10 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
 #import "LYPQRCodeResultVC.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MAMapKit/MAMapKit.h>
+#import "LYPLoginVC.h"
+#import "LYPChoosePaperView.h"
 
 #define RGBACOLOR(R,G,B,A) [UIColor colorWithRed:(R) / 255.0f green:(G) /255.0f blue:(B) / 255.0f alpha:(A)] // 自定义颜色
 #define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width
@@ -20,12 +24,15 @@
 
 #define kMarin_Width 100
 #define kMarin 30
-@interface LYPScanViewController ()<AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate>
+@interface LYPScanViewController ()<AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate,CLLocationManagerDelegate>
 
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) UIView *scanView;
 @property (nonatomic, strong) UIImageView *scanImgView;
 @property (nonatomic, strong) UIView *maskView;
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *location;
 
 @end
 
@@ -47,13 +54,17 @@
 //设置导航栏
     [self setUPNav];
     
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    //    获取定位
+    [self startLocation];
     // 这是扫描的横线
     [self resumeAnimation];
     [self.session startRunning];
+
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -233,8 +244,33 @@
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex:0];
         NSLog(@"metadataObject.stringValue == %@", metadataObject.stringValue);
 //        扫码成功之后跳转页面
-//        先判断格式对不对，如果格式不对，就调回到首页
-        [self pushToOpenVCWithQRCodeStr:metadataObject.stringValue];
+        
+        if ([StringEXtension isBlankString:metadataObject.stringValue]) {
+            [SVStatusHUD showWithStatus:@"扫码出错啦，请重试!"];
+        }else
+        {
+            NSString *lon = [NSString stringWithFormat:@"%f",self.location.coordinate.longitude];
+            NSString *lat = [NSString stringWithFormat:@"%f",self.location.coordinate.latitude];
+            
+            if ([StringEXtension isBlankString:lon]) {
+                return;
+            }
+//            弹出选择框
+            LYPChoosePaperView *paperView = [LYPChoosePaperView aweakFromXib];
+            
+            YPPopView *popView = [[YPPopView alloc]initWithContentView:paperView];
+            popView.dimBackground = YES;
+            [popView showInRect:CGRectMake((SCREENWIDTH - 280)/2, (SCREENHEIGHT - 144)/2, 280, 144)];
+            
+            __weak typeof(self) weakself = self;
+            [paperView setPaperLength:^(CGFloat paperLength) {
+                //            orderno 暂时不传，订单号
+                NSDictionary *parames = [NSDictionary dictionaryWithObjectsAndKeys:@"orderno",@"orderno", metadataObject.stringValue,@"devicesn",@(paperLength),@"num",lon,@"lon",lat,@"lat",nil];
+                [weakself takePaperWithDIc:parames];
+            }];
+        
+        }
+        NSLog(@"metadataObject.stringValue ---- %@", metadataObject.stringValue);
     }
 }
 #pragma mark - 获取扫描区域的比例关系
@@ -246,7 +282,32 @@
     height = CGRectGetWidth(rect) / CGRectGetWidth(readerViewBounds);
     return CGRectMake(x, y, width, height);
 }
-
+//请求出纸
+-(void)takePaperWithDIc:(NSDictionary *)parames{
+    //        请求出纸
+    [SVProgressHUD showWithStatus:@"正在出纸"];
+    LYPListNeteworkTool *netTool = [[LYPListNeteworkTool alloc]init];
+    [netTool takePaperWithDic:parames success:^(id responseData, NSInteger responseCode) {
+        [SVProgressHUD dismiss];
+        
+        LYPDeviceListModel *model = [LYPDeviceListModel mj_objectWithKeyValues:responseData];
+        if (![StringEXtension isBlankString:model.error.msg]) {
+            [SVStatusHUD showWithStatus:model.error.msg];
+            [self.session startRunning];
+            if (model.error.code == 1001) {//重新登录
+                UIStoryboard *board = [UIStoryboard storyboardWithName:@"LYPLoginVC" bundle:nil];
+                LYPLoginVC *loginVC = [board instantiateViewControllerWithIdentifier:@"LYPLoginVC"];
+                [self presentViewController:loginVC animated:YES completion:nil];
+                [self.session stopRunning];
+            }
+        }
+        
+    } failure:^(id responseData, NSInteger responseCode) {
+        [SVProgressHUD dismiss];
+        [SVStatusHUD showWithStatus:@"出纸失败"];
+        [self.session startRunning];
+    }];
+}
 #pragma mark - 恢复动画
 
 - (void)resumeAnimation {
@@ -274,6 +335,60 @@
         [_scanImgView.layer addAnimation:scanNetAnimation forKey:@"translationAnimation"];
         [_scanView addSubview:_scanImgView];
     }
+}
+
+-(BOOL)isLocationServiceOpen {
+    if ([ CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        return NO;
+    } else
+        return YES;
+}
+//开始定位
+- (void)startLocation {
+    if ([self isLocationServiceOpen]) {
+        if ([CLLocationManager locationServicesEnabled]) {
+            //        CLog(@"--------开始定位");
+            self.locationManager = [[CLLocationManager alloc]init];
+            self.locationManager.delegate = self;
+            //控制定位精度,越高耗电量越
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+            // 总是授权
+            [self.locationManager requestAlwaysAuthorization];
+            self.locationManager.distanceFilter = 10.0f;
+            [self.locationManager requestAlwaysAuthorization];
+            [self.locationManager startUpdatingLocation];
+        }
+    }else{
+        
+        UIAlertController *alertVc = [UIAlertController alertSureWithMessage:@"请允许\"共享纸盒\"获取您的位置" AndTitle:@"" sureblock:^{
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if([[UIApplication sharedApplication] canOpenURL:url]) {
+                NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                //此处可以做一下版本适配，至于为何要做版本适配，大家应该很清楚
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }];
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVc animated:YES completion:nil];
+    }
+    
+}
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    if ([error code] == kCLErrorDenied) {
+        NSLog(@"访问被拒绝");
+    }
+    if ([error code] == kCLErrorLocationUnknown) {
+        NSLog(@"无法获取位置信息");
+    }
+}
+//定位代理经纬度回调
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    
+    CLLocation *newLocation = locations[0];
+    self.location = newLocation;
+    //系统会一直更新数据，直到选择停止更新，因为我们只需要获得一次经纬度即可，所以获取之后就停止更新
+    [manager stopUpdatingLocation];
+    
 }
 
 @end

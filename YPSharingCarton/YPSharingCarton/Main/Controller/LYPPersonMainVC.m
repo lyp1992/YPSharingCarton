@@ -10,6 +10,7 @@
 #import "LYPPersonHeadView.h"
 #import "LYPPersonCycTableViewCell.h"
 #import "LYPPersonTableViewCell.h"
+#import "LYPLoginVC.h"
 
 @interface LYPPersonMainVC ()<UITableViewDelegate,UITableViewDataSource,LYPPersonCycTableViewCellDelegate>
 
@@ -26,7 +27,8 @@
         NSArray *arr = @[@{@"title":@"我的钱包",@"image":@"menu_wallet"},
                          @{@"title":@"我的卡劵",@"image":@"menu_promo"},
                          @{@"title":@"邀请好友",@"image":@"menu_invite"},
-                         @{@"title":@"我的贴纸",@"image":@"menu_sticker"}];
+                         @{@"title":@"我的贴纸",@"image":@"menu_sticker"},
+                         @{@"title":@"登录",@"image":@"navigationbar_list_hl"}];
 
         _rowDataArr = [NSMutableArray arrayWithArray:arr];
         
@@ -119,7 +121,17 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    switch (indexPath.row) {
+        case 4:
+        {
+            UIStoryboard *board = [UIStoryboard storyboardWithName:@"LYPLoginVC" bundle:nil];
+            LYPLoginVC *loginVC = [board instantiateViewControllerWithIdentifier:@"LYPLoginVC"];
+            [self presentViewController:loginVC animated:YES completion:nil];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

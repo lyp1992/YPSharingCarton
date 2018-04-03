@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LYPPersonMainVC : BaseViewController
+@interface LYPPersonMainVC : LYPFatherViewController
 
 
 @end

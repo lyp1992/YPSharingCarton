@@ -8,8 +8,9 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-
-#define BaseIP @"114.115.167.38:8085"
+//api.paperboxsharing.com
+//114.115.167.38:8085
+#define BaseIP @"api.paperboxsharing.com"
 
 #define loginUrl [NSString stringWithFormat:@"http://%@/v1.0/user/login",BaseIP]
 #define loginRegisterUrl [NSString stringWithFormat:@"http://%@/v1.0/user/register",BaseIP]
@@ -47,5 +48,9 @@
 #import "LYPSavePList.h"
 #import "SVStatusHUD.h"
 #import "UIViewController+DismissKeyboard.h"
+#import "LYPListNeteworkTool.h"
+#import "LYPDeviceListModel.h"
+#import "UIAlertController+Block.h"
+#import "YPPopView.h"
 
 #endif /* PrefixHeader_pch */

@@ -18,7 +18,7 @@
 //    本地登录成功之后的token，appkey
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer setValue:APPKey forHTTPHeaderField:@"appkey"];
-    [manager.requestSerializer setValue:parames[@"token"] forHTTPHeaderField:@"token"];
+//    [manager.requestSerializer setValue:parames[@"token"] forHTTPHeaderField:@"token"];
     
     NSString *url = [NSString stringWithFormat:@"%@/devicelist?lon=%@&lat=%@",getCodeUrl,parames[@"lon"],parames[@"lat"]];
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

@@ -378,12 +378,12 @@ updatingLocation:(BOOL)updatingLocation
         LYPDataListModel *listModel = array[i];
         
         CLLocationCoordinate2D coor;
-        coor.latitude = listModel.lat;
-        coor.longitude = listModel.lon;
+        coor.latitude = [listModel.lat floatValue];
+        coor.longitude = [listModel.lon floatValue];
         MAPointAnnotation *coorPoint = [[MAPointAnnotation alloc]init];
         coorPoint.coordinate = coor;
         coorPoint.title = listModel.build;
-        coorPoint.subtitle = listModel.floor;
+        coorPoint.subtitle = [NSString stringWithFormat:@"%d",listModel.floor];
         [self.mapView addAnnotation:coorPoint];
     }
 }

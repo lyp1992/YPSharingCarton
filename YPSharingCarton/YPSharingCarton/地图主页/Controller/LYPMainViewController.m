@@ -34,28 +34,27 @@
 {
     [super viewDidAppear:animated];
 //    每次用户进来都要让他默认去登录一次系统
-    
-    NSDictionary *userdic = [LYPSavePList readUserInfo];
-    if (userdic) {
-        NSDictionary *dic = @{@"mobile":userdic[@"mobile"],@"password":userdic[@"password"],@"deviceToken":userdic[@"deviceToken"],@"ios":@(0)};
-        LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
-        [longinTool userLoginWithUserDic:dic Success:^(id responseData, NSInteger responseCode) {
-            NSLog(@"login=%@",responseData);
-            LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
-            if (![StringEXtension isBlankString:model.error.msg]) {
-                [SVStatusHUD showWithStatus:model.error.msg];
-            }else{
-                
-                if (![StringEXtension isBlankString:model.data.token]) {
-                    //                写入本地
-                    [LYPSavePList saveTokenPlistWith:model.data.token];
-                }
-            }
-        } failue:^(id responseData, NSInteger responseCode) {
-            NSLog(@"errlogin=%@",responseData);
-            [SVStatusHUD showWithStatus:@"服务器连接失败"];
-        }];
-    }
+//    NSDictionary *userdic = [LYPSavePList readUserInfo];
+//    if (userdic) {
+//        NSDictionary *dic = @{@"mobile":userdic[@"mobile"],@"password":userdic[@"password"],@"deviceToken":userdic[@"deviceToken"],@"ios":@(1)};
+//        LYPLonginNetworkTool *longinTool = [[LYPLonginNetworkTool alloc]init];
+//        [longinTool userLoginWithUserDic:dic Success:^(id responseData, NSInteger responseCode) {
+//            NSLog(@"login=%@",responseData);
+//            LYPloginModel *model = [LYPloginModel mj_objectWithKeyValues:responseData];
+//            if (![StringEXtension isBlankString:model.error.msg]) {
+//                [SVStatusHUD showWithStatus:model.error.msg];
+//            }else{
+//
+//                if (![StringEXtension isBlankString:model.data.token]) {
+//                    //                写入本地
+//                    [LYPSavePList saveTokenPlistWith:model.data.token];
+//                }
+//            }
+//        } failue:^(id responseData, NSInteger responseCode) {
+//            NSLog(@"errlogin=%@",responseData);
+//            [SVStatusHUD showWithStatus:@"服务器连接失败"];
+//        }];
+//    }
 }
 
 - (void)viewDidLoad {
@@ -65,8 +64,8 @@
 //    
     [self setUPUI];//地图
     [self sweepTheYard];//扫码
-    [self createUserLocation];//定位
-    [self createService];//客服
+//    [self createUserLocation];//定位
+//    [self createService];//客服
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(hideNav) name:@"hideNav" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showNav) name:@"showNav" object:nil];
@@ -100,6 +99,7 @@
     self.serviceButton.hidden = parameter;
     self.locationButton.hidden = parameter;
 }
+
 
 -(void)sweepTheYard{
     
@@ -148,13 +148,13 @@
     
 //    判断用户是否登录了
     if ([StringEXtension isBlankString:[LYPSavePList readTokenPlist]]) {//本地没有存token，需要登录或者注册
-        
+
         UIStoryboard *board = [UIStoryboard storyboardWithName:@"LYPLoginVC" bundle:nil];
         LYPLoginVC *loginVC = [board instantiateViewControllerWithIdentifier:@"LYPLoginVC"];
         [self presentViewController:loginVC animated:YES completion:nil];
-        
+
     }else{//本地有token，直接进入扫码界面
-        
+    
         LYPScanViewController *scanVC = [[LYPScanViewController alloc]init];
         [self.navigationController pushViewController:scanVC animated:YES];
     }

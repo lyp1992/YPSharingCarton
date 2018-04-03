@@ -17,5 +17,10 @@
 //用户登录成功的token
 @property (nonatomic, copy) NSString *token;
 
+@property (nonatomic, strong) NSMutableArray *managerControlArr;
+
+//点击展开按钮
+@property (nonatomic, assign) BOOL openToolView;
+
 @end
 

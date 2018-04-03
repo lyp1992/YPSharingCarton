@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LYPChoosePaperView">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="144"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   请选择出纸长度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dye-MZ-UGq">
+                    <rect key="frame" x="0.0" y="0.0" width="134.5" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="PYk-AO-wZz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     温馨提示：节约用纸，低碳生活" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkD-08-Trq">
+                    <rect key="frame" x="0.0" y="29" width="280" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="s0C-MU-GjQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84l-Kn-sCQ">
+                    <rect key="frame" x="0.0" y="54" width="280" height="90"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfR-HI-r07">
+                            <rect key="frame" x="0.0" y="-5" width="280" height="95"/>
+                            <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="YPw-oa-zqb"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="Ked-mM-d0x"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xfR-HI-r07" secondAttribute="trailing" id="Tj3-I7-gkQ"/>
+                        <constraint firstItem="xfR-HI-r07" firstAttribute="leading" secondItem="84l-Kn-sCQ" secondAttribute="leading" id="ZH1-nr-Ghl"/>
+                        <constraint firstItem="xfR-HI-r07" firstAttribute="top" secondItem="84l-Kn-sCQ" secondAttribute="top" constant="-5" id="eKh-8F-uc9"/>
+                        <constraint firstAttribute="bottom" secondItem="xfR-HI-r07" secondAttribute="bottom" id="esV-vX-Ag3"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6k-Cm-Y67">
+                    <rect key="frame" x="229" y="0.0" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="dpg-y6-w8l"/>
+                        <constraint firstAttribute="width" constant="46" id="ow0-cF-ox3"/>
+                    </constraints>
+                    <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="sureClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ta6-2V-ylL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gkD-08-Trq" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="6HI-8I-4zT"/>
+                <constraint firstItem="84l-Kn-sCQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FSG-XS-Ejx"/>
+                <constraint firstItem="Dye-MZ-UGq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Vnv-RX-dbV"/>
+                <constraint firstItem="84l-Kn-sCQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Zoa-eD-Sy1"/>
+                <constraint firstItem="84l-Kn-sCQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="att-Qz-v2o"/>
+                <constraint firstItem="84l-Kn-sCQ" firstAttribute="top" secondItem="gkD-08-Trq" secondAttribute="bottom" constant="10" id="dDc-aa-U8d"/>
+                <constraint firstItem="Dye-MZ-UGq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fA9-VJ-pph"/>
+                <constraint firstItem="T6k-Cm-Y67" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="fMB-da-3dP"/>
+                <constraint firstItem="gkD-08-Trq" firstAttribute="top" secondItem="Dye-MZ-UGq" secondAttribute="bottom" constant="4" id="hh1-QI-JJB"/>
+                <constraint firstItem="T6k-Cm-Y67" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-5" id="jLH-54-aH3"/>
+                <constraint firstItem="gkD-08-Trq" firstAttribute="top" secondItem="Dye-MZ-UGq" secondAttribute="bottom" constant="4" id="q10-M9-cau"/>
+                <constraint firstItem="gkD-08-Trq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uQl-yI-3fG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="containView" destination="84l-Kn-sCQ" id="cBb-0h-RRu"/>
+                <outlet property="pickerView" destination="xfR-HI-r07" id="bDn-OG-rGl"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="-150"/>
+        </view>
+    </objects>
+</document>

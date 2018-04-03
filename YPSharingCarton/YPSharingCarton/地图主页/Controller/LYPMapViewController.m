@@ -54,43 +54,58 @@
     [manager initMapView];
     self.manager = manager;
 }
+-(BOOL)isLocationServiceOpen {
+    if ([ CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied) {
+        return NO;
+    } else
+        return YES;
+}
 //开始定位
 - (void)startLocation {
-    if ([CLLocationManager locationServicesEnabled]) {
-        //        CLog(@"--------开始定位");
-        self.locationManager = [[CLLocationManager alloc]init];
-        self.locationManager.delegate = self;
-        //控制定位精度,越高耗电量越
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-        // 总是授权
-        [self.locationManager requestAlwaysAuthorization];
-        self.locationManager.distanceFilter = 10.0f;
-        [self.locationManager requestAlwaysAuthorization];
-        [self.locationManager startUpdatingLocation];
+    if ([self isLocationServiceOpen]) {
+        if ([CLLocationManager locationServicesEnabled]) {
+            //        CLog(@"--------开始定位");
+            self.locationManager = [[CLLocationManager alloc]init];
+            self.locationManager.delegate = self;
+            //控制定位精度,越高耗电量越
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+            // 总是授权
+            [self.locationManager requestAlwaysAuthorization];
+            self.locationManager.distanceFilter = 10.0f;
+            [self.locationManager requestAlwaysAuthorization];
+            [self.locationManager startUpdatingLocation];
+        }
+    }else{
+        
+        UIAlertController *alertVc = [UIAlertController alertSureWithMessage:@"请允许\"共享纸盒\"获取您的位置" AndTitle:@"" sureblock:^{
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if([[UIApplication sharedApplication] canOpenURL:url]) {
+                NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                //此处可以做一下版本适配，至于为何要做版本适配，大家应该很清楚
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }];
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVc animated:YES completion:nil];
     }
+    
 }
 
 -(void)getDeviceList:(CLLocation*)location{
 
-    NSString *token = [LYPSavePList readTokenPlist];
+//    NSString *token = [LYPSavePList readTokenPlist];
     LYPListNeteworkTool *tool = [[LYPListNeteworkTool alloc]init];
-    if ([StringEXtension isBlankString:token]) {
-        return;
-    }
+//    if ([StringEXtension isBlankString:token]) {
+//        return;
+//    }
 //    参数，token，自己的位置
-    NSDictionary *parame = [NSDictionary dictionaryWithObjectsAndKeys:@(location.coordinate.longitude),@"lon",@(location.coordinate.latitude),@"lat",token,@"token", nil];
+    NSDictionary *parame = [NSDictionary dictionaryWithObjectsAndKeys:@(location.coordinate.longitude),@"lon",@(location.coordinate.latitude),@"lat", nil];
     [tool getEquipmentListWithDic:parame success:^(id responseData, NSInteger responseCode) {
         NSLog(@"=%@",responseData);
         LYPDeviceListModel *listModel = [LYPDeviceListModel mj_objectWithKeyValues:responseData];
 //        创建位置
         [[MapManager sharedManager]addAnomationWithArray:listModel.data];
-//        for (LYPDataListModel *dataList in listModel.data) {
-//            CLLocationCoordinate2D coor;
-//            coor.latitude = dataList.lat;
-//            coor.longitude = dataList.lon;
-//            [[MapManager sharedManager] addAnomationWithCoor:coor];
-//        }
-//
+
     } failure:^(id responseData, NSInteger responseCode) {
         NSLog(@"err==%@",responseData);
     }];

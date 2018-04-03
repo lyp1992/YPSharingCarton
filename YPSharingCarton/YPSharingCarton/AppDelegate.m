@@ -43,12 +43,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    LYPMainViewController *mainVc = [[LYPMainViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVc];
-    self.window.rootViewController = nav;
-    
-    [self.window makeKeyAndVisible];
 
+        LYPMainViewController *mainVc = [[LYPMainViewController alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVc];
+        self.window.rootViewController = nav;
+
+    [self.window makeKeyAndVisible];
     
 //    注册远程通知
     [self registRemoteNotification];

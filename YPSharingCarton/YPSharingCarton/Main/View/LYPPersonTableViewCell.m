@@ -30,7 +30,7 @@
     [super layoutSubviews];
     CGFloat width = self.frame.size.width;
     CGFloat height = self.frame.size.height;
-    self.menuImageView.frame = CGRectMake(10, (height - 25)/2, 30, 30);
+    self.menuImageView.frame = CGRectMake(10, (height - 30)/2, 30, 30);
     self.menuLabel.frame = CGRectMake(CGRectGetMaxX(self.menuImageView.frame), 0, 80, height);
     self.eventlabel.frame = CGRectMake(CGRectGetMaxX(self.menuImageView.frame), 0, width - CGRectGetMaxX(self.menuLabel.frame), height);
 }
@@ -50,6 +50,7 @@
 -(UIImageView *)menuImageView{
     if(!_menuImageView){
         _menuImageView = [[UIImageView alloc]init];
+        _menuImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _menuImageView;
 }
