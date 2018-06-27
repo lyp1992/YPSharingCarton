@@ -90,6 +90,13 @@
     NSLog(@"[XGDemo] receive Notification");
     [[XGPush defaultManager] reportXGNotificationInfo:userInfo];
 }
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    
+    NSDictionary *apsDic = notification.userInfo[@"aps"];
+    UIAlertController *alertVC = [UIAlertController alertSureWithMessage:apsDic[@"alert"] sureblock:^{
+    }];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+}
     /**
      收到静默推送的回调
      
@@ -155,8 +162,13 @@
     
     // App 在前台弹通知需要调用这个接口
 - (void)xgPushUserNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-    [[XGPush defaultManager] reportXGNotificationInfo:notification.request.content.userInfo];
-    completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
+    NSDictionary *apsDic = notification.request.content.userInfo[@"aps"];
+    UIAlertController *alertVC = [UIAlertController alertSureWithMessage:apsDic[@"alert"] sureblock:^{
+    }];
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+//    [[XGPush defaultManager] reportXGNotificationInfo:notification.request.content.userInfo];
+//    completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
 }
     
 #endif
