@@ -1,6 +1,5 @@
 //
 //  UIView+Extension.m
-//  老赖微博
 //
 //  Created by 赖永鹏 on 15/9/23.
 //  Copyright © 2015年 赖永鹏. All rights reserved.
@@ -93,4 +92,15 @@
 
     return self.center.y;
 }
+
+-(UIViewController *)viewController{
+    for (UIView *view = self; view; view = view.superview) {
+        UIResponder *nextResponder = [view nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
+
 @end

@@ -749,7 +749,7 @@
 				TargetAttributes = {
 					D73E81911FE76093003C6DA9 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1186,8 +1186,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YPSharingCarton/YPSharingCarton.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GCKJ377G9A;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPSharingCarton/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1205,8 +1205,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paperbox.paperboxapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "9d564fa7-865b-45b7-8fd2-7a634719a074";
+				PROVISIONING_PROFILE_SPECIFIER = paperboxapp._ad;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
@@ -1218,8 +1218,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YPSharingCarton/YPSharingCarton.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GCKJ377G9A;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YPSharingCarton/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1237,8 +1237,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paperbox.paperboxapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "209b1f02-c743-47f1-a2db-d0c7303d8fd6";
+				PROVISIONING_PROFILE_SPECIFIER = paperShareBox_AS;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
